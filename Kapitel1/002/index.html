@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Beispiel</title>
+  <link rel="stylesheet" href="../001/styles/main.css" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <label for="field1">X</label> <input id="field1" type="text" value="5">
+  </div>
+  <div class="row">
+    <label for="field2">Y</label> <input id="field2" type="text" value="5">
+  </div>
+  <div class="row">
+    <label for="result">Ergebnis: </label> <input id="result" type="text">
+    <button onclick="calculateSum()">Summe berechnen</button>
+  </div>
+</div>
+<script>
+  function calculateSum() {
+    var x = parseInt(document.getElementById('field1').value);
+    var y = parseInt(document.getElementById('field2').value);
+    var result = document.getElementById('result');
+    console.log(x+y);
+    result.value = x + y;
+  }
+</script>
+</body>
+</html>

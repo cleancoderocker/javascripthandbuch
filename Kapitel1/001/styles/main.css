@@ -1,0 +1,12 @@
+.container {
+    display: table;
+}
+.row {
+    display: table-row;
+}
+label, input {
+    margin: 5px;
+}
+label, input, button {
+    display: table-cell;
+}

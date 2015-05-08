@@ -1,0 +1,9 @@
+var request = new XMLHttpRequest();                         // Erstellen des XMLHttpRequest-Objekts
+request.onload = function () {                              // Wenn Ergebnis geladen wurde ...
+  if (request.status === 200) {                             // ... und die Anfrage erfolgreich war ...
+    var snippet = request.responseText;                     // ... soll der Textinhalt ...
+    document.getElementById('result').innerHTML = snippet;  // ... dem DOM hinzugefügt werden.
+  }
+};
+request.open('GET', 'content/snippet.html', true);          // Konfiguration der Anfrage
+request.send(null);                                         // Absenden der Anfrage
