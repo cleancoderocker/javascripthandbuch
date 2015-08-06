@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+.bold {
+    font-weight: bold;
+}
+#battery-status {
+    height: 100%;
+    width: 100%;
+}
+#battery-status table {
+    text-align: left;
+}

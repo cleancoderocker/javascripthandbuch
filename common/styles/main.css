@@ -1,0 +1,24 @@
+/* Kapitel 3 */
+#for-loop-grades #grade {
+  margin-left: 20px; }
+
+#while-loop div {
+  min-height: 80px;
+  float: left;
+  padding: 5px; }
+#while-loop ul {
+  list-style: none;
+  border: thin solid #CCCCCC;
+  min-height: 80px;
+  width: 200px;
+  float: left;
+  padding: 5px;
+  margin: 5px; }
+
+/* Kapitel 12 */
+#camera canvas, #camera video {
+  border: thin solid #CCCCCC; }
+
+body {
+  font-family: sans-serif;
+  font-size: 0.8rem; }
