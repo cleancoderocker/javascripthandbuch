@@ -1,0 +1,10 @@
+{
+  "name": "socket-example",
+  "version": "0.0.1",
+  "description": "Beispiel für eine Socket-Anwendung",
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6",
+    "socket.io-client": "^1.3.6"
+  }
+}
