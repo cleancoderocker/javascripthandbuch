@@ -13,3 +13,4 @@ function init() {
     // elements[i].attachEvent('click', handler);  // IE<9 immer Bubbling-Phase
   }
 }
+document.addEventListener('DOMContentLoaded', init);

@@ -1,32 +1,32 @@
 function init() {
 
-  var albums = [
+  let albums = [
     {
-      title: "Push the Sky Away",
-      artist: "Nick Cave",
+      title: 'Push the Sky Away',
+      artist: 'Nick Cave',
       year: 2013
     },
     {
-      title: "No more shall we part",
-      artist: "Nick Cave",
+      title: 'No more shall we part',
+      artist: 'Nick Cave',
       year: 2001
     },
     {
-      title: "Live from Mars",
-      artist: "Ben Harper",
+      title: 'Live from Mars',
+      artist: 'Ben Harper',
       year: 2003
     },
     {
-      title: "The Will to Live",
-      artist: "Ben Harper",
+      title: 'The Will to Live',
+      artist: 'Ben Harper',
       year: 1997
     }
   ];
 
 
   (function() {
-    var before2000 = [];
-    for(var i=0, l=albums.length; i<l; i++) {   // Für alle Alben:
+    let before2000 = [];
+    for(let i=0, l=albums.length; i<l; i++) {   // Für alle Alben:
       if(albums[i].year < 2000) {               // Prüfe, ob vor 2000 veröffentlicht.
         before2000.push(albums[i]);             // Falls ja, in Ergebnis übernehmen.
       }
@@ -35,7 +35,7 @@ function init() {
   })();
 
   (function() {
-    var before2000 = albums.filter(  // Die filter()-Methode erwartet ...
+    let before2000 = albums.filter(  // Die filter()-Methode erwartet ...
       function(                      // ... eine Callback-Funktion.  
         album,                       // (1) Das jeweilige Element.
         index,                       // (2) Der Index des Elements im Array.

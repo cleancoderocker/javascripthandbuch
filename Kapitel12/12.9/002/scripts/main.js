@@ -1,14 +1,15 @@
-(function () {
-  if (!!window.Worker) {
-    for(var i=0; i<10; i++) {
-      var worker = new Worker("scripts/worker.js");
-      worker.id = i;
-      var message = 'Hallo Worker';
-      console.log('Hauptthread: Sende Nachricht: ' + message);
-      worker.postMessage(message);
-      worker.onmessage = function (event) {
-        console.log('Hauptthread: Antwort von Worker erhalten: ' + event.data);
-      }
-    }
-  }
-})();
+'use strict';
+function init() {
+  document.getElementById('message').addEventListener('click', sendMessage);
+}
+function sendMessage() {
+  let worker = new SharedWorker("scripts/worker.js");
+  let message = 'Hallo Worker';
+  console.log('Hauptthread: Sende Nachricht: ' + message);
+  worker.port.addEventListener('message', (event) => {
+    console.log('Hauptthread: Antwort von Worker erhalten: ' + event.data);
+  });
+  worker.port.start();
+  worker.port.postMessage(message);
+}
+document.addEventListener('DOMContentLoaded', init)

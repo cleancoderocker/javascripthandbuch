@@ -1,23 +1,47 @@
-var idbFactory = window.indexedDB;
-var request = idbFactory.open('TestDatabase5', 9);
-request.onerror = function (event) {
-  var error = event.target.error;
+let idbFactory = window.indexedDB;
+let request = idbFactory.open(
+  'TestDatabaseCursor',
+  1
+);
+let books = [
+  {
+    'isbn': '978-3836217408',
+    'title': 'Schrödinger programmiert Java',
+    'author': 'Philip Ackermann'
+  },
+  {
+    'isbn': '978-3836223799',
+    'title': 'Professionell entwickeln mit JavaScript',
+    'author': 'Philip Ackermann'
+  }
+]
+request.onerror = (event) => {
+  let error = event.target.error;
   console.error(error.message);
 };
-request.onsuccess = function (event) {
-  var database = event.target.result;
-  var transaction = database.transaction('Books');
-  var objectStore = transaction.objectStore('Books');
+request.onsuccess = (event) => {
+  let database = event.target.result;
+  let transaction = database.transaction('Books');
+  let objectStore = transaction.objectStore('Books');
   var request = objectStore.openCursor();
-  request.onerror = function(event) {
-    console.error(event.target.error.message);
-  };
-  request.onsuccess = function(event) {
-    var cursor = event.target.result;
+  let books = [];
+  request.onsuccess = (event) => {
+    let cursor = event.target.result;
     if (cursor) {
       console.log(cursor.key);
       console.log(cursor.value);
+      books.push(cursor.value);
       cursor.continue();
+    } else {
+      console.log(books);
     }
   };
 };
+request.onupgradeneeded = (event) => {
+  let database = event.target.result;
+  let objectStore = database.createObjectStore('Books', { keyPath: 'isbn' });
+  books.forEach((book) => {
+    objectStore.add(book);
+  });
+}
+

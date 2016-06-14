@@ -1,5 +1,5 @@
-document.cookie = 'username=Max Mustermann';
-document.cookie = 'shoppingCartItemIDs=22345,23445,65464,74747,46646; expires=Fri, 5 Aug 2020 20:44:00 UTC; path=/';
+createCookie('username', 'Max Mustermann', 7);
+createCookie('shoppingCartItemIDs', '22345,23445,65464,74747,46646', 7);
 
 console.log(document.cookie);
 console.log(readCookie('shoppingCartItemIDs'));

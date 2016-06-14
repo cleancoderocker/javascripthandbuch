@@ -9,7 +9,20 @@ function getPosition() {
     document.getElementById('timestamp').value = position.timestamp;
   }
   function errorHandler(error) {
-    // Nutzer verweigert Positionsermittlung
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        alert('Geolokalisierung durch Nutzer nicht erlaubt.');
+        break;
+      case error.POSITION_UNAVAILABLE:
+        alert('Jeine Lokalisierunginformationen verfügbar.');
+        break;
+      case error.TIMEOUT:
+        alert('Timeout für die Lokalisierungsanfrage wurde überschritten.');
+        break;
+      default:
+        alert('Unbekannter Fehler (#' + error.code + ': ' + error.message + ')');
+        break;
+    }
   }
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(successHandler, errorHandler);

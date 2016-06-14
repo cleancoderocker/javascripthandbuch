@@ -9,7 +9,7 @@ function checkAgeNotNegative() {
 function checkAgeIsNumber() {
   var element = document.getElementById('age');         // Eingabefeld Alter
   var age = element.value;                              // Aktueller Wert Alter
-  if(!(!isNaN(parseFloat(age)) && isFinite(age))) {     // Falls Wert ist Zahl ...
+  if(!(!isNaN(parseFloat(age)) && isFinite(age))) {     // Falls Wert Zahl ist ...
     showMessage('Alter muss Zahl sein.');               // ... gebe Meldung aus.
   }
 }

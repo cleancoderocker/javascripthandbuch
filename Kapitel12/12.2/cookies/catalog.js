@@ -1,6 +1,6 @@
 var catalog = {
   22345: {
-    name: 'Gurkenglas (500 ml)',
+    name: 'Gurken im Glas (500 ml)',
     price: '2.50'
   },
   23445: {

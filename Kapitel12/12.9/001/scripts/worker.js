@@ -1,6 +1,7 @@
-onmessage = function(event) {
+'use strict';
+self.addEventListener('message', (event) => {
   console.log('Worker: Nachricht erhalten: ' + event.data);
-  var workerResult = 'Hallo Hauptthread';
+  let workerResult = 'Hallo Hauptthread';
   console.log('Worker: Sende Antwort zurück: ' + workerResult);
-  postMessage(workerResult);
-}
+  self.postMessage(workerResult);
+});

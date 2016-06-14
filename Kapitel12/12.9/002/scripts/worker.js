@@ -1,6 +1,11 @@
-onmessage = function(event) {
-  console.log('Worker' + self.id + ' : Nachricht erhalten: ' + event.data);
-  var workerResult = 'Hallo Hauptthread';
-  console.log('Worker: Sende Antwort zurück: ' + workerResult);
-  postMessage(workerResult);
-}
+'use strict';
+let randomNumber = Math.random();
+self.addEventListener('connect', (event) => {
+  let port = event.ports[0];
+  port.addEventListener('message', (event) => {
+    console.log('Worker: Nachricht erhalten: ' + event.data);
+    console.log('Worker: Sende Antwort zurück: ' + randomNumber);
+    port.postMessage(randomNumber);
+  });
+  port.start();
+});

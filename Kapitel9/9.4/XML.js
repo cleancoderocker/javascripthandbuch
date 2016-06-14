@@ -1,9 +1,10 @@
-var request = new XMLHttpRequest();                     // Erstellen des XMLHttpRequest-Objekts
-request.onload = function () {                          // Wenn Ergebnis geladen wurde ...
-  if (request.status === 200) {                         // ... und die Anfrage erfolgreich war ...
-    var data = request.responseXML;
-    var entries = data.getElementsByTagName('entry');
-    for (var i = 0; i < entries.length; i++) {
+'use strict';
+let request = new XMLHttpRequest();                          // Erstellen des XMLHttpRequest-Objekts
+request.onreadystatechange = () => {                         // Wenn Ergebnis geladen wurde ...
+  if (request.readyState === 4 && request.status === 200) {  // ... und die Anfrage erfolgreich war ...
+    let data = request.responseXML;
+    let entries = data.getElementsByTagName('entry');
+    for (let i = 0; i < entries.length; i++) {
       /* XML einbauen */
     }
   }

@@ -1,9 +1,9 @@
-var idbFactory = window.indexedDB;
-var request = idbFactory.open(
+let idbFactory = window.indexedDB;
+let request = idbFactory.open(
   'TestDatabaseIndex',
   1
 );
-var books = [
+let books = [
   {
     'isbn': '978-3836217408',
     'title': 'Schrödinger programmiert Java',
@@ -16,39 +16,47 @@ var books = [
   }
 ]
 request.onerror = function (event) {
-  var error = event.target.error;
+  let error = event.target.error;
   console.error(error.message);
 };
 request.onsuccess = function (event) {
-  var database = event.target.result;
-  var transaction = database.transaction('Books');
-  var objectStore = transaction.objectStore('Books');
-  var index = objectStore.index('author');
+  let database = event.target.result;
+  let transaction = database.transaction('Books');
+  let objectStore = transaction.objectStore('Books');
+  let index = objectStore.index('author');
   index.get('Philip Ackermann').onsuccess = function(event) {
     console.log(event.target.result);
   };
 
+  let books = [];
   index.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    let cursor = event.target.result;
     if (cursor) {
       console.log(cursor.key);
       console.log(cursor.value);
+      books.push(cursor.value);
       cursor.continue();
+    } else {
+      console.log(books);
     }
   };
 
+  let keys = [];
   index.openKeyCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    let cursor = event.target.result;
     if (cursor) {
       console.log(cursor.key);
       console.log(cursor.primaryKey);
+      keys.push(cursor.primaryKey);
       cursor.continue();
+    } else {
+      console.log(keys);
     }
   };
 };
 request.onupgradeneeded = function (event) {
-  var database = event.target.result;
-  var objectStore = database.createObjectStore('Books', { keyPath: 'isbn' });
+  let database = event.target.result;
+  let objectStore = database.createObjectStore('Books', { keyPath: 'isbn' });
   objectStore.createIndex('author', 'author', { unique: false });
   books.forEach(function(book) {
     objectStore.add(book);

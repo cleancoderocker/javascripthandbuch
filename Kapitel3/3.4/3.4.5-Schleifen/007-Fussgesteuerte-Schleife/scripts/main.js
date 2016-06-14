@@ -1,7 +1,7 @@
 (function () {
-  var i = 0;
+  var i = 1;
   do {
     console.log(i);
     i++;
-  } while (i < 10)
+  } while (i < 11)
 })();

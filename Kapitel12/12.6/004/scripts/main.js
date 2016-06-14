@@ -53,3 +53,4 @@ function handleFileSelect(event) {
 }
 
 document.getElementById('files').addEventListener('change', handleFileSelect, false);
+document.getElementById('abort-file-reading').addEventListener('click', abortRead, false);
