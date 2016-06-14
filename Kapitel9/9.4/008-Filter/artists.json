@@ -1,0 +1,22 @@
+{
+  "artists": [
+    {
+      "name": "Nick Cave",
+      "albums": [
+        {
+          "title": "Tests",
+          "year": 2000
+        }
+      ]
+    },
+    {
+      "name": "Ben Harper",
+      "albums": [
+        {
+          "title": "Tests",
+          "year": 2000
+        }
+      ]
+    }
+  ]
+}

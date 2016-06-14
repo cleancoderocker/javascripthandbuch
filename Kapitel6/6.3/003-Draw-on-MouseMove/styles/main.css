@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+#container {
+    position: relative;
+}
+
+#canvas {
+    border: thin solid black;
+}
