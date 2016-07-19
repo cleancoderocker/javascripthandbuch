@@ -1,9 +1,0 @@
-{
-  "name": "Professionell entwickeln mit JavaScript",
-  "price": 34.9,
-  "author": {
-    "firstName": "Philip",
-    "lastName": "Ackermann"
-  },
-  "isbn": "978-3836223799"
-}

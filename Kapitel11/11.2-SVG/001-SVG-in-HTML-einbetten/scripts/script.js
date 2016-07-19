@@ -28,4 +28,4 @@ function moveCircle(value, direction) {
   circle.setAttribute('c' + direction, value);
 }
 
-window.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', init);

@@ -36,4 +36,4 @@ function redraw() {
   context.restore();                // (4) Zustand laden
   window.requestAnimationFrame(redraw);
 }
-window.addEventListener('DOMContentLoaded', draw);
+document.addEventListener('DOMContentLoaded', draw);
