@@ -1,0 +1,18 @@
+#content {
+    height: 2000px;
+    border: thin solid black;
+    padding-left: 20px;
+    padding-top: 150px;
+    font-size: 22pt;
+}
+.hide {
+    opacity: 0;
+}
+.show {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
