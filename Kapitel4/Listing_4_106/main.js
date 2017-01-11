@@ -5,5 +5,5 @@ let result = regExp.exec(text)
 console.log(
   'Nummer ' + result[0]
   + ' gefunden an Index ' + result.index
-  + '. '
+  + '.'
 );

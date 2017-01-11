@@ -4,11 +4,11 @@ console.log('Vor der Schleife.');
 let i = -1;                                   // Zählervariable initialisieren
 while(i < numbers.length) {                   // Iteriere über das Zahlenarray.
   i++;                                        // Erhöhe die Zählervariable.
-  let number = numbers[i];                    // jeweilige Zahl zuweisen
+  let number = numbers[i];                    // Jeweilige Zahl zuweisen.
   if (number % 2 === 1) {                     // Wenn eine Zahl ungerade ist ...
     console.log('Ungerade Zahl gefunden.');   // ... gebe Meldung aus ...
     continue;                                 // ... und breche die Schleifeniteration
                                               // ab.
   }                                           // Ansonsten ...
-  console.log(number);                        // ... gebe die Zahl aus und ...
+  console.log(number);                        // ... gebe die Zahl aus.
 }

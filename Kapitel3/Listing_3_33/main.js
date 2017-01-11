@@ -4,7 +4,7 @@ let dog = {
 }
 let person = {
   firstName: 'Max',
-  lastName: 'Mustermann'
+  lastName: 'Mustermann',
   pet: dog
 }
 console.log(person.pet); // Ausgabe: Object {name: "Bello"}

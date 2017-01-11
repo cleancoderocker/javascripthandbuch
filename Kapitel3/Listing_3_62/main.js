@@ -1,6 +1,6 @@
 'use strict';
 switch(expression) {
-  case value:
+  case value1:
 // Anweisungen
     break;
   case value2:

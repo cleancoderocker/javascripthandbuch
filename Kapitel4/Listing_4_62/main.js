@@ -1,7 +1,7 @@
 'use strict';
 let contacts = [
   {
-    firstName: 'Max ',
+    firstName: 'Max',
     lastName: 'Mustermann',
     email: 'max.mustermann@javascripthandbuch.de'
   },

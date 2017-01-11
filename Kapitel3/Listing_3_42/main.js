@@ -15,5 +15,5 @@ let BYTE_B = 0b01000001; // Binärwert 01000001, Dezimalwert 65
 let BYTE_C = BYTE_A & BYTE_B; // Binärwert 00000001, Dezimalwert 1
 // Bitweises ODER
 let BYTE_D = BYTE_A | BYTE_B; // Binärwert 01000001, Dezimalwert 65
-// Bitweise exklusives ODER
+// Bitweises exklusives ODER
 let BYTE_E = BYTE_A ^ BYTE_B; // Binärwert 01000000, Dezimalwert 64

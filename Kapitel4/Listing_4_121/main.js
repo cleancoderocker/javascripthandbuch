@@ -8,6 +8,6 @@ function sayHello() {
     }
   }
 }
-console.log(sayHello());      // Aufruf der »äußeren« Funktion
-console.log(sayHello()());    // Aufruf der »äußeren« und der »mittleren« Funktion
-console.log(sayHello()()());  // Aufruf aller Funktionen
+sayHello();      // Aufruf der »äußeren« Funktion
+sayHello()();    // Aufruf der »äußeren« und der »mittleren« Funktion
+sayHello()()();  // Aufruf aller Funktionen

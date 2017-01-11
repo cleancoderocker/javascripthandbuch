@@ -11,7 +11,7 @@ Object.seal(max);                       // Objekt versiegeln
 console.log(Object.isExtensible(max));  // false
 console.log(Object.isSealed(max));      // true
 max.firstName = 'Moritz';               // Erlaubt: bestehende Eigenschaft ändern
-console.log(max.firstName);             // "Max"
+console.log(max.firstName);             // "Moritz"
 console.log(Object.getOwnPropertyDescriptor(max, 'firstName').enumerable); // true
 Object.defineProperty(max, 'firstName', { // Uncaught TypeError: Cannot redefine
 // property: firstName

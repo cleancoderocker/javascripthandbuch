@@ -19,10 +19,12 @@ let item = {
 }
 // Dateneigenschaft
 item.isbn = '978-3836217408';
+console.log(item.isbn);
+
+// Möglich, aber nicht erwünscht, da der Zugriff über set und get erfolgen soll.
 item._name = 'Schrödinger programmiert Java';
 console.log(item._name);
+
 // Zugriffseigenschaft
 item.name = 'Schrödinger programmiert Java - Das etwas andere Fachbuch';
-// Zugriff ist in allen Fällen gleich
-console.log(item.isbn);
 console.log(item.name);

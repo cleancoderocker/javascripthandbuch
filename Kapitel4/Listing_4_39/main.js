@@ -9,7 +9,7 @@ console.log(max.age);                   // 44
 Object.preventExtensions(max);          // Erweiterungen verhindern
 console.log(Object.isExtensible(max));  // false
 max.firstName = 'Moritz';               // Erlaubt: bestehende Eigenschaft ändern
-console.log(max.firstName);             // "Max"
+console.log(max.firstName);             // "Moritz"
 console.log(Object.getOwnPropertyDescriptor(max, 'firstName').enumerable); // true
 Object.defineProperty(max, 'firstName', { // Erlaubt: Eigenschaftsattribute ändern
   enumerable: false

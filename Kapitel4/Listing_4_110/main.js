@@ -4,6 +4,6 @@ let string = 'Eine Telefonnummer: 49 30 1234567, und noch eine: 49 30 1234568';
 let result = string.match(regExp);
 console.log(result[0]);             // 49 30 1234567
 console.log(result[1]);             // 49 30 1234567
-var result2 = regExp.exec(string);
+let result2 = regExp.exec(string);
 console.log(result2[0]);            // 49 30 1234567
 console.log(result2[1]);            // undefined
