@@ -1,3 +1,4 @@
+'use strict';
 function draw() {
   let canvas = document.getElementById('canvas');
   if (canvas.getContext){
@@ -6,7 +7,7 @@ function draw() {
       0,                                                // x-Koordinate Startpunkt
       0,                                                // y-Koordinate Startpunkt
       0,                                                // x-Koordinate Endpunkt
-      150                                               // y-Koordinate Startpunkt
+      150                                               // y-Koordinate Endpunkt
     );
     gradient.addColorStop(0, '#FF0000');                // Erster Farbwert
     gradient.addColorStop(0.5, '#00FF00');              // Zweiter Farbwert

@@ -1,5 +1,5 @@
 createCookie('username', 'Max Mustermann', 7);
-createCookie('shoppingCartItemIDs', '22345,23445,65464,74747,46646', 7);
+createCookie('shoppingCartItemIDs', 'id22345,id23445,id65464,id74747,id46646', 7);
 
 console.log(document.cookie);
 console.log(readCookie('shoppingCartItemIDs'));

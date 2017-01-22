@@ -1,17 +1,17 @@
 let contacts = [
   {
     firstName: 'Max ',
-    lastName: ' Mustermann',
+    lastName: 'Mustermann',
     email: 'max.mustermann@javascripthandbuch.de'
   },
   {
     firstName: 'Moritz',
-    lastName: ' Mustermann',
+    lastName: 'Mustermann',
     email: 'moritz.mustermann@javascripthandbuch.de'
   },
   {
     firstName: 'Peter ',
-    lastName: ' Mustermann',
+    lastName: 'Mustermann',
     email: 'peter.mustermann@javascripthandbuch.de'
   }
 ];

@@ -14,7 +14,7 @@ function init() {
     );
     let objectStore = transaction.objectStore('Books');  // Öffnen des Objektspeichers
     let request = objectStore.clear();                   // Löschvorgang
-    request.onerror = function(event) {                  // Event-Handler für Normalfall
+    request.onerror = function(event) {                  // Event-Handler für Fehlerfall
       console.error(event.target.error.message);         // Ausgabe der Fehlermeldung
     };
     request.onsuccess = function(event) {                // Event-Handler für Normalfall

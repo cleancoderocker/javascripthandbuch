@@ -1,5 +1,5 @@
-function handler(e) {
-  let e = e || window.event;                              // Event holen
+function handler(ev) {
+  let e = ev || window.event;                             // Event holen
   let target = e.target || e.srcElement;                  // Zielelement
   this.classList.toggle('selected');                      // CSS-Klasse
   console.log(                                            // Ausgabe geklicktes ...

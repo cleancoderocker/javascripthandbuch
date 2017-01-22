@@ -1,5 +1,5 @@
-function handler(e) {
-  let e = e || window.event;
+function handler(ev) {
+  let e = ev || window.event;
   let target = e.target || e.srcElement;
   this.classList.toggle('selected');
   console.log(

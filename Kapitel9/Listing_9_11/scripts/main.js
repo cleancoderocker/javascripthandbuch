@@ -1,4 +1,3 @@
-'use strict';
 function init() {
   // Script für ältere Browser, daher auch das var-Schlüsselwort
   var request = new XMLHttpRequest();

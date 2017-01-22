@@ -13,7 +13,7 @@ function init() {
     return false;
   });
   target.addEventListener('dragenter', function(event) {
-    event.target.classList.add("dragover");
+    event.target.classList.add('dragover');
   });
   function onLeave(event) {
     event.target.classList.remove("dragover");

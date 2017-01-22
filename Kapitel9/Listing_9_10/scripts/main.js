@@ -1,4 +1,3 @@
-'use strict';
 function init() {
   var createFunctions = [
     function () {return new XMLHttpRequest()},

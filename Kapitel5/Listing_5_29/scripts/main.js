@@ -1,17 +1,17 @@
 let contacts = [
   {
     firstName: 'Max ',
-    lastName: ' Mustermann',
+    lastName: 'Mustermann',
     email: 'max.mustermann@javascripthandbuch.de'
   },
   {
     firstName: 'Moritz',
-    lastName: ' Mustermann',
+    lastName: 'Mustermann',
     email: 'moritz.mustermann@javascripthandbuch.de'
   },
   {
     firstName: 'Peter ',
-    lastName: ' Mustermann',
+    lastName: 'Mustermann',
     email: 'peter.mustermann@javascripthandbuch.de'
   }
 ];
@@ -62,7 +62,7 @@ function sortByFirstName() {
     tableBody.removeChild(tableBody.firstChild);
   }
   contacts.sort(function(contact1, contact2) {
-    return contact1.firstName.localeCompare(contact2);
+    return contact1.firstName.localeCompare(contact2.firstName);
   })
   createTable();
 }

@@ -45,7 +45,7 @@ function init() {
       }
     ];
 
-    for(let i= 0; i<artists.length; i++) {
+    for(let i=0; i<artists.length; i++) {
       console.log(artists[i].name);
     }
 

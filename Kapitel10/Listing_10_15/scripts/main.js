@@ -17,7 +17,7 @@ $(document).ready(() => {
   // Auswahl aller nächsten Geschwisterelemente bis zu bestimmtem Element
   let nextSiblingsUntil = $('div').nextUntil('a');
   // Auswahl des vorigen Geschwisterelements
-  let previousSibling = $('ul').next();
+  let previousSibling = $('ul').prev();
   // Auswahl aller vorigen Geschwisterelemente
   let previousSiblings = $('ul').prevAll();
   // Auswahl aller vorigen Geschwisterelemente bis zu bestimmtem Element

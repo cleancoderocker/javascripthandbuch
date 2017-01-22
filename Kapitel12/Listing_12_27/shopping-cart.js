@@ -1,5 +1,5 @@
 localStorage.setItem('username', 'Max Mustermann');
-localStorage.setItem('shoppingCartItemIDs', JSON.stringify([22345,23445,65464,74747,46646]));
+localStorage.setItem('shoppingCartItemIDs', JSON.stringify(['id22345','id23445','id65464','id74747','id46646']));
 
 showUsername();
 showShoppingCart();

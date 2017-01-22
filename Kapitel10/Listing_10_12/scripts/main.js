@@ -8,7 +8,7 @@ $(document).ready(() => {
   $('li').filter('.selected');
   // Auswahl aller <li>-Elemente, die ein <ul>-Element enthalten
   $('li').has('ul');
-  // Auswahl aller <Elemente, welche die CSS-Klasse ".selected" haben
+  // Auswahl aller Elemente, welche die CSS-Klasse ".selected" haben
   $('li').has('.selected');
   // Auswahl des letzten <li>-Elements
   $('li').last();

@@ -12,7 +12,7 @@ function init() {
         output += '<li>' +                                                // ... und Ergebnis-HTML zusammebauen, bestehend aus:
         '<strong>' + file.name + '</strong>' +                            // Dateiname
         ' (' + (file.type || "n/a") + ') - ' +                            // Dateityp
-        file.size + 'bytes, ' +                                           // Dateigröße
+        file.size + ' Bytes, ' +                                          // Dateigröße
         ' geändert am: ' +                                                // Änderungsdatum
         file.lastModifiedDate.toLocaleDateString() +
         '</li>';
