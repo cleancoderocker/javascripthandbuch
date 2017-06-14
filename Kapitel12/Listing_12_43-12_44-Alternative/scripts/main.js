@@ -13,18 +13,19 @@ function init() {
     return false;
   });
   target.addEventListener('dragenter', function(event) {
-	let targetElement = event.target || event.srcElement;
-	targetElement.classList.add('dragover');
+    event.target.classList.add('dragover');
   });
   function onLeave(event) {
-	let targetElement = event.target || event.srcElement;
-	targetElement.classList.remove("dragover");
+    event.target.classList.remove("dragover");
   }
   target.addEventListener('dragleave', onLeave);
   target.addEventListener('drop', function(event) {
-	let targetElement = event.target || event.srcElement;
-	if(targetElement.id === 'target') {
-	  targetElement.innerHTML += event.dataTransfer.getData('text/html');
+    if(event.target.id === 'target') {                                        // Stellt sicher, dass das Ziel auch wirklich das gedachte Ziel ist
+      event.srcElement.innerHTML += event.dataTransfer.getData('text/html');
+	  event.srcElement.addEventListener('dragstart', function(event) {
+		console.log('drag')
+		console.log(event.srcElement.parentNode)
+	  });
     }
     onLeave(event);
   })
