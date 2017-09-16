@@ -13,7 +13,7 @@ function init() {
       'readwrite'                                        // Schreibender Zugriff
     );
     let objectStore = transaction.objectStore('Books');  // Öffnen des Objektspeichers
-    let request = objectStore.get('978-3836217408');     // Lesen des Objekts
+    let request = objectStore.get('978-3836245838');     // Lesen des Objekts
     request.onerror = function(event) {
       console.error(event.target.error.message);
     };

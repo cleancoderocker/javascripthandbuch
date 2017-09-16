@@ -7,7 +7,7 @@ function init() {
   );
   let books = [
     {
-      'isbn': '978-3836217408',
+      'isbn': '978-3836245838',
       'title': 'Schrödinger programmiert Java',
       'author': 'Philip Ackermann'
     },

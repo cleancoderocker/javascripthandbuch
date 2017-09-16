@@ -10,7 +10,7 @@ Object.defineProperty(item, 'author', {
   value: 'Philip Ackermann'
 });
 Object.defineProperty(item, 'isbn', {
-  value: '978-3836217408'
+  value: '978-3836245838'
 });
 Object.defineProperty(item, 'printDescription', {
   value: function() {
@@ -20,4 +20,4 @@ Object.defineProperty(item, 'printDescription', {
 console.log(item.name);   // "Schrödinger programmiert Java"
 console.log(item.price);  // 44.9
 console.log(item.author); // "Philip Ackermann"
-console.log(item.isbn);   // "978-3836217408"
+console.log(item.isbn);   // "978-3836245838"

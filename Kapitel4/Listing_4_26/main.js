@@ -18,7 +18,7 @@ let item = {
   /* Analog für die anderen Eigenschaften. */
 }
 // Dateneigenschaft
-item.isbn = '978-3836217408';
+item.isbn = '978-3836245838';
 console.log(item.isbn);
 
 // Möglich, aber nicht erwünscht, da der Zugriff über set und get erfolgen soll.

@@ -13,7 +13,7 @@ function init() {
       'readwrite'                                        // Schreibender Zugriff
     );
     let objectStore = transaction.objectStore('Books');  // Öffnen des Objektspeichers
-    let request = objectStore.delete('978-3836217408');  // Löschvorgang
+    let request = objectStore.delete('978-3836245838');  // Löschvorgang
     request.onerror = function(event) {                  // Event-Handler für Fehlerfall
       console.error(event.target.error.message);         // Ausgabe der Fehlermeldung
     };

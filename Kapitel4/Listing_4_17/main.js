@@ -19,7 +19,7 @@ let item = Object.create(Object.prototype, {
     enumerable: true
   },
   isbn: {
-    value: '978-3836217408',
+    value: '978-3836245838',
     writable: false,
     configurable: true,
     enumerable: false // Die Eigenschaft "isbn" wird bei Iteration
