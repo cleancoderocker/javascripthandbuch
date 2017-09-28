@@ -14,7 +14,8 @@ let item = Object.create(Object.prototype, {
         return this._name;
     }
     /* Analog für die anderen Eigenschaften. */
-  });
+  }
+});
 // "Neuen Namen setzen"
 item.name = 'Schrödinger programmiert Java - Das etwas andere Fachbuch';
 // "Namen zurückgeben"
