@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Beispiel HTML</title>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<body ng-app="exampleApp" ng-controller="mainController">
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search artist" ng-model="searchArtist">
+      </div>
+    </div>
+  </form>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>
+          <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+            Artist
+            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortType = 'album'; sortReverse = !sortReverse">
+            Album
+            <span ng-show="sortType == 'album' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'album' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortType = 'releaseDate'; sortReverse = !sortReverse">
+            Release Date
+            <span ng-show="sortType == 'releaseDate' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'releaseDate' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortType = 'genre'; sortReverse = !sortReverse">
+            Genre
+            <span ng-show="sortType == 'genre' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'genre' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="artist in artists | orderBy:sortType:sortReverse | filter:searchArtist">
+        <td>{{artist.name}}</td>
+        <td>{{artist.album}}</td>
+        <td>{{artist.releaseDate}}</td>
+        <td>{{artist.genre}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
