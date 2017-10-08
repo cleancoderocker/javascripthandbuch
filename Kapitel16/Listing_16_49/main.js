@@ -1,7 +1,9 @@
 'use strict';
-let message = 'Sehr geehrter Herr Mustermann, \n\ngerne übersenden wir ' +
-  'Ihnen die geforderten Unterlagen zur Prüfung zurück. \n\n' +
-  'Mit freundlichen Grüßen, \nFrau Musterfrau, \nMusterfirma';
+let message = 'Sehr geehrter Herr Mustermann,
+gerne übersenden wir Ihnen die geforderten Unterlagen zur Prüfung zurück.
+  Mit freundlichen Grüßen,
+  Frau Musterfrau,
+  Musterfirma';
 console.log(message);
 // Ausgabe:
 //

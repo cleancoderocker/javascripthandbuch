@@ -1,24 +1,21 @@
 'use strict';
-let persons = [
-  {
-    firstName: 'Max',
-    lastName: 'Mustermann',
-    contact: {
-      email: 'max.mustermann@javascripthandbuch.de',
-      phone: '02345/23456789'
-    }
-  },
-  {
-    firstName: 'Maxi',
-    lastName: 'Musterfrau',
-    contact: {
-      email: 'maxi.musterfrau@javascripthandbuch.de',
-      phone: '02345/23456789'
-    }
+let person = {
+  firstName : 'Max',
+  lastName : 'Mustermann',
+  address : {
+    postCode : '23456',
+    street : 'Musterstraße 22'
   }
-];
-for (let {firstName:f, lastName:l, contact:{email:e, phone:p}} of persons) {
-  console.log(f + ' ' + l);
-  console.log('E-Mail: ' + e);
-  console.log('Telefon: ' + p);
 }
+let {
+  firstName : firstNameExtracted,
+  lastName : lastNameExtracted,
+  address : {
+    postCode : postCodeExtracted,
+    street : streetExtracted
+    }
+  } = person;
+console.log(firstNameExtracted);  // "Max"
+console.log(lastNameExtracted);   // "Mustermann"
+console.log(postCodeExtracted);   // "23456"
+console.log(streetExtracted);     // "Musterstraße 22"

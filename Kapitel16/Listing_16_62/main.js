@@ -1,12 +1,17 @@
 'use strict';
-let bestOfStonerrock = [];
+let bestOfStonerrock = [
+  'Kyuss',
+  'Spiritual Beggars',
+  'Spice and the RJ Band',
+  'Band of Spice'
+];
 let [
-  one = 'Kyuss',
-  two = 'Kyuss',
-  three = 'Kyuss',
-  four = 'Kyuss'
+  one,
+  two,
+  three,
+  four
   ] = bestOfStonerrock;
-console.log(one); // "Kyuss";
-console.log(two); // "Kyuss";
-console.log(three); // "Kyuss";
-console.log(four); // "Kyuss";
+console.log(one);     // "Kyuss"
+console.log(two);     // "Spiritual Beggars"
+console.log(three);   // "Spice and the RJ Band"
+console.log(four);    // "Band of Spice"

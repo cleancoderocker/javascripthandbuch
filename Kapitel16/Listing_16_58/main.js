@@ -1,17 +1,14 @@
 'use strict';
-let bestOfStonerrock = [
-  'Kyuss',
-  'Spiritual Beggars',
-  'Spice and the RJ Band',
-  'Band of Spice'
-];
-let [
-  one,
-  two,
-  three,
-  four
-  ] = bestOfStonerrock;
-console.log(one);     // "Kyuss"
-console.log(two);     // "Spiritual Beggars"
-console.log(three);   // "Spice and the RJ Band"
-console.log(four);    // "Band of Spice"
+let firstName = Symbol('firstName');
+let lastName = Symbol('lastName');
+let person = {};
+person[firstName] = 'Max';
+person[lastName] = 'Mustermann';
+console.log(person[firstName]);     // "Max"
+console.log(person[lastName]);      // "Mustermann"
+console.log(person[0]);             // undefined
+console.log(person[1]);             // undefined
+console.log(person.firstName);      // undefined
+console.log(person.lastName);       // undefined
+console.log(person['firstName']);   // undefined
+console.log(person['lastName']);    // undefined
