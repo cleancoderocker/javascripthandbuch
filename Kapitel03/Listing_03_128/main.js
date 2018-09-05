@@ -1,5 +1,5 @@
 'use strict';
-let createUser => (username, email, password) =>
+let createUser = (username, email, password) =>
 (
 {
   username: username,
