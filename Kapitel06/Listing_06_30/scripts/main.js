@@ -18,3 +18,4 @@ function init() {
     elements[i].addEventListener('click', handler);
   }
 }
+document.addEventListener('DOMContentLoaded', init);
