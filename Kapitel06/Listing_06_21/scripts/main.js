@@ -5,7 +5,7 @@ function init() {
       // Unterstützt beispielsweise von Firefox und Internet Explorer
       console.log(event.key);
       switch (event.key) {
-        case 'ArrowTop':
+        case 'ArrowUp':
           moveUp();
           break;
         case 'ArrowLeft':
