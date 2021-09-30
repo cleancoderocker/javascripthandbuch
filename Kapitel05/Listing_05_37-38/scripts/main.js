@@ -1,5 +1,5 @@
 function init() {
-  let element = document.getElementById('home');
+  const element = document.getElementById('home');
   element.setAttribute('class', 'link active');
   element.setAttribute('href', 'newlink.html');
   element.setAttribute('target', '_blank');

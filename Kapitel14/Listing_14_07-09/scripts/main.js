@@ -1,6 +1,6 @@
 function init() {
 
-  let albums = [
+  const albums = [
     {
       title: 'Push the Sky Away',
       artist: 'Nick Cave',
@@ -25,7 +25,7 @@ function init() {
 
 
   (function() {
-    let before2000 = [];
+    const before2000 = [];
     for(let i=0, l=albums.length; i<l; i++) {   // Für alle Alben:
       if(albums[i].year < 2000) {               // Prüfe, ob vor 2000 veröffentlicht.
         before2000.push(albums[i]);             // Falls ja, in Ergebnis übernehmen.
@@ -35,7 +35,7 @@ function init() {
   })();
 
   (function() {
-    let before2000 = albums.filter(  // Die filter()-Methode erwartet ...
+    const before2000 = albums.filter(  // Die filter()-Methode erwartet ...
       function(                      // ... eine Callback-Funktion.  
         album,                       // (1) Das jeweilige Element.
         index,                       // (2) Der Index des Elements im Array.

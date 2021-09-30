@@ -2,33 +2,33 @@
 $(document).ready(() => {
   // Kindelemente
   // Auswahl aller Kindelemente von <ul>
-  let listItems = $('ul').children();
+  const listItems = $('ul').children();
   // Auswahl des nächsten Links innerhalb von <ul>
-  let closestLink = $('ul').closest('a');
+  const closestLink = $('ul').closest('a');
   // Geschwisterelemente
   // Auswahl des nächsten Geschwisterelements
-  let nextSibling = $('ul').next();
+  const nextSibling = $('ul').next();
   // Auswahl des nächsten Linkelements
-  let nextSiblingLink = $('ul').next('a');
+  const nextSiblingLink = $('ul').next('a');
   // Auswahl aller nächsten Geschwisterelemente
-  let nextSiblings = $('ul').nextAll();
+  const nextSiblings = $('ul').nextAll();
   // Auswahl aller nächsten Linkelemente
-  let nextSiblingLinks = $('div').nextAll('a');
+  const nextSiblingLinks = $('div').nextAll('a');
   // Auswahl aller nächsten Geschwisterelemente bis zu bestimmtem Element
-  let nextSiblingsUntil = $('div').nextUntil('a');
+  const nextSiblingsUntil = $('div').nextUntil('a');
   // Auswahl des vorherigen Geschwisterelements
-  let previousSibling = $('ul').prev();
+  const previousSibling = $('ul').prev();
   // Auswahl aller vorherigen Geschwisterelemente
-  let previousSiblings = $('ul').prevAll();
+  const previousSiblings = $('ul').prevAll();
   // Auswahl aller vorherigen Geschwisterelemente bis zu bestimmtem Element
-  let previousSiblingsUntil = $('div').prevUntil('a');  
+  const previousSiblingsUntil = $('div').prevUntil('a');  
   // Auswahl aller Geschwisterelemente
-  let siblings = $('div').siblings();
+  const siblings = $('div').siblings();
   // Elternelemente
   // Auswahl des Elternelements
-  let parent = $('ul').parent();
+  const parent = $('ul').parent();
   // Auswahl aller Vorfahrenelemente
-  let parents = $('ul').parents();
+  const parents = $('ul').parents();
   // Auswahl aller Vorfahrenelemente bis zu bestimmtem Element
-  let parentsUntil = $('ul').parentsUntil('div');
+  const parentsUntil = $('ul').parentsUntil('div');
 });

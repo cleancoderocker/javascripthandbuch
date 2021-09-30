@@ -1,8 +1,8 @@
 function draw() {
-  let canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext){
-    let context = canvas.getContext('2d');
-    let path = new Path2D();
+    const context = canvas.getContext('2d');
+    const path = new Path2D();
     path.moveTo(25,100);
     path.quadraticCurveTo(
       25,                   // Kontrollpunkt x-Koordinate

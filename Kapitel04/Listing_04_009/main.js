@@ -1,5 +1,5 @@
 'use strict';
-let item = new Item(
+const item = new Item(
   'Schrödinger programmiert Java',
   44.90,
   'Philip Ackermann',
@@ -10,7 +10,7 @@ console.log(item.price);    // 44.90
 console.log(item.author);   // "Philip Ackermann"
 console.log(item.isbn);     // "978-3-8362-7272-8"
 item.printDescription();    // "Philip Ackermann: Schrödinger programmiert Java"
-let item2 = new Item(
+const item2 = new Item(
   'Professionell entwickeln mit JavaScript: Design, Patterns, Praxistipps',
   49.90,
   'Philip Ackermann',

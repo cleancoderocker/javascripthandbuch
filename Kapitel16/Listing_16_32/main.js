@@ -14,7 +14,7 @@ function asyncFunction(callbackFunction) {
   return result;
 }
 try {
-  let result = asyncFunction();
+  const result = asyncFunction();
 } catch(error) {
   console.error(`Fehler: ${error}`); // Diese Stelle wird nicht aufgerufen!
 }

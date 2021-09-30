@@ -1,10 +1,10 @@
 'use strict';
-let one = 'Kyuss';
-let two = 'Spiritual Beggars';
-let three = 'Spice and the RJ Band';
-let four =  'Band of Spice';
-let five;
-let bestOfStonerrock = [
+const one = 'Kyuss';
+const two = 'Spiritual Beggars';
+const three = 'Spice and the RJ Band';
+const four =  'Band of Spice';
+const five;
+const bestOfStonerrock = [
   one,
   two,
   three,
@@ -16,7 +16,7 @@ let bestOfStonerrock = [
   three,
   four
   ] = bestOfStonerrock;
-let [
+const [
   one,
   two,
   three,

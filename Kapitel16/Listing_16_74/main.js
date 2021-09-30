@@ -1,5 +1,5 @@
 'use strict';
-let person = {
+const person = {
   firstName : 'Max',
   lastName : 'Mustermann',
   address : {
@@ -11,7 +11,7 @@ let person = {
     '02345/23456789'
   ]
 }
-let {
+const {
   firstName : firstNameExtracted,
   lastName : lastNameExtracted,
   address : {

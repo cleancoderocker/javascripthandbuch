@@ -1,5 +1,5 @@
 'use strict';
-let item = {
+const item = {
   isbn: '',
   _name: '',
   /* Hier die anderen Eigenschaften */

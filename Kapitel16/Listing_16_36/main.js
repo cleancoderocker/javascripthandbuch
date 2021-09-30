@@ -1,10 +1,10 @@
 'use strict';
 function asyncFunction() {
-  let promise = new Promise(
+  const promise = new Promise(
     function(resolve, reject) {
       setTimeout(
         () => {
-          let result = Math.floor(Math.random() * 100) + 1; // Zufallszahl
+          const result = Math.floor(Math.random() * 100) + 1; // Zufallszahl
           if(result >= 50) {
             resolve(result); // Ergebnis
           } else {

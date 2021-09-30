@@ -1,5 +1,5 @@
 'use strict';
-let createUser = (username, email, password) =>
+const createUser = (username, email, password) =>
 (
 {
   username: username,
@@ -9,7 +9,7 @@ let createUser = (username, email, password) =>
 );
 // ... ist das Gleiche wie ...
 function createUser(username, email, password) {
-  let user = {
+  const user = {
     username: username,
     email: email,
     password: password

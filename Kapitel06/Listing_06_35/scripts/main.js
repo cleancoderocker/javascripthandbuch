@@ -4,7 +4,7 @@ function handleLinkClicked(e) {
 }
 
 function init() {
-  let element = document.getElementById('link');
+  const element = document.getElementById('link');
   element.onclick = handleLinkClicked;
 }
 

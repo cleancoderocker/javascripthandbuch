@@ -1,5 +1,5 @@
 'use strict';
-let animal = {
+const animal = {
   name: '',
   color: 'Braun',
   age: 0,
@@ -10,15 +10,15 @@ let animal = {
     console.log('Mmmmmmh, ' + drink + '!');
   }
 }
-let cat = Object.create(animal);
+const cat = Object.create(animal);
 cat.meow = function() {
   console.log('Miauuuuuu!');
 }
-let dog = Object.create(animal);
+const dog = Object.create(animal);
 dog.bark = function() {
   console.log('Wuff wuff!');
 }
-let vegetarianDog = Object.create(dog);
+const vegetarianDog = Object.create(dog);
 vegetarianDog.eat = function(food) {
   if(food.indexOf('Fleisch') >= 0 || food.indexOf('fleisch') >= 0) {
     throw new Error('Ich esse doch kein Fleisch!');

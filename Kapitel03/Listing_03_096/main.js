@@ -1,6 +1,6 @@
 'use strict';
 function showMessage() {
   'use strict';
-  let message = 'Herzlich willkommen';
+  const message = 'Herzlich willkommen';
   console.log(message);
 }

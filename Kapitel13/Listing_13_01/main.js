@@ -1,5 +1,5 @@
 'use strict';
-let animal = {
+const animal = {
   name: '',
   color: 'Braun',
   age: 0,
@@ -10,5 +10,5 @@ let animal = {
     console.log('Mmmmmmh, ' + drink + '!');
   }
 }
-let cat = Object.create(animal);
-let dog = Object.create(animal);
+const cat = Object.create(animal);
+const dog = Object.create(animal);

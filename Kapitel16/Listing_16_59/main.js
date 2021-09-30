@@ -1,7 +1,7 @@
 'use strict';
-let firstName = 'firstName';
-let lastName = 'lastName';
-let person = {};
+const firstName = 'firstName';
+const lastName = 'lastName';
+const person = {};
 person[firstName] = 'Max';
 person[lastName] = 'Mustermann';
 console.log(person[firstName]);     // "Max"

@@ -1,5 +1,5 @@
 function init() {
-  let element = document.getElementById('home');
+  const element = document.getElementById('home');
   console.log(element.getAttribute('id'));    // home
   console.log(element.getAttribute('class')); // link
   console.log(element.getAttribute('href'));  // index.html
@@ -8,7 +8,7 @@ function init() {
   console.log(element.className); // link
   console.log(element.href);      // index.html
 
-  let button = document.getElementById('create');
+  const button = document.getElementById('create');
   console.log(button.onclick);                        // Ausgabe der Funktion
   console.log(typeof button.onclick);                 // Ausgabe: function
   console.log(button.getAttribute('onclick'));        // createContact()

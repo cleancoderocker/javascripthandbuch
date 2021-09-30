@@ -1,6 +1,6 @@
 'use strict';
 const events = require('events'); // events-Package einbinden
-let emitter = new events.EventEmitter(); // Emitter erstellen
+const emitter = new events.EventEmitter(); // Emitter erstellen
 emitter.once( // Event abfangen
   'personAdded', // Event-Name
   (firstName, lastName) => { // Callback-Funktion

@@ -4,7 +4,7 @@ const client = require('mongodb').MongoClient; // Client erstellen
 const url = 'mongodb://localhost:27017/exampleDB'; // URL zur Datenbank
 client.connect(url, (error, db) => { // Verbindung herstellen
   if (!error) { //
-    let collection = db.collection('persons'); // Collection finden
+    const collection = db.collection('persons'); // Collection finden
     collection.deleteMany( // Personen löschen ...
       { //
         lastName: // ... deren Nachname ...

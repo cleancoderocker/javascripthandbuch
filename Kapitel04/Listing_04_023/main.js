@@ -20,7 +20,7 @@ Item.prototype = {
   }
   /* Analog für die anderen Eigenschaften. */
 };
-let item = new Item(
+const item = new Item(
   'Schrödinger programmiert Java',
   44.90,
   'Philip Ackermann',

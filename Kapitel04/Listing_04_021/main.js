@@ -1,5 +1,5 @@
 'use strict';
-let person = {
+const person = {
   'first-name': 'Max',
   'last-name': 'Mustermann'
 }
@@ -8,15 +8,15 @@ let person = {
 console.log(person['first-name']);  // "Max"
 console.log(person['last-name']);   // "Mustermann"
 
-let firstName = 'first-name';
-let lastName = 'last-name';
+const firstName = 'first-name';
+const lastName = 'last-name';
 
 console.log(person[firstName]);  // "Max"
 console.log(person[lastName]);   // "Mustermann"
 
-let name = 'name';
-let prefixFirstName = 'first-';
-let prefixLastName = 'last-';
+const name = 'name';
+const prefixFirstName = 'first-';
+const prefixLastName = 'last-';
 
 console.log(person[prefixFirstName + name]);  // "Max"
 console.log(person[prefixLastName + name]);   // "Mustermann"

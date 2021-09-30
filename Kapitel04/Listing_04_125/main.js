@@ -1,5 +1,5 @@
 'use strict';
-let button = {
+const button = {
   handler : null,
 // Funktion, die einen Callback-Handler erwartet
   onClick : function(handler) {
@@ -9,7 +9,7 @@ let button = {
     this.handler();
   }
 };
-let handler = {
+const handler = {
   log: function() {
     console.log("Button geklickt.");
   },

@@ -1,9 +1,9 @@
 'use strict';
-let max = {
+const max = {
   firstName: 'Max',
   lastName: 'Mustermann'
 }
-let numbers = [2,3,4,5,6,7,8,9];
+const numbers = [2,3,4,5,6,7,8,9];
 function add(x, y) {
   return x + y;
 }

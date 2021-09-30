@@ -1,6 +1,6 @@
 'use strict';
 function init() {
-  let object = {
+  const object = {
     "artists": [
       {
         "name": "Kyuss",
@@ -46,12 +46,12 @@ function init() {
       }
     ]
   }
-  let string = JSON.stringify(
+  const string = JSON.stringify(
     object,               // JavaScript-Objekt
     null,                 // Ersetzungsfunktion
     2                     // Einrückung
   );
-  let objectParsed = JSON.parse(
+  const objectParsed = JSON.parse(
     string,               // JSON
     null                  // Ersetzungsfunktion
   );

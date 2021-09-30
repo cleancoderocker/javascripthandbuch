@@ -19,7 +19,7 @@ Dog.prototype.constructor = Dog;
 Dog.prototype.bark = function() {
   console.log('Wuff wuff');
 }
-let bello = new Dog('Bello', 'Weiß', 2, 'Malteser');
+const bello = new Dog('Bello', 'Weiß', 2, 'Malteser');
 bello.bark(); // Ausgabe: "Wuff wuff"
 
 function VegetarianDog(name, color, age, type) {
@@ -33,5 +33,5 @@ VegetarianDog.prototype.eat = function(food) {
     Dog.prototype.eat.call(this, food);
   }
 }
-let vegetarianDog = new VegetarianDog('Bella', 'Weiß', 2, 'Malteser');
+const vegetarianDog = new VegetarianDog('Bella', 'Weiß', 2, 'Malteser');
 vegetarianDog.eat('Brot');

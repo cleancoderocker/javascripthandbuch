@@ -1,11 +1,11 @@
-let person = {
+const person = {
   firstName: 'Max',
   lastName: 'Mustermann',
   email: 'maxmustermann@javascripthandbuch.de',
   age: 42
 }
 
-let handler = {
+const handler = {
   get(target, property) {
       console.log(`Lese "${target[property]}" von Eigenschaft "${property}"`);
       return target[property];
@@ -17,7 +17,7 @@ let handler = {
   }
 }
 
-let proxy = new Proxy(person, handler);
+const proxy = new Proxy(person, handler);
 proxy.firstName = 'Max';        // Aufruf set() von handler
 // Ausgabe: 
 // Schreibe Wert "Max" in Eigenschaft "firstName"

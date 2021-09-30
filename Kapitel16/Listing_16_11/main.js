@@ -1,5 +1,5 @@
 'use strict';
-let artists = new Set();                // Erstellen des Sets
+const artists = new Set();                // Erstellen des Sets
 artists.add('Kyuss');                   // Hinzufügen verschiedener Werte
 artists.add('Kyuss');
 artists.add('Tool');

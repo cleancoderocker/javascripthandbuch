@@ -1,7 +1,7 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function() {
-  let userInput = prompt('Bitte die Länge des Arrays eingeben');
-  let length = parseInt(userInput);
+  const userInput = prompt('Bitte die Länge des Arrays eingeben');
+  const length = parseInt(userInput);
   let array;
   try {
     array = createArray(length);

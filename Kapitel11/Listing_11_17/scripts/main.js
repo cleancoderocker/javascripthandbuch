@@ -1,8 +1,8 @@
 function draw() {
-  let canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext){
-    let context = canvas.getContext('2d');
-    let gradient = context.createRadialGradient(        // Erstellen des Farbverlaufs
+    const context = canvas.getContext('2d');
+    const gradient = context.createRadialGradient(        // Erstellen des Farbverlaufs
       50,                                               // x-Koordinate Zentrum Kreis 1
       100,                                              // y-Koordinate Zentrum Kreis 1
       20,                                               // Radius Kreis 1

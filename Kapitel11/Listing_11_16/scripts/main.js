@@ -1,9 +1,9 @@
 'use strict';
 function draw() {
-  let canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext){
-    let context = canvas.getContext('2d');
-    let gradient = context.createLinearGradient(        // Erstellen des Farbverlaufs
+    const context = canvas.getContext('2d');
+    const gradient = context.createLinearGradient(        // Erstellen des Farbverlaufs
       0,                                                // x-Koordinate Startpunkt
       0,                                                // y-Koordinate Startpunkt
       0,                                                // x-Koordinate Endpunkt

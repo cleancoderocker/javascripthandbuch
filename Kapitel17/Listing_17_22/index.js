@@ -1,6 +1,6 @@
 'use strict';
 const http = require('http');
-let options = {
+const options = {
   host: 'localhost',
   port: '8080',
   path: '/index.html'
@@ -14,5 +14,5 @@ function handleResponse(response){
     console.log(body);
   });
 }
-let request = http.request(options, handleResponse);
+const request = http.request(options, handleResponse);
 request.end();

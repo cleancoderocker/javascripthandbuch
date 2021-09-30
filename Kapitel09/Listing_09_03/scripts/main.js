@@ -1,6 +1,6 @@
 'use strict';
 function init() {
-  let xmlString = `<?xml version="1.0" encoding="ISO-8859-1"?>
+  const xmlString = `<?xml version="1.0" encoding="ISO-8859-1"?>
                   <artists>
                     <artist name="Kyuss">
                       <albums>
@@ -11,10 +11,10 @@ function init() {
                       </albums>
                     </artist>
                   </artists>`;
-  let domParser = new DOMParser();
-  let xmlDOM = domParser.parseFromString(xmlString, 'text/xml');
-  let xmlSerializer = new XMLSerializer();
-  let xmlStringSerialized = xmlSerializer.serializeToString(xmlDOM);
+  const domParser = new DOMParser();
+  const xmlDOM = domParser.parseFromString(xmlString, 'text/xml');
+  const xmlSerializer = new XMLSerializer();
+  const xmlStringSerialized = xmlSerializer.serializeToString(xmlDOM);
   console.log(xmlStringSerialized);
 }
 

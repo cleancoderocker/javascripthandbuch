@@ -1,6 +1,6 @@
 function init() {
-  let element = document.getElementById('example')
-  let event = new CustomEvent('beispiel', {
+  const element = document.getElementById('example')
+  const event = new CustomEvent('beispiel', {
     detail: {
       firstName: 'Max',
       lastName: 'Mustermann',

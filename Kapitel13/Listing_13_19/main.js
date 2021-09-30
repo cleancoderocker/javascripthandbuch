@@ -71,7 +71,7 @@ class Dog extends Animal {
   }
 }
 
-let dog = new Dog('Bello', 'Weiß', 2, 'Malteser'); // Fehler!
+const dog = new Dog('Bello', 'Weiß', 2, 'Malteser'); // Fehler!
 dog.eat('Käse'); 
 dog.bark();
 console.log(dog.type);

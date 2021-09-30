@@ -1,4 +1,4 @@
-let catalog = {
+const catalog = {
   id22345: {
     name: 'Gurken im Glas (500 ml)',
     price: '2.50'

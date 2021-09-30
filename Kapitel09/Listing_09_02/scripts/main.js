@@ -1,6 +1,6 @@
 'use strict';
 function init() {
-  let xmlString = `<?xml version="1.0" encoding="ISO-8859-1"?>
+  const xmlString = `<?xml version="1.0" encoding="ISO-8859-1"?>
                   <artists>
                     <artist name="Kyuss">
                       <albums>
@@ -11,9 +11,9 @@ function init() {
                       </albums>
                     </artist>
                   </artists>`;
-  let domParser = new DOMParser();
-  let xmlDOM = domParser.parseFromString(xmlString, 'text/xml');
-  let firstArtist = xmlDOM.querySelector('artist');
+  const domParser = new DOMParser();
+  const xmlDOM = domParser.parseFromString(xmlString, 'text/xml');
+  const firstArtist = xmlDOM.querySelector('artist');
   console.log(firstArtist.getAttribute('name'));                  // "Kyuss"
   console.log(firstArtist.querySelector('title').textContent);    // "Wretch"
   console.log(firstArtist.querySelector('year').textContent);     // 1991

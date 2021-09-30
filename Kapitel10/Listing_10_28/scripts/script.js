@@ -1,7 +1,7 @@
 'use strict';
 $(document).ready(() => {
-  let login = $('#login');
-  let register = $('#register');
+  const login = $('#login');
+  const register = $('#register');
   login.click((e) => {
     e.preventDefault();
     loadContent('login');

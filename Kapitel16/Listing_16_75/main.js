@@ -1,5 +1,5 @@
 'use strict';
-let persons = [
+const persons = [
   {
     firstName: 'Max',
     lastName: 'Mustermann',

@@ -14,7 +14,7 @@ function printPerson(
   console.log(`Telefon: ${phone}`);
 
 }
-let person = {
+const person = {
   firstName: 'Max',
   lastName: 'Mustermann',
   contact: {

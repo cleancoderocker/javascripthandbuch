@@ -1,14 +1,14 @@
 'use strict';
-let name = 'Max Mustermann';
-let age = 44;
-let message = tagFunction'Mein Name ist ${name}, ich bin ${age} Jahre alt';
+const name = 'Max Mustermann';
+const age = 44;
+const message = tagFunction'Mein Name ist ${name}, ich bin ${age} Jahre alt';
 console.log(message); // Mein Name ist Max Mustermann, ich bin 44 Jahre alt.
 age = 88;
 message = tagFunction'Mein Name ist ${name}, ich bin ${age} Jahre alt';
 console.log(message); // Mein Name ist Max Mustermann
 function tagFunction(strings, ...replacements) {
-  let name = replacements[0];
-  let age = replacements[1];
+  const name = replacements[0];
+  const age = replacements[1];
   if(age > 80) {
     return `${strings[0]}${replacements[0]}`;
   }

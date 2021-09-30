@@ -8,7 +8,7 @@ client.connect(url, (error, db) => { // Verbindung herstellen
     'persons', // Name der Collection
     (error, collection) => { // Callback-Handler
       if(!error) { //
-        let person = { // Objekt, das gespeichert ...
+        const person = { // Objekt, das gespeichert ...
           firstName:'Max', // ... werden soll
           lastName: 'Mustermann' //
         }; //

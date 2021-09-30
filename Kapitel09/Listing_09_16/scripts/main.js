@@ -1,9 +1,9 @@
 'use strict';
 function init() {
-  let request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
   request.onload = (e) => {
     if(request.status === 200) {
-      let xml = request.responseXML;
+      const xml = request.responseXML;
       // hier Weiterverarbeitung der XML-Daten
       console.log(xml);
     }

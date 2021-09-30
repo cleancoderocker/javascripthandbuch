@@ -1,6 +1,6 @@
 function init() {
   (function() {
-    let artists = [
+    const artists = [
       {
         name: 'Kyuss',
         albums: [

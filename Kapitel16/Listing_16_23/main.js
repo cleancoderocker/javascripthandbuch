@@ -1,13 +1,13 @@
 'use strict';
 function* counter() {
-  let counter = 0;
+  const counter = 0;
   while(true) {
     counter++;
     yield counter;
   }
 }
 
-let counter1 = counter();
+const counter1 = counter();
 console.log(counter1.next()); // {done: false, value: 1}
 console.log(counter1.next()); // {done: false, value: 2}
 console.log(counter1.next()); // {done: false, value: 3}

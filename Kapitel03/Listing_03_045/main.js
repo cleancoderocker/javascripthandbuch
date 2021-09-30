@@ -1,5 +1,5 @@
 'use strict';
-let condition;
+const condition;
 if(condition) {
 // Programmcode, der ausgeführt werden soll, falls Bedingung erfüllt ist
 }

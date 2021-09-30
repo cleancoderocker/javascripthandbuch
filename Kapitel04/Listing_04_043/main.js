@@ -1,2 +1,2 @@
 'use strict';
-let names = new Array(20);
+const names = new Array(20);

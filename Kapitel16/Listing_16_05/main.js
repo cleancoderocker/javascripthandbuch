@@ -1,5 +1,5 @@
 'use strict';
-let numbers = [ 18, 22, 26, 30, 34 ];
+const numbers = [ 18, 22, 26, 30, 34 ];
 numbers.name = "Zahlenarray";
 // for-in-Schleife
 for (let i in numbers) {

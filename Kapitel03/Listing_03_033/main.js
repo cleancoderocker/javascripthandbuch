@@ -1,8 +1,8 @@
 'use strict';
-let dog = {
+const dog = {
   name: 'Bello'
 }
-let person = {
+const person = {
   firstName: 'Max',
   lastName: 'Mustermann',
   pet: dog

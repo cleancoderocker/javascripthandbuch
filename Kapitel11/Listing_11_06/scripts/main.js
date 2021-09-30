@@ -1,8 +1,8 @@
 'use strict';
 function draw() {
-  let canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext){
-    let context = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     context.fillStyle = 'rgb(200,0,0)';           // Festlegen der Hintergrundfarbe
     context.fillRect (10, 10, 80, 80);            // Zeichnen des 1. Rechtecks
     context.fillStyle = 'rgba(0, 0, 200, 0.5)';   // Festlegen der Hintergrundfarbe

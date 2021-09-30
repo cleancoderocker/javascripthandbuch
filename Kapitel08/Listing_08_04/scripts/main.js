@@ -1,10 +1,10 @@
 'use strict';
 function init() {
-  let windowReference;
-  let linkOpen = document.getElementById('link-open');
-  let linkClose = document.getElementById('link-close');
+  const windowReference;
+  const linkOpen = document.getElementById('link-open');
+  const linkClose = document.getElementById('link-close');
   linkOpen.addEventListener('click', (e) => {
-    let url = document.getElementById('url').value;
+    const url = document.getElementById('url').value;
     windowReference = window.open(
       url,
       'Fenstertitel',

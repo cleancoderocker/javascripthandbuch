@@ -1,8 +1,8 @@
 'use strict';
-let max = {
+const max = {
   firstName: 'Max'
 }
-let maxMustermann = Object.create(max, {
+const maxMustermann = Object.create(max, {
   lastName: {
     value: 'Mustermann',
     enumerable: true
@@ -16,6 +16,6 @@ console.log(maxMustermann.lastName);  // Mustermann
 for(let i in maxMustermann) {
   console.log(i);
 }
-let properties = Object.keys(maxMustermann);
+const properties = Object.keys(maxMustermann);
 // Ausgabe: ["lastName"]
 console.log(properties);

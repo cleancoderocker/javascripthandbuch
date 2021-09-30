@@ -1,16 +1,16 @@
 'use strict';
-let artists = [
+const artists = [
   'Deep Purple',
   'Jimi Hendrix',
   'The Doors',
   'King Crimson'
 ];
-let arrayWrapper = {
+const arrayWrapper = {
   array: artists
 }
 arrayWrapper[Symbol.iterator] = function() {
-  let array = this.array;
-  let counter = this.array.length-1;
+  const array = this.array;
+  const counter = this.array.length-1;
 // Rückgabe des Iteratorobjekts
   return {
     next: function(){

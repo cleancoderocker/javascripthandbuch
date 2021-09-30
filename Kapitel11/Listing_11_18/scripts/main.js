@@ -1,6 +1,6 @@
 'use strict';
 function draw() {
-  let ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);    // Rechteck zeichnen mit Standardeinstellungen
                                    // Hintergrundfarbe schwarz

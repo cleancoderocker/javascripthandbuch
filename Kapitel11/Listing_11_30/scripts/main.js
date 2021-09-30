@@ -1,7 +1,7 @@
 'use strict';
 function init() {
-  let svgDocument = document.getElementById('svg');
-  let circle = svg.getElementById('circle');
+  const svgDocument = document.getElementById('svg');
+  const circle = svg.getElementById('circle');
   circle.addEventListener('click', (e) => {
     console.log('Hallo Welt');
   });

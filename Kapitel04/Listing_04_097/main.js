@@ -1,5 +1,5 @@
 'use strict';
-let regExp = /^\d\d\s\d\d\s\d\d\d\d\d\d\d$/;
+const regExp = /^\d\d\s\d\d\s\d\d\d\d\d\d\d$/;
 console.log(regExp.test('49 30 1234567'));        // true
 console.log(regExp.test('Hallo Welt'));           // false
 console.log(regExp.test('Hallo Max Mustermann')); // false

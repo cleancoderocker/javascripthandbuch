@@ -1,2 +1,2 @@
 'use strict';
-let regExp = /abcde/;
+const regExp = /abcde/;

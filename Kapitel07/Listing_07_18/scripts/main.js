@@ -1,6 +1,6 @@
 function init() {
-  let loginForm = document.getElementById('login');
-  let resetButton = document.getElementById('reset');
+  const loginForm = document.getElementById('login');
+  const resetButton = document.getElementById('reset');
   resetButton.addEventListener('click', (e) => {
     loginForm.reset();
   });

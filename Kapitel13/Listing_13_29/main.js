@@ -63,7 +63,7 @@ console.log(Animal.ANIMAL_COLORS);
 //   YELLOW: 'Gelb',
 //   ORANGE: 'Orange'
 // }
-let bird = new Animal('Birdie', Animal.ANIMAL_COLORS.BLACK, 5);
+const bird = new Animal('Birdie', Animal.ANIMAL_COLORS.BLACK, 5);
 console.log(bird.name);   // "Birdie"
 console.log(bird.color);  // "Schwarz"
 console.log(bird.age);    // 5

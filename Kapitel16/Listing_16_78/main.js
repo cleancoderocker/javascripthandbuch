@@ -10,7 +10,7 @@ function printContactInformation(
   console.log(`E-Mail: ${email}`);
   console.log(`Telefon: ${phone}`);
 }
-let person = {
+const person = {
   firstName: 'Max',
   lastName: 'Mustermann',
   contact: {

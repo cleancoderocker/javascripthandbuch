@@ -1,5 +1,5 @@
 'use strict';
-let item = {};
+const item = {};
 Object.defineProperty(item, 'name', {
   value: 'Schrödinger programmiert Java'
 });

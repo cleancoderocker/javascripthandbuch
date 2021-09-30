@@ -4,9 +4,9 @@ function handleLinkClicked(e) {
 }
 
 function init() {
-  let element = document.getElementById('link');
+  const element = document.getElementById('link');
   element.onclick = handleLinkClicked;
-  let element2 = document.getElementById('link2');
+  const element2 = document.getElementById('link2');
   element2.addEventListener(
     'click',
     handleLinkClicked,

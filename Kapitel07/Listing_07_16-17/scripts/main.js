@@ -1,6 +1,6 @@
 function init() {
-  let loginForm = document.getElementById('login');
-  let loginButton = document.getElementById('submit');
+  const loginForm = document.getElementById('login');
+  const loginButton = document.getElementById('submit');
   loginButton.addEventListener('click', (e) => {
     loginForm.submit();
   });

@@ -1,2 +1,2 @@
 'use strict';
-let variable = condition ? value1 : value2;
+const variable = condition ? value1 : value2;

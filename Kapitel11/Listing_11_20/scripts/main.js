@@ -1,8 +1,8 @@
 'use strict';
 function draw() {
-  let canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext){
-    let context = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     context.save();                     // Speichern des initialen Zustands
     context.fillStyle = '#FF0000';      // Füllfarbe rot
     context.rotate(7);                  // Rotation

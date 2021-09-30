@@ -1,5 +1,5 @@
 'use strict';
-let numbersOfAlbums = new Map(      // Erstellen einer Map ...
+const numbersOfAlbums = new Map(      // Erstellen einer Map ...
   [                                 // ... auf Basis eines Arrays
     ['Kyuss', 4],
     ['Tool', 6],

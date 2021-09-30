@@ -1,11 +1,11 @@
 'use strict';
 function init() {
   if (window.File && window.FileReader && window.FileList && window.Blob) {
-    let progress = document.querySelector('.percent');
-    let reader = new FileReader();
+    const progress = document.querySelector('.percent');
+    const reader = new FileReader();
     function updateProgress(event) {
       if (event.lengthComputable) {
-        let percentLoaded = Math.round((event.loaded / event.total) * 100);
+        const percentLoaded = Math.round((event.loaded / event.total) * 100);
         if (percentLoaded < 100) {
           progress.style.width = percentLoaded + '%';
           progress.textContent = percentLoaded + '%';

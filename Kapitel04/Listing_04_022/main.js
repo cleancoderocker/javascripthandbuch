@@ -1,5 +1,5 @@
 'use strict';
-let item = {
+const item = {
   _name: 'Schrödinger programmiert Java',
   _price: 44.90,
   _author: 'Philip Ackermann',

@@ -1,7 +1,7 @@
 'use strict';
-let firstName = Symbol('firstName');
-let lastName = Symbol('lastName');
-let person = {};
+const firstName = Symbol('firstName');
+const lastName = Symbol('lastName');
+const person = {};
 person[firstName] = 'Max';
 person[lastName] = 'Mustermann';
 console.log(person[firstName]);     // "Max"

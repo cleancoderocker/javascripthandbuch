@@ -1,10 +1,10 @@
 function init() {
 
   (function() {
-    let allListItemElements = document.getElementsByTagName('li');
+    const allListItemElements = document.getElementsByTagName('li');
     console.log(allListItemElements.length); // Ausgabe: 8
-    let subList = document.getElementById('list-2');
-    let subListListItems = subList.getElementsByTagName('li');
+    const subList = document.getElementById('list-2');
+    const subListListItems = subList.getElementsByTagName('li');
     console.log(subListListItems.length); // Ausgabe: 4
   })();
 

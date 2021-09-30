@@ -4,7 +4,7 @@ const http = require('http');
 const MIN = 1;
 const MAX = 20;
 
-let server = http.createServer((request, response) => {
+const server = http.createServer((request, response) => {
   if (request.headers.accept && request.headers.accept === 'text/event-stream') {
     // URL für die Event-Quelle
     if (request.url === '/events') {
@@ -31,7 +31,7 @@ function sendEvent(request, response) {
     'Connection': 'keep-alive'
   });
 
-  let id = (new Date()).toLocaleTimeString();
+  const id = (new Date()).toLocaleTimeString();
 
   setInterval(() => {
     createServerSendEvent(response, id);
@@ -41,14 +41,14 @@ function sendEvent(request, response) {
 }
 
 function createServerSendEvent(response, id) {
-  let exercise = createRandomExercise();
+  const exercise = createRandomExercise();
   response.write('id: ' + id + '\n');
   response.write("data: " + exercise + '\n\n');
 }
 
 function createRandomExercise() {
-  let number1 = Math.floor(Math.random() * MAX) + MIN;
-  let number2 = Math.floor(Math.random() * MAX) + MIN;
-  let exercise = number1 + ' + ' + number2 + ' = ';
+  const number1 = Math.floor(Math.random() * MAX) + MIN;
+  const number2 = Math.floor(Math.random() * MAX) + MIN;
+  const exercise = number1 + ' + ' + number2 + ' = ';
   return exercise;
 }

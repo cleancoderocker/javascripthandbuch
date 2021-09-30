@@ -1,6 +1,6 @@
 function init() {
 
-  let artists = [
+  const artists = [
     {
       name: 'Kyuss',
       albums: [
@@ -47,25 +47,25 @@ function init() {
 
 
   (function() {
-    let totalAlbumCount = 0;                      // Anzahl aller Alben
-    for(let i=0, i<artists.length; i++) {         // Für alle Künstler:
-      let albumCount = artists[i].albums.length;  // Ermittle die Anzahl ...
-                                                  // ... der Alben, ...
-      totalAlbumCount += albumCount;              // ... und erhöhe die ...
-                                                  // ... Gesamtanzahl.
+    let totalAlbumCount = 0;                        // Anzahl aller Alben
+    for(let i=0, i<artists.length; i++) {           // Für alle Künstler:
+      const albumCount = artists[i].albums.length;  // Ermittle die Anzahl ...
+                                                    // ... der Alben, ...
+      totalAlbumCount += albumCount;                // ... und erhöhe die ...
+                                                    // ... Gesamtanzahl.
     }
     console.log(totalAlbumCount);
   })();
 
   (function() {
-    let totalAlbumCount = artists.reduce(         // Die reduce()-Methode ...
+    const totalAlbumCount = artists.reduce(         // Die reduce()-Methode ...
       function(                                   // ... erwartet eine Callback-Funktion
         result,                                   // (1) Aktuelles Zwischenergebnis.
         artist,                                   // (2) Das jeweilige Element.
         index,                                    // (3) Der Index des Elements im Array.
         artists                                   // (4) Das Array.
       ) {
-        let albumCount = artist.albums.length;    // Anzahl Alben des Künstlers.
+        const albumCount = artist.albums.length;    // Anzahl Alben des Künstlers.
         return result + albumCount;               // Gesamtanzahl erhöhen.
       },
       0                                           // Anzahl aller Alben.

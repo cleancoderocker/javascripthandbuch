@@ -2,20 +2,20 @@
 function init() {
   if (window.File && window.FileReader && window.FileList && window.Blob) {
     function handleFileSelected(event) {
-      let files = event.target.files;
+      const files = event.target.files;
       for (let i = 0; i < files.length; i++) {
-        let file = files[i];
-        let reader = new FileReader();
+        const file = files[i];
+        const reader = new FileReader();
         if (file.type.match('text.*')) {
           reader.onload = (event) => {
-            let span = document.createElement('span');
+            const span = document.createElement('span');
             span.innerHTML = reader.result;
             document.getElementById('list').insertBefore(span, null);
           };
           reader.readAsText(file);
         } else if(file.type.match('image.*')) {
           reader.onload = (event) => {
-            let span = document.createElement('span');
+            const span = document.createElement('span');
             span.innerHTML = `<img class="thumbnail" src="${reader.result}"/>`;
             document.getElementById('list').insertBefore(span, null);
           };

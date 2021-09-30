@@ -1,9 +1,9 @@
 'use strict';
-let person = {
+const person = {
   firstName : 'Max',
   lastName : 'Mustermann'
 };
-let {
+const {
   firstName : firstNameExtracted,
   lastName : lastNameExtracted
   } = person;

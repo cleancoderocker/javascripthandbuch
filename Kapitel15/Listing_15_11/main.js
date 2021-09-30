@@ -11,7 +11,7 @@ var ModuleA = ModuleA || (function (moduleB) {
 // Innerhalb des Moduls stehen ...
 // ... Abhängigkeiten über das entsprechende ...
 // ... Argument zur Verfügung.
-  let x = 5;
+  const x = 5;
   let y = 4711;
   function getX() {
     return x;

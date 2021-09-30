@@ -1,5 +1,5 @@
 'use strict';
-let person = {
+const person = {
   name: 'Max',                  // Objekteigenschaft
   getName: function() {
     return this.name;

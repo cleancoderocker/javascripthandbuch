@@ -1,5 +1,5 @@
 'use strict';
-let coordinates = [
+const coordinates = [
   [50.69, 8.94],
   [54.29, 11.97],
   [55.38, 12.88],
@@ -10,7 +10,7 @@ let coordinates = [
   [80.69, 8.56]
 ];
 for(let i=0; i<coordinates.length; i++) {
-  let coordinate = coordinates[i];
+  const coordinate = coordinates[i];
   for(let j=0; j<coordinate.length; j++) {
     console.log(coordinate[j]);
   }

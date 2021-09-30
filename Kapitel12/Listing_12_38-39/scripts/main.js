@@ -2,11 +2,11 @@
 function init() {
   if (window.File && window.FileReader && window.FileList && window.Blob) {
     function handleFileSelected(event) {
-      let files = event.target.files;                 // alle ausgewählten Dateien
+      const files = event.target.files;                 // alle ausgewählten Dateien
       console.log(files);
-      let output = '';                                // Variable für Ergebnis
+      const output = '';                                // Variable für Ergebnis
       for (let i = 0; i < files.length; i++) {        // Über alle Dateien iterieren ...
-        let file = files[i];                          // ... jede Datei betrachten ...
+        const file = files[i];                          // ... jede Datei betrachten ...
         output += '<li>' +                            // ... und Ergebnis-HTML zusammebauen, bestehend aus:
         '<strong>' + file.name + '</strong>' +        // Dateiname
         ' (' + (file.type || "n/a") + ') - ' +        // Dateityp

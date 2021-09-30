@@ -1,5 +1,5 @@
 'use strict';
-let shoppingCart = [ // Beginn der Array-Definition
+const shoppingCart = [ // Beginn der Array-Definition
   'Plattenspieler', // erster Eintrag
   'Lautsprecher', // zweiter Eintrag
   'Vorverstärker', // dritter Eintrag

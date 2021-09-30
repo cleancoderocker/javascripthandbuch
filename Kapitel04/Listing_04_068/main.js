@@ -1,5 +1,5 @@
 'use strict';
-let todoList = [
+const todoList = [
   'Bad putzen',
   'Einkaufen',
   'Aufräumen',

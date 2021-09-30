@@ -1,2 +1,2 @@
 'use strict';
-let showMessage = message => console.log(message);
+const showMessage = message => console.log(message);

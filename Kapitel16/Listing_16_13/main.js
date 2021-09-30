@@ -1,5 +1,5 @@
 'use strict';
-let artists = new Set(
+const artists = new Set(
   [
     'Kyuss',
     'Tool',

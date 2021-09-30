@@ -25,9 +25,9 @@ class Animal {
 
 }
 
-let defaultAnimal = new Animal();
+const defaultAnimal = new Animal();
 console.log(defaultAnimal.toString()); // "Max Musterfisch, Gold, 25"
 
-let fish = new Animal('Fischi', 'Grün', 2);
+const fish = new Animal('Fischi', 'Grün', 2);
 fish.eat('Algen');             // "Mmpf mmpf, Algen"
 console.log(fish.toString());  // "Fischi, Grün, 2"

@@ -4,12 +4,12 @@ $(document).ready(() => {
     url: 'artists.xml',
     dataType: 'xml'
   }).done((data) => {
-    let table = initTable();
-    let artists = $(data).find('artist');
+    const table = initTable();
+    const artists = $(data).find('artist');
     artists.each((index, artist) => {
-      let albums = $(artist).find('album');
+      const albums = $(artist).find('album');
       albums.each((index, album) => {
-        let row = createRow(
+        const row = createRow(
           artist.getAttribute('name'),
           $(album).find('title').text(),
           $(album).find('year').text()
@@ -22,13 +22,13 @@ $(document).ready(() => {
 });
 
 function initTable() {
-  let table = document.createElement('table');
-  let tableHeader = document.createElement('thead');
-  let headerRow = document.createElement('tr');
-  let headerColumnArtistName = document.createElement('th');
-  let headerColumnAlbumTitle = document.createElement('th');
-  let headerColumnAlbumYear = document.createElement('th');
-  let tableBody = document.createElement('tbody');
+  const table = document.createElement('table');
+  const tableHeader = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+  const headerColumnArtistName = document.createElement('th');
+  const headerColumnAlbumTitle = document.createElement('th');
+  const headerColumnAlbumYear = document.createElement('th');
+  const tableBody = document.createElement('tbody');
   headerColumnArtistName.appendChild(document.createTextNode('Name'));
   headerColumnAlbumTitle.appendChild(document.createTextNode('Titel'));
   headerColumnAlbumYear.appendChild(document.createTextNode('Jahr'));
@@ -43,10 +43,10 @@ function initTable() {
 }
 
 function createRow(artistName, albumTitle, albumYear) {
-  let row = document.createElement('tr');
-  let columnName = document.createElement('td');
-  let columnTitle = document.createElement('td');
-  let columnYear = document.createElement('td');
+  const row = document.createElement('tr');
+  const columnName = document.createElement('td');
+  const columnTitle = document.createElement('td');
+  const columnYear = document.createElement('td');
   columnName.appendChild(document.createTextNode(artistName));
   columnTitle.appendChild(document.createTextNode(albumTitle));
   columnYear.appendChild(document.createTextNode(albumYear));

@@ -1,6 +1,6 @@
 function init() {
   let scrollPosition = window.scrollY;
-  let nameElement = document.getElementById('name');
+  const nameElement = document.getElementById('name');
 
   function handleScrollEvent(e) {
     scrollPosition = window.scrollY;

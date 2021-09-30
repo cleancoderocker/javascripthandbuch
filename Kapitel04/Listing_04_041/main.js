@@ -1,5 +1,5 @@
 'use strict';
-let max = {
+const max = {
   firstName: 'Max',
   lastName: 'Mustermann'
 }

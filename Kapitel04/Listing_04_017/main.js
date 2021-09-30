@@ -1,5 +1,5 @@
 'use strict';
-let item = Object.create(Object.prototype, {
+const item = Object.create(Object.prototype, {
   name: {
     value: 'Schrödinger programmiert Java',
     writable: false,

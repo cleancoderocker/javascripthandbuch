@@ -15,18 +15,18 @@ function clearMessage() {
 }
 
 function showMessage(message) {
-  let output = document.getElementById('output');
+  const output = document.getElementById('output');
   output.textContent = message;
 }
 
 function getAgeValue() {
-  let element = document.getElementById('age');
-  let age = element.value;
+  const element = document.getElementById('age');
+  const age = element.value;
   return age;
 }
 
 function init() {
-  let element = document.getElementById('age');
+  const element = document.getElementById('age');
   element.addEventListener(
     'blur',
     clearMessage
@@ -34,14 +34,14 @@ function init() {
   element.addEventListener(
     'blur',
     function() {                      // Anonyme Funktion
-      let age = getAgeValue();        // Wert für Alter holen
+      const age = getAgeValue();        // Wert für Alter holen
       checkAgeNotNegative(age);       // Aufruf der eigentlichen Funktion
     }
   );
   element.addEventListener(
     'blur',
     function() {                      // Anonyme Funktion
-      let age = getAgeValue();        // Wert für Alter holen
+      const age = getAgeValue();        // Wert für Alter holen
       checkAgeIsNumber(age);          // Aufruf der eigentlichen Funktion
     }
   );

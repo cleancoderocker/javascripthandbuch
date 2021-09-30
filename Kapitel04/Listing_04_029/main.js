@@ -1,6 +1,6 @@
 'use strict';'use strict';
 'use strict';
-let item = {
+const item = {
   isbn: '',
   _name: '',
   /* Hier die anderen Eigenschaften */
@@ -23,7 +23,7 @@ item.order = function() {
   console.log('Das Buch wurde erfolgreich bestellt.');
 }
 console.log(item.publisher); // Ausgabe: Galileo Press
-item.order(); // Ausgabe: Das Buch wurde erfolgreich bestellt.
+item.order();                // Ausgabe: Das Buch wurde erfolgreich bestellt.
 // Überschreiben der Eigenschaft
 item.publisher = 'Rheinwerk Verlag';
 // Überschreiben der Methode

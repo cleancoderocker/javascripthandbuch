@@ -4,8 +4,8 @@ const client = require('mongodb').MongoClient; // Client erstellen
 const url = 'mongodb://localhost:27017/exampleDB'; // URL zur Datenbank
 client.connect(url, (error, db) => { // Verbindung herstellen
   if (!error) { //
-    let collection = db.collection('persons'); // Collection finden
-    let cursor = collection.find(); // Cursor erstellen
+    const collection = db.collection('persons'); // Collection finden
+    const cursor = collection.find(); // Cursor erstellen
     cursor.each( (error, document) => { // Cursor iterieren
       if(document) { //
         console.log( //

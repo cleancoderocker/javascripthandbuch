@@ -1,6 +1,6 @@
 function init() {
-  let element = document.getElementById('example')
-  let event = new Event(
+  const element = document.getElementById('example')
+  const event = new Event(
     'beispiel',            // Typ des Events
     {
       bubbles: true,       // Bubbling erlauben

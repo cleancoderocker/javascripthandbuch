@@ -10,7 +10,7 @@ class Item {
     console.log(`${this.author}: ${this.name}`);
   }
 }
-let item = new Item(
+const item = new Item(
   'Schrödinger programmiert Java',
   44.90,
   'Philip Ackermann',

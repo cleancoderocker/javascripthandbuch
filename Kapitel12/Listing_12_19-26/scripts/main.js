@@ -6,7 +6,7 @@
   sessionStorage.setItem('firstname', 'Max');
   sessionStorage.setItem('lastname', 'Mustermann');
 
-  let user = {
+  const user = {
     firstname: 'Max',
     lastname: 'Mustermann'
   }
@@ -22,8 +22,8 @@
 
 (function() {
   // Werte aus dem Browserspeicher lesen
-  let firstname = localStorage.getItem('firstname');
-  let lastname = localStorage.getItem('lastname');
+  const firstname = localStorage.getItem('firstname');
+  const lastname = localStorage.getItem('lastname');
   console.log(firstname);                             // Max
   console.log(lastname);                              // Mustermann
 
@@ -37,8 +37,8 @@
   // Werte im Browserspeicher aktualisieren
   localStorage.setItem('firstname', 'Max');
   localStorage.setItem('lastname', 'Mustermann');
-  let firstname = localStorage.getItem('firstname');
-  let lastname = localStorage.getItem('lastname');
+  const firstname = localStorage.getItem('firstname');
+  const lastname = localStorage.getItem('lastname');
   console.log(firstname);                             // Max
   console.log(lastname);                              // Mustermann
   localStorage.setItem('firstname', 'Moritz');

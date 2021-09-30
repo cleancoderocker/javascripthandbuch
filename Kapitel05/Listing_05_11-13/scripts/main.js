@@ -1,20 +1,20 @@
 function init() {
 
   (function() {
-    let tableCell = document.querySelector('#main table td:nth-child(2)');
+    const tableCell = document.querySelector('#main table td:nth-child(2)');
     tableCell.style.border = 'thick solid red';
 
-    let tableCells = document.querySelectorAll('#main table td:nth-child(2)');
+    const tableCells = document.querySelectorAll('#main table td:nth-child(2)');
     if(tableCells.length > 0) {
       for(let i=0; i<tableCells.length; i++) {
-        let tableCell = tableCells[i];
+        const tableCell = tableCells[i];
         tableCell.style.border = 'thick solid red';
       }
     }
   })();
 
   (function() {
-    let table = document.querySelector('table');
+    const table = document.querySelector('table');
     console.log(table.parentNode);     // <main>
     console.log(table.parentElement);  // <main>
   })();

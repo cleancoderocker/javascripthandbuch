@@ -1,10 +1,10 @@
 'use strict';
-let targetObject = {
+const targetObject = {
   firstName: null,
   lastName: null
 };
-let handler = {/* wird gleich implementiert*/};
-let proxy = Proxy(targetObject, handler);
+const handler = {/* wird gleich implementiert*/};
+const proxy = Proxy(targetObject, handler);
 proxy.firstName = 'Max';
 proxy.lastName = 'Mustermann';
 console.log(proxy.firstName);

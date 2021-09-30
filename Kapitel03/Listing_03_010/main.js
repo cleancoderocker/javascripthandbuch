@@ -1,7 +1,7 @@
 'use strict';
 // Wenig aussagekräftige Variablennamen
-let fn = 'Max ';
-let ln = 'Mustermann ';
+const fn = 'Max ';
+const ln = 'Mustermann ';
 // Aussagekräftige Variablennamen
-let firstName = 'Max ';
-let lastName = 'Mustermann ';
+const firstName = 'Max ';
+const lastName = 'Mustermann ';

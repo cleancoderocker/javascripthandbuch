@@ -1,5 +1,5 @@
 'use strict';
-let shoppingCartItem1 = 'Plattenspieler'; // erster Eintrag
-let shoppingCartItem2 = 'Lautsprecher'; // zweiter Eintrag
-let shoppingCartItem3 = 'Vorverstärker'; // dritter Eintrag
-let shoppingCartItem4 = 'Lautsprecherkabel'; // vierter Eintrag
+const shoppingCartItem1 = 'Plattenspieler'; // erster Eintrag
+const shoppingCartItem2 = 'Lautsprecher'; // zweiter Eintrag
+const shoppingCartItem3 = 'Vorverstärker'; // dritter Eintrag
+const shoppingCartItem4 = 'Lautsprecherkabel'; // vierter Eintrag

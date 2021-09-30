@@ -1,5 +1,5 @@
 'use strict';
-let animal = {
+const animal = {
   name: 'default',
   color: 'Braun',
   age: 0,
@@ -10,7 +10,7 @@ let animal = {
     console.log('Mmmmmmh, ' + drink + '!');
   }
 }
-let cat = Object.create(animal);
+const cat = Object.create(animal);
 cat.meow = function() {
   console.log('Miauuuuuu!');
 }
@@ -18,7 +18,7 @@ cat.eat('Katzenfutter'); // Ausgabe: 'Mmpf mmpf, Katzenfutter!'
 cat.drink('Milch'); // Ausgabe: 'Mmmmmmh, Milch!'
 cat.meow(); // Ausgabe: 'Miauuuuuu!'
 console.log(cat.color); // Ausgabe: 'Braun'
-let dog = Object.create(animal);
+const dog = Object.create(animal);
 dog.bark = function() {
   console.log('Wuff wuff!');
 }

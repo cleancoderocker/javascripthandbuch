@@ -5,16 +5,16 @@ showUsername();
 showShoppingCart();
 
 function showUsername() {
-    let username = localStorage.getItem('username');
+    const username = localStorage.getItem('username');
     document.getElementById('username').textContent = username;
 }
 
 function showShoppingCart() {
-    let ids = JSON.parse(localStorage.getItem('shoppingCartItemIDs'));
-    let itemsElement = document.getElementById('shopping-cart-items');
+    const ids = JSON.parse(localStorage.getItem('shoppingCartItemIDs'));
+    const itemsElement = document.getElementById('shopping-cart-items');
     ids.forEach(function (id) {
-        let item = catalog[id];
-        let itemElement = document.createElement('li');
+        const item = catalog[id];
+        const itemElement = document.createElement('li');
         itemElement.appendChild(document.createTextNode(item.name));
         itemsElement.appendChild(itemElement);
     });

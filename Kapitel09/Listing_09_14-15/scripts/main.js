@@ -1,7 +1,7 @@
 'use strict';
 function init() {
-  let login = document.getElementById('login');
-  let register = document.getElementById('register');
+  const login = document.getElementById('login');
+  const register = document.getElementById('register');
   login.addEventListener('click', (e) => {
     e.preventDefault();
     loadContent('login');
@@ -13,9 +13,9 @@ function init() {
 }
 
 function loadContent(name) {
-  let request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
   request.onload = () => {
-    let htmlSnippet = request.responseText;
+    const htmlSnippet = request.responseText;
     document.getElementById('main-content').innerHTML = htmlSnippet;
   };
   request.open('GET', name + '.html', true);

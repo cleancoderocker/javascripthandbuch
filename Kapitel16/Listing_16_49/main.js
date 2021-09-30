@@ -1,5 +1,5 @@
 'use strict';
-let message = 'Sehr geehrter Herr Mustermann,
+const message = 'Sehr geehrter Herr Mustermann,
 gerne übersenden wir Ihnen die geforderten Unterlagen zur Prüfung zurück.
   Mit freundlichen Grüßen,
   Frau Musterfrau,

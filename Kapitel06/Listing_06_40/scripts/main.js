@@ -1,6 +1,6 @@
 function init() {
-  let element = document.getElementById('example')
-  let event = new MouseEvent('click', {
+  const element = document.getElementById('example')
+  const event = new MouseEvent('click', {
     'view': window,
     'bubbles': true,
     'cancelable': true

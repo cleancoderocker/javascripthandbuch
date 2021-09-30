@@ -13,7 +13,7 @@ app.put('/something', (request, response) => {
 app.delete('/something', (request, response) => {
   response.send('DELETE-Anfrage bearbeitet');
 });
-let server = app.listen(8080, () => {
-  let port = server.address().port;
+const server = app.listen(8080, () => {
+  const port = server.address().port;
   console.log("Server läuft unter: http://localhost:%s", port);
 });

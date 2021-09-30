@@ -1,5 +1,5 @@
 function init() {
-  let source = new EventSource('/events');
+  const source = new EventSource('/events');
   source.onmessage = (event) => {
     console.log(event.data);        // gesendete Nachricht
     console.log(event.origin);      // Quelle

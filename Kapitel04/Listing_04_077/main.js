@@ -1,5 +1,5 @@
 'use strict';
-let today = new Date();
+const today = new Date();
 console.log(today.getMonth());    // Gibt den aktuellen Monat (0-11) zurück
 console.log(today.getFullYear()); // Gibt das Jahr im Format YYYY zurück
 console.log(today.getDate());     // Gibt den aktuellen Tag im Monat (1-31) zurück

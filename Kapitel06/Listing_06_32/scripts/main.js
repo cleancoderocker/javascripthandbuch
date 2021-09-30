@@ -1,10 +1,10 @@
 function handleClickEvent1(ev) {
-  let e = ev || window.event;
+  const e = ev || window.event;
   this.classList.toggle('selected');
   e.stopPropagation();
 }
 function handleClickEvent2(ev) {
-  let e = ev || window.event;
+  const e = ev || window.event;
   this.classList.toggle('selected-border');
   e.stopPropagation();
 }

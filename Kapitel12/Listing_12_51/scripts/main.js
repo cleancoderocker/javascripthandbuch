@@ -7,12 +7,12 @@ function getPosition() {
     document.getElementById('heading').value = position.coords.heading;
     document.getElementById('speed').value = position.coords.speed;
     document.getElementById('timestamp').value = position.timestamp;
-    let mapOptions = {
+    const mapOptions = {
       zoom: 6
     };
-    let map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    let googlePosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    let infowindow = new google.maps.InfoWindow({
+    const map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    const googlePosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    const infowindow = new google.maps.InfoWindow({
       map: map,
       position: googlePosition,
       content: 'Sie befinden sich hier.'

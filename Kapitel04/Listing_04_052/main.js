@@ -1,5 +1,5 @@
 'use strict';
-let todoList = [];
+const todoList = [];
 let length;
 length = todoList.unshift('Bad putzen');
 console.log(length);    // 1

@@ -1,10 +1,10 @@
 function init() {
-  let messageContainer = document
+  const messageContainer = document
     .getElementById('selection');                   // Container für Meldungen
-  let orderForm = document
+  const orderForm = document
       .getElementById('orderform');                 // Formular
-  // let order = document.forms.orderform.order;    // Alternative
-  let radioButtons = orderForm.order;
+  // const order = document.forms.orderform.order;    // Alternative
+  const radioButtons = orderForm.order;
   for(let i=0; i<radioButtons.length; i++) {
     radioButtons[i].addEventListener('change', function(e) {
       console.log(e.target.value);                  // z.B. "P002"

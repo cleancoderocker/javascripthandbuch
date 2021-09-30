@@ -1,8 +1,8 @@
 'use strict';
 $(document).ready(() => {
-  let element = $('a#main');
+  const element = $('a#main');
   // lesender Zugriff auf das Attribut "href" des Elements
-  let href = element.attr('href');
+  const href = element.attr('href');
   // schreibender Zugriff auf das Attribut "href" des Elements
   element.attr('href', 'index.html');
   // alternativer schreibender Zugriff über Konfigurationsobjekt

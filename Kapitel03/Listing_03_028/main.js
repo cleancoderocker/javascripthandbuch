@@ -1,5 +1,5 @@
 'use strict';
-let shoppingCart = [
+const shoppingCart = [
   'Plattenspieler',
   'Lautsprecher',
   'Vorverstärker',

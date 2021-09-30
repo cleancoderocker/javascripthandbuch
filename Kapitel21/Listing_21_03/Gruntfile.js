@@ -1,7 +1,7 @@
 'use strict';
 const path = require("path");
 module.exports = function (grunt) {
-  let binDir = path.join(__dirname, "dist", "bin");
+  const binDir = path.join(__dirname, "dist", "bin");
   grunt.initConfig({
     uglify: {
       module : {

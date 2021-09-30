@@ -2,7 +2,7 @@
 // Datei 1
 var ModuleA = ModuleA || (function (moduleA) {
 // Eigenschaften und Funktionen hinzufügen
-  let x = 5;
+  const x = 5;
   let y = 4711;
   moduleA.getX = function() {
     return x;

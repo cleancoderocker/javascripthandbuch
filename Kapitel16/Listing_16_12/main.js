@@ -1,6 +1,6 @@
 'use strict';
 'use strict';
-let artists = new Set()               // Erstellen eines Sets ...
+const artists = new Set()               // Erstellen eines Sets ...
   .add('Kyuss')                       // ... mit Verkettung
   .add('Tool')
   .add('Monster Magnet')

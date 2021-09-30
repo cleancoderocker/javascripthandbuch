@@ -1,6 +1,6 @@
 'use strict';
-let userIsLoggedIn = true;
-let userIsAdmin = false;
+const userIsLoggedIn = true;
+const userIsAdmin = false;
 if(userIsLoggedIn && userIsAdmin) {
   /* ... */
 }

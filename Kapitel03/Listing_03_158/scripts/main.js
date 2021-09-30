@@ -1,10 +1,10 @@
 'use strict';
 function findDuplicates() {
-  let numbers = [2, 4, 5, 2, 5, 8, 5, 4711];
+  const numbers = [2, 4, 5, 2, 5, 8, 5, 4711];
   for(let i=0; i<numbers.length; i++) {
-    let numberAtI = numbers[i];
+    const numberAtI = numbers[i];
     for(let j=i+1; j<numbers.length; j++) {
-      let numberAtJ = numbers[j];
+      const numberAtJ = numbers[j];
       if(numberAtI === numberAtJ) {
         console.log(`Doppelte Zahl gefunden: ${numberAtI}`);
       }

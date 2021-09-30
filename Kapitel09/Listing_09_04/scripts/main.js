@@ -1,6 +1,6 @@
 'use strict';
 function init() {
-  let object = {
+  const object = {
     "artists": [
       {
         "name": "Kyuss",

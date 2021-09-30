@@ -1,8 +1,8 @@
 'use strict';
 function init() {
-  let linkOpen = document.getElementById('link-open');
+  const linkOpen = document.getElementById('link-open');
   linkOpen.addEventListener('click', (e) => {
-    let url = document.getElementById('url').value;
+    const url = document.getElementById('url').value;
     window.open(
       url,                  // Zu öffnende URL
       'Fenstertitel',       // Titel des Fensters

@@ -1,6 +1,6 @@
 'use strict';
-let userIsLoggedIn = true;
+const userIsLoggedIn = true;
 if(userIsLoggedIn) {
-  let message = 'Herzlich willkommen, ' + userName;
+  const message = 'Herzlich willkommen, ' + userName;
   document.getElementById('message').textContent = message;
 }

@@ -1,11 +1,11 @@
 'use strict';
-let bestOfStonerrock = [
+const bestOfStonerrock = [
   'Kyuss',
   'Spiritual Beggars',
   'Spice and the RJ Band',
   'Band of Spice'
 ];
-let one = bestOfStonerrock[0];
-let two = bestOfStonerrock[1];
-let three = bestOfStonerrock[2];
-let four = bestOfStonerrock[3];
+const one = bestOfStonerrock[0];
+const two = bestOfStonerrock[1];
+const three = bestOfStonerrock[2];
+const four = bestOfStonerrock[3];

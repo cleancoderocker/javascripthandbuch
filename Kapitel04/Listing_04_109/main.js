@@ -1,6 +1,6 @@
 'use strict';
-let regExp = /^(\+?\d{2})\s(\d{2})\s(\d{5,7})$/;
-let result = regExp.exec('49 30 1234567');
+const regExp = /^(\+?\d{2})\s(\d{2})\s(\d{5,7})$/;
+const result = regExp.exec('49 30 1234567');
 console.log(result[0]);     // 49 30 1234567
 console.log(result[1]);     // 49
 console.log(result[2]);     // 30

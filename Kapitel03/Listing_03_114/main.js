@@ -1,6 +1,6 @@
 'use strict';
 function sum(x, y) {
-  let result =
+  const result =
     normalize(x) +
     normalize(y);
   function normalize(i) {

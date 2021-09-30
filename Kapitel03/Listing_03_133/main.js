@@ -2,11 +2,11 @@
 function getNameGlobal() {
   return this.name;
 }
-let person = {
+const person = {
   name : 'Moritz',
   getName : getNameGlobal
 }
-let artist = {
+const artist = {
   name : 'Kyuss',
   getName : getNameGlobal
 }

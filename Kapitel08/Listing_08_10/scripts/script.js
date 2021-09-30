@@ -1,8 +1,8 @@
 'use strict';
 function init() {
-  let linkLoad = document.getElementById('link-load');
+  const linkLoad = document.getElementById('link-load');
   linkLoad.addEventListener('click', (e) => {
-    let url = document.getElementById('url').value;
+    const url = document.getElementById('url').value;
     window.location.href = url;
   });
 }

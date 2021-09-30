@@ -3,11 +3,11 @@ $(document).ready(() => {
   // Hinzufügen von neuem HTML-Inhalt
   $('#main').html('<div>Neuer Inhalt</div>');
 // Zugriff auf den HTML-Inhalt
-  let htmlContent = $('#main').html();
+  const htmlContent = $('#main').html();
 // Hinzufügen von neuem Textinhalt
   $('#main').text('Neuer Textinhalt');
 // Zugriff auf den Textinhalt
-  let textContent = $('#main').text();
+  const textContent = $('#main').text();
 // Hinzufügen von neuem Inhalt hinter den
 // bestehenden Inhalt jedes <div>-Elements
 // mit der CSS-Klasse "example"

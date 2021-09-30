@@ -8,7 +8,7 @@ function checkAge(age) {
   return true;
 }
 function enter() {
-  let age = document.getElementById('age').value;
+  const age = document.getElementById('age').value;
   try {
     checkAge(age);
   } catch (error) {

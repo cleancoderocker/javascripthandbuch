@@ -1,23 +1,23 @@
 'use strict';
-let artist1 = {
+const artist1 = {
   name: 'Kyuss'
 };
-let artist2 = {
+const artist2 = {
   name: 'Tool'
 };
-let artist3 = {
+const artist3 = {
   name: 'Monster Magnet'
 };
-let artist4 = {
+const artist4 = {
   name: 'Ben Harper'
 };
-let artist5 = {
+const artist5 = {
   name: 'Queens of the Stone Age'
 };
-let artist6 = {
+const artist6 = {
   name: 'Justin Bieber'
 };
-let artists = new WeakSet(
+const artists = new WeakSet(
   [
     artist1,
     artist2,

@@ -8,18 +8,18 @@ function getPosition() {
     document.getElementById('speed').value = position.coords.speed;
     document.getElementById('timestamp').value = position.timestamp;
 
-    let directionsService = new google.maps.DirectionsService();
-    let directionsRenderer = new google.maps.DirectionsRenderer();
-    let mapOptions = {
+    const directionsService = new google.maps.DirectionsService();
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    const mapOptions = {
       zoom: 6
     };
-    let map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    let travel = {
+    const map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    const travel = {
       origin : new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
       destination : 'Alexanderplatz, Berlin',
       travelMode : google.maps.DirectionsTravelMode.DRIVING
     };
-    let googlePosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    const googlePosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     map.setCenter(googlePosition);
     directionsRenderer.setMap(map);
     directionsRenderer.setPanel(document.getElementById('map-directions'));

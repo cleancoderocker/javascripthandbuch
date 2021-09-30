@@ -11,7 +11,7 @@ function buttonClicked(event) {
 }
 
 function init() {
-  let element = document.getElementById('button');    // Button holen
+  const element = document.getElementById('button');    // Button holen
   element.addEventListener(                           // Event-Listener registrieren
     'click',                                          // Name des Events
     buttonClicked,                                    // Name des Event-Listeners

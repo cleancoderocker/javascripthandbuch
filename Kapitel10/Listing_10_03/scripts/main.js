@@ -1,3 +1,3 @@
 $(document).ready(() => {
-  let selectedElements = jQuery('body > div > span');
+  const selectedElements = jQuery('body > div > span');
 });

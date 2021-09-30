@@ -1,6 +1,6 @@
 'use strict';
-let defaultValue = 2345;
-let firstName = 'Max';
-let lastName = 'Mustermann';
-let isAdmin = true;
-let userIsNotLoggedIn = true;
+const defaultValue = 2345;
+const firstName = 'Max';
+const lastName = 'Mustermann';
+const isAdmin = true;
+const userIsNotLoggedIn = true;

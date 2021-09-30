@@ -6,4 +6,4 @@ function createNewUser(username, email, password) {
     password: password
   }
 }
-let max = createNewUser('Max', 'max@example.com', 'secret');
+const max = createNewUser('Max', 'max@example.com', 'secret');

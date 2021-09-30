@@ -1,5 +1,5 @@
 'use strict';
-let item = {
+const item = {
   name: 'Schrödinger programmiert Java',
   price: 44.90,
   author: 'Philip Ackermann ',
@@ -8,9 +8,9 @@ let item = {
     console.log(`${this.author}: ${this.name}`);
   }
 }
-let properties = Object.keys(item);
+const properties = Object.keys(item);
 for(let i=0; i<properties.length; i++) {
-  let property = properties[i];
+  const property = properties[i];
   console.log(`Name: ${property}`);
   console.log(`Wert: ${item[property]}`);
 }

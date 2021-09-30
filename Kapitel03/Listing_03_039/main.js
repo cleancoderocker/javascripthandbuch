@@ -1,13 +1,13 @@
 'use strict';
-let max = {
+const max = {
   firstName: 'Max',
   lastName: 'Mustermann'
 };
-let moritz = {
+const moritz = {
   firstName: 'Moritz',
   lastName: 'Mustermann'
 };
-let isMaxAndMoritz = max && moritz;
+const isMaxAndMoritz = max && moritz;
 console.log(isMaxAndMoritz); // Ausgabe: Object {firstName: "Moritz",
 // lastName: "Mustermann"}
 console.log(false && 'Max'); // Ausgabe: false

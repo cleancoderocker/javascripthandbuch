@@ -1,7 +1,7 @@
 function draw() {
-  let canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   if (canvas.getContext){
-    let context = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     context.font = '48px serif';               // Schrifteigenschaften
     context.fillText('Hallo Welt', 10, 50);    // Zeichen des Textes
     context.font = '48px serif';               // Schrifteigenschaften

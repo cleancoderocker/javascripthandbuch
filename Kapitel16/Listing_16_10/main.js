@@ -1,5 +1,5 @@
 'use strict';
-let artists = new Set(          // Erstellen eines Sets ...
+const artists = new Set(          // Erstellen eines Sets ...
   [                             // ... auf Basis eines Arrays
     'Kyuss',
     'Kyuss',

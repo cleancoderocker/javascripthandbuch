@@ -1,4 +1,4 @@
 'use strict';
-let salutation = 'Ihr persönlicher Newsletter,'; // Zeichenkette 1
-let name = 'Max Mustermann'; // Zeichenkette 2
-let message = salutation + name; // Konkatenation
+const salutation = 'Ihr persönlicher Newsletter,'; // Zeichenkette 1
+const name = 'Max Mustermann'; // Zeichenkette 2
+const message = salutation + name; // Konkatenation

@@ -1,7 +1,7 @@
 function init() {
-  let canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
   canvas.addEventListener('mousemove', handleMouseMove, false);
-  let context = canvas.getContext('2d');  // Zeichenfläche holen.
+  const context = canvas.getContext('2d');  // Zeichenfläche holen.
   let started = false;          // Merken, ob Pfad begonnen.
   function handleMouseMove(e) {
     let x, y;

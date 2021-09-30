@@ -1,6 +1,6 @@
 'use strict';
 // Kein Best Practice: boolesche Bedingungen innerhalb einer switch-Anweisung
-let age = prompt('Für welches Alter suchen Sie Filmtipps?');
+const age = prompt('Für welches Alter suchen Sie Filmtipps?');
 switch(true) {
   case (age >= 18):
     console.log('Filme mit FSK6, FSK12, FSK16 und FSK18 anzeigen.');

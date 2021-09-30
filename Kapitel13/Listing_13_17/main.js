@@ -49,7 +49,7 @@ class Animal {
 
 }
 
-let snake = new Animal('Zischi', 'Grün', 5);
+const snake = new Animal('Zischi', 'Grün', 5);
 console.log(snake.name);  // "Zischi"
 console.log(snake.color); // "Grün"
 console.log(snake.age);   // 5

@@ -5,10 +5,10 @@ function init() {
       event.stopPropagation();
       event.preventDefault();
 
-      let files = event.dataTransfer.files;                               // alle ausgewählten Dateien
+      const files = event.dataTransfer.files;                             // alle ausgewählten Dateien
       let output = '';                                                    // Variable für Ergebnis
       for (let i = 0; i < files.length; i++) {                            // Über alle Dateien iterieren ...
-        let file = files[i];                                              // ... jede Datei betrachten ...
+        const file = files[i];                                            // ... jede Datei betrachten ...
         output += '<li>' +                                                // ... und Ergebnis-HTML zusammebauen, bestehend aus:
         '<strong>' + file.name + '</strong>' +                            // Dateiname
         ' (' + (file.type || "n/a") + ') - ' +                            // Dateityp
@@ -26,7 +26,7 @@ function init() {
       event.dataTransfer.dropEffect = 'copy';
     }
 
-    let dropTarget = document.getElementById('target');
+    const dropTarget = document.getElementById('target');
     dropTarget.addEventListener('dragover', handleDragOver, false);
     dropTarget.addEventListener('drop', handleFileSelected, false);
   } else {

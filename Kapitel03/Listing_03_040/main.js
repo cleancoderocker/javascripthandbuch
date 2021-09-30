@@ -1,15 +1,15 @@
 'use strict';
-let max = {
+const max = {
     firstName: 'Max',
     lastName: 'Mustermann'
 };
 
-let moritz = {
+const moritz = {
     firstName: 'Moritz',
     lastName: 'Mustermann'
 };
 
-let isMaxOrMoritz = max || moritz;
+const isMaxOrMoritz = max || moritz;
 console.log(isMaxOrMoritz);
 // Ausgabe: Object {firstName: "Max", lastName: "Mustermann"}
 console.log(false || 'Max'); // Ausgabe: Max

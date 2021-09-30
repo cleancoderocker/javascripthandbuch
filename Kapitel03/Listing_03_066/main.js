@@ -1,6 +1,6 @@
 'use strict';
-let testResultElement = document.getElementById('testResult');
-let testResult = 0; // Testergebnis, würde normalerweise berechnet
+const testResultElement = document.getElementById('testResult');
+const testResult = 0; // Testergebnis, würde normalerweise berechnet
 let icon = null; // Variable, die den Bildnamen enthalten wird
 switch(testResult) { // Prüfe das Testergebnis
   case 0: // Hat dieses den Wert 0

@@ -1,5 +1,5 @@
 'use strict';
-let age = prompt('Für welches Alter suchen Sie Filmtipps?');
+const age = prompt('Für welches Alter suchen Sie Filmtipps?');
 if(age >= 6) {
   console.log('Filme mit FSK6 anzeigen.');
 } else if(age >= 12) {

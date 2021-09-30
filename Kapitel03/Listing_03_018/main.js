@@ -1,5 +1,5 @@
 'use strict';
-let firstName = 'Max'; // einfache Anführungszeichen
-let lastName = "Mustermann"; // doppelte Anführungszeichen
-let age = "22"; // keine Zahl, sondern Zeichenkette
-let street = 'Musterstraße"; // Syntaxfehler: Mischform
+const firstName = 'Max'; // einfache Anführungszeichen
+const lastName = "Mustermann"; // doppelte Anführungszeichen
+const age = "22"; // keine Zahl, sondern Zeichenkette
+const street = 'Musterstraße"; // Syntaxfehler: Mischform

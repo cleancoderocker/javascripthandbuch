@@ -1,5 +1,5 @@
 'use strict';
-let max = {
+const max = {
   firstName: 'Max',
   lastName: 'Mustermann',
   contact: {
@@ -7,7 +7,7 @@ let max = {
   }
 };
 
-let moritz = {
+const moritz = {
   firstName: 'Moritz',
   lastName: 'Mustermann',
 };

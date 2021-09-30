@@ -1,5 +1,5 @@
 'use strict';
-let item = {
+const item = {
   name: 'Schrödinger programmiert Java',
   price: 44.90,
   author: 'Philip Ackermann',
@@ -8,7 +8,7 @@ let item = {
     console.log(`${this.author}: ${this.name}`);
   }
 }
-let item = {};
+const item = {};
 item.name = 'Schrödinger programmiert Java';
 item.price = 44.90;
 item.author = 'Philip Ackermann ';

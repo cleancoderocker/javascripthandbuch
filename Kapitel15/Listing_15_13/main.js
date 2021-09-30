@@ -4,9 +4,9 @@ define(
   'ModuleA', // Name des Moduls
   ['ModuleB'], // zu importierende Module
   function (moduleB) { // Funktion, die das Modul definiert
-    let x = 5;
+    const x = 5;
     let y = 4711;
-    let module = {
+    const module = {
       getX: function() {
         return x;
       },
@@ -31,7 +31,7 @@ define(
   'ModuleB', // Name des Moduls
   [], // zu importierende Module
   function () { // Funktion, die das Modul definiert
-    let module = {
+    const module = {
       printHelloWorld: function() {
         console.log('Hello World');
       }

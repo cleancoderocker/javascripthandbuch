@@ -1,3 +1,3 @@
 'use strict';
-let regExp = /abcde/;
+const regExp = /abcde/;
 console.log(regExp.test('abcdefghijklmnopqrstuvwxyz')); // Ausgabe: true

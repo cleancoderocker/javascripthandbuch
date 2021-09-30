@@ -1,5 +1,5 @@
 'use strict';
-let item = Object.create(Object.prototype, {
+const item = Object.create(Object.prototype, {
   name: {
     set: function(newName) {
       if (typeof newName === 'string') {

@@ -1,6 +1,6 @@
 function init() {
-  let inputUsername = document.getElementById('username');
-  let inputPassword = document.getElementById('password');
+  const inputUsername = document.getElementById('username');
+  const inputPassword = document.getElementById('password');
 
   inputUsername.addEventListener('change', function(e) {
     console.log(inputUsername.value);     // Eingegebener Wert

@@ -1,5 +1,5 @@
 function init() {
-  let checkbox = document.getElementById('remember');
+  const checkbox = document.getElementById('remember');
   checkbox.addEventListener('change', (e) => {
     console.log(checkbox.value);    // "on"
     console.log(checkbox.checked);  // true oder false

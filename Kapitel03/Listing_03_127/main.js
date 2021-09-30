@@ -1,2 +1,2 @@
 'use strict';
-let printHelloWorld = () => console.log('Hallo Welt');
+const printHelloWorld = () => console.log('Hallo Welt');

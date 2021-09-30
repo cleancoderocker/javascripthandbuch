@@ -1,5 +1,5 @@
 function init() {
-  let element = document.getElementById('home');
+  const element = document.getElementById('home');
   console.log(element.classList);                     // ["link"]
   element.classList.add('active');                    // Klasse hinzufügen
   console.log(element.classList);                     // ["link", "active"]
@@ -12,7 +12,7 @@ function init() {
   console.log(element.classList.contains('link'));    // true
   console.log(element.classList.contains('active'));  // false
   let i = 5;
-  let condition = i > 0;
+  const condition = i > 0;
   element.classList.toggle('active', condition);      // Klasse umschalten
   console.log(element.classList);                     // ["link", "active"]
 }

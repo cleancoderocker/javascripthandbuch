@@ -1,5 +1,5 @@
 'use strict';
-let shoppingCart = [ // Beginn des äußeren Arrays
+const shoppingCart = [ // Beginn des äußeren Arrays
   [ // erster Eintrag
     'Plattenspieler', // erstes Element im ersten Array
     200, // zweites Element im ersten Array

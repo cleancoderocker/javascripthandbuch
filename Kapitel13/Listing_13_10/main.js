@@ -10,6 +10,6 @@ Animal.prototype.eat = function(food) {
 Animal.prototype.drink = function(drink) {
   console.log('Mmmmmmh, ' + drink + '!');
 }
-let fish = new Animal('Fischi', 'Grün', 2);
+const fish = new Animal('Fischi', 'Grün', 2);
 fish.eat('Algen');    // Ausgabe: 'Mmpf mmpf, Algen!'
 fish.drink('Wasser'); // Ausgabe: 'Mmmmmmh, Wasser!'

@@ -1,5 +1,5 @@
 'use strict';
-let moritz = {
+const moritz = {
   firstName: 'Moritz',
 };
 moritz.firstName ||= 'Max';
@@ -8,7 +8,7 @@ console.log(moritz);
 // { firstName: 'Moritz', lastName: 'Mustermann' }
 
 // Vor ES2021 war Folgendes notwendig:
-let peter = {
+const peter = {
   firstName: 'Peter',
 };
 peter.firstName || (peter.firstName = 'Max');

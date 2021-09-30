@@ -1,5 +1,5 @@
 'use strict';
-let numbers = [2,3,4,5];
+const numbers = [2,3,4,5];
 function every(array, f) {
   for(let i=0; i<array.length; i++) {
     f(array[i]);

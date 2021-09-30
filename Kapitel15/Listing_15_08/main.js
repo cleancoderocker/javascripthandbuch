@@ -1,7 +1,7 @@
 'use strict';
 var Module = Module || (function () {
 // private Variable
-    let x = 5;
+    const x = 5;
 // private Variable
     let y = 4711;
 // öffentliche API

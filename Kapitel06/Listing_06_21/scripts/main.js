@@ -43,8 +43,8 @@ function init() {
     }
   });
 
-  let circle = document.getElementById('circle');
-  let position = [0, 0];
+  const circle = document.getElementById('circle');
+  const position = [0, 0];
   function move() {
     circle.style.top = position[0] + 'px';
     circle.style.left = position[1] + 'px';

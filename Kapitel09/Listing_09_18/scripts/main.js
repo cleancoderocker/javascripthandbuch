@@ -1,6 +1,6 @@
 'use strict';
 function init() {
-  let request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
   request.onload = () => {
     if(request.status === 200) {
       let json;

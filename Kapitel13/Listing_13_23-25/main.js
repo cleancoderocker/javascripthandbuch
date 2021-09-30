@@ -24,9 +24,9 @@ class Meat extends Food {}
 
 class Bread extends Food {}
 
-let bread = new Bread('Weizenbrot');
+const bread = new Bread('Weizenbrot');
 console.log(bread.description); // "Weizenbrot"
-let meat = new Meat('Steak');
+const meat = new Meat('Steak');
 console.log(meat.description);  // "Steak"
 
 class Animal {
@@ -112,6 +112,7 @@ class VegetarianDog extends Dog {
   }
 
 }
-let dog = new VegetarianDog('Bello', 'Weiß', 2, 'Malteser');
+
+const dog = new VegetarianDog('Bello', 'Weiß', 2, 'Malteser');
 dog.eat(new Bread('Weizenbrot')); // "Mmpf, mmpf, Weizenbrot!"
 dog.eat(new Meat('Steak'));       // Fehler: "Ich esse doch kein Fleisch!"

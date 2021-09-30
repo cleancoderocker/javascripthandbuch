@@ -10,5 +10,5 @@ function asyncFunction(callbackFunction) {
   );
   return result;
 }
-let result = asyncFunction();
+const result = asyncFunction();
 console.log(result); // undefined

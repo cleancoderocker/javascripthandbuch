@@ -1,15 +1,15 @@
 'use strict';
 function* counter() {
-  let counter = 0;
+  const counter = 0;
   while(true) {
     counter++;
-    let restart = yield counter;
+    const restart = yield counter;
     if(restart === true) {
       counter = 0;
     }
   }
 }
-let counterInstance = counter();
+const counterInstance = counter();
 console.log(counterInstance.next());      // {done: false, value: 1}
 console.log(counterInstance.next());      // {done: false, value: 2}
 console.log(counterInstance.next());      // {done: false, value: 3}

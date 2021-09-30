@@ -1,5 +1,5 @@
 'use strict';
-let name = "globaler Name";
+const name = "globaler Name";
 function getNameGlobal() {
   return this.name;
 }

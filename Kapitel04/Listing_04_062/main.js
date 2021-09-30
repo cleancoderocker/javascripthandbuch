@@ -1,5 +1,5 @@
 'use strict';
-let contacts = [
+const contacts = [
   {
     firstName: 'Max',
     lastName: 'Mustermann',

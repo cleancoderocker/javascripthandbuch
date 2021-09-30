@@ -15,13 +15,13 @@ function clearMessage() {
 }
 
 function showMessage(message) {
-  let output = document.getElementById('output');
+  const output = document.getElementById('output');
   output.textContent = message;
 }
 
 function getAgeValue() {
-  let element = document.getElementById('age');
-  let age = element.value;
+  const element = document.getElementById('age');
+  const age = element.value;
   return age;
 }
 
@@ -38,7 +38,7 @@ function addEvent(element, eventType, eventHandler) {
 }
 
 function init() {
-  let element = document.getElementById('age');
+  const element = document.getElementById('age');
   addEvent(
     element,
     'blur',
@@ -48,7 +48,7 @@ function init() {
     element,
     'blur',
     function() {
-      let age = getAgeValue();
+      const age = getAgeValue();
       checkAgeNotNegative(age);
     }
   );
@@ -56,7 +56,7 @@ function init() {
     element,
     'blur',
     function() {
-      let age = getAgeValue();
+      const age = getAgeValue();
       checkAgeIsNumber(age);
     }
   );

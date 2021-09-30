@@ -1,5 +1,5 @@
 'use strict';
-let item = {
+const item = {
   name: 'Schrödinger programmiert Java',
   price: 44.90,
   author: 'Philip Ackermann',
@@ -8,7 +8,7 @@ let item = {
     console.log(`${this.author}: ${this.name}`);
   }
 }
-let propertyDescriptor = Object.getOwnPropertyDescriptor(item, 'name');
+const propertyDescriptor = Object.getOwnPropertyDescriptor(item, 'name');
 console.log(propertyDescriptor.enumerable);       // true
 console.log(propertyDescriptor.configurable);     // true
 console.log(propertyDescriptor.writable);         // true

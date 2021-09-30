@@ -1,6 +1,6 @@
 function init() {
   (function() {
-    let artists = [
+    const artists = [
       {
         name: 'Kyuss',
         albums: [
@@ -44,7 +44,7 @@ function init() {
         ]
       }
     ];
-    let artistNames = [];
+    const artistNames = [];
     for(let i=0; i<artists.length; i++) {
       artistNames.push(artists[i].name);
     }
@@ -52,7 +52,7 @@ function init() {
   })();
 
   (function() {
-    let artists = [
+    const artists = [
       {
         name: 'Kyuss',
         albums: [
@@ -96,7 +96,7 @@ function init() {
         ]
       }
     ];
-    let artistNames = artists.map(
+    const artistNames = artists.map(
       (artist, index, artists) => {
         return artist.name;
       }

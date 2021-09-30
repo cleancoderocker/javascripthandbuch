@@ -1,5 +1,5 @@
 function init() {
-  let element = document.getElementById('home');
+  const element = document.getElementById('home');
   element.removeAttribute('class');
   element.removeAttribute('href');
   console.log(element.getAttribute('class'));   // null

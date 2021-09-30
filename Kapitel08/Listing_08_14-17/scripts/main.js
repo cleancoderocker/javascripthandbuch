@@ -1,8 +1,8 @@
 function init() {
   // Containerelement für den Inhalt
-  let contentElement = document.getElementById('content');
+  const contentElement = document.getElementById('content');
   // Beispielinhalte, normalerweise per Ajax laden
-  let contents = {
+  const contents = {
     home: {
       content: 'Startseite'
     },
@@ -21,8 +21,8 @@ function init() {
   };
   // Event-Listener für die Links
   function handleClick(event) {
-    let pageName = event.target.getAttribute('href').split('/').pop();
-    let content = contents[pageName];
+    const pageName = event.target.getAttribute('href').split('/').pop();
+    const content = contents[pageName];
     updateContent(content.content);
     history.pushState(
       content,                    // Zustandsobjekt
@@ -32,7 +32,7 @@ function init() {
     return event.preventDefault();
   }
   // Registrieren der Event-Listener
-  let linkElements = document.getElementsByTagName('a');
+  const linkElements = document.getElementsByTagName('a');
   for (let i = 0; i < linkElements.length; i++) {
     linkElements[i].addEventListener('click', handleClick, true);
   }

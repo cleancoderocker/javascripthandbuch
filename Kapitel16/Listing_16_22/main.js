@@ -6,7 +6,7 @@ function* returnOneThenReturnTwo() {
   yield 2;
   console.log('C');
 }
-let generator = returnOneThenReturnTwo();
+const generator = returnOneThenReturnTwo();
 for(let value of generator) {
   if(value) {
     console.log(value);

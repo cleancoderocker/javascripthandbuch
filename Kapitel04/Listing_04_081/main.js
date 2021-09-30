@@ -1,2 +1,2 @@
 'use strict';
-let regExp = new RegExp('abcde');
+const regExp = new RegExp('abcde');

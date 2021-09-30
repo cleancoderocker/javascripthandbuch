@@ -1,5 +1,5 @@
 'use strict';
-let transactions = [
+const transactions = [
   -20.0, 500.50, -40.0, -34.50, 200, 500.50, -20, 200
 ];
 console.log(transactions.indexOf(-20.0));   // Ausgabe: 0

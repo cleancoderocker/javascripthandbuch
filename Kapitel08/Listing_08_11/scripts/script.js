@@ -1,6 +1,6 @@
 'use strict';
 function init() {
-  let linkReload = document.getElementById('link-reload');
+  const linkReload = document.getElementById('link-reload');
   linkReload.addEventListener('click', (e) => {
     window.location.reload(true);
   });

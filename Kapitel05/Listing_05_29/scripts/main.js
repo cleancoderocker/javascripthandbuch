@@ -1,4 +1,4 @@
-let contacts = [
+const contacts = [
   {
     firstName: 'Max ',
     lastName: 'Mustermann',
@@ -17,31 +17,31 @@ let contacts = [
 ];
 
 function createTable() {
-  let tableBody = document.querySelector('#contact-table tbody');
+  const tableBody = document.querySelector('#contact-table tbody');
   for(let i=0; i<contacts.length; i++) {
     // Für den aktuellen Kontakt ...
-    let contact = contacts[i];
+    const contact = contacts[i];
     // ... wird eine neue Zeile erzeugt.
     // (1)
-    let tableRow = document.createElement('tr');
+    const tableRow = document.createElement('tr');
     // Innerhalb der Zeile werden verschiedene Zellen erstellt ...
     // (2)
-    let tableCellFirstName = document.createElement('td');
+    const tableCellFirstName = document.createElement('td');
     // ... und jeweils mit Werten befüllt.
     // (3)
-    let firstName = document.createTextNode(contact.firstName);
+    const firstName = document.createTextNode(contact.firstName);
     // (4)
     tableCellFirstName.appendChild(firstName);
     // (5)
-    let tableCellLastName = document.createElement('td');
+    const tableCellLastName = document.createElement('td');
     // (6)
-    let lastName = document.createTextNode(contact.lastName);
+    const lastName = document.createTextNode(contact.lastName);
     // (7)
     tableCellLastName.appendChild(lastName);
     // (8)
-    let tableCellEmail = document.createElement('td');
+    const tableCellEmail = document.createElement('td');
     // (9)
-    let email = document.createTextNode(contact.email);
+    const email = document.createTextNode(contact.email);
     // (10)
     tableCellEmail.appendChild(email);
     // (11)
@@ -57,7 +57,7 @@ function createTable() {
 
 
 function sortByFirstName() {
-  let tableBody = document.querySelector('#contact-table tbody');
+  const tableBody = document.querySelector('#contact-table tbody');
   while (tableBody.firstChild !== null) {
     tableBody.removeChild(tableBody.firstChild);
   }

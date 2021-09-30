@@ -5,7 +5,7 @@ const fs = require('fs');
 // 1.) Server erstellen
 http.createServer((request, response) => {
 // 2.) Pfad herausfinden
-  let pathname = url.parse(request.url).pathname;
+  const pathname = url.parse(request.url).pathname;
 // 3.) Datei für Pfad lesen
 fs.readFile(pathname.substr(1), (error, data) => {
   if (error) {

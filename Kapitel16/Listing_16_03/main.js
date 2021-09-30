@@ -1,5 +1,5 @@
 'use strict';
-let numbersOfAlbums = new Map()       // Erstellen einer Map ...
+const numbersOfAlbums = new Map()       // Erstellen einer Map ...
   .set('Kyuss', 4)                    // ... mit Methodenverkettung
   .set('Tool', 6)
   .set('Monster Magnet', 8)

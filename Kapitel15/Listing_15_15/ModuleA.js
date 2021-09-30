@@ -1,8 +1,8 @@
 'use strict';
 // Datei "ModuleA.js"
 // Laden eines Moduls
-let moduleB = require('ModuleB');
-let x = 5;
+const moduleB = require('ModuleB');
+const x = 5;
 let y = 4711;
 function getX() {
   return x;
