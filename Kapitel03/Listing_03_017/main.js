@@ -1,5 +1,9 @@
 'use strict';
-console.log(Number.MIN_VALUE); // Ausgabe: 5e-324
-console.log(Number.MAX_VALUE); // Ausgabe: 1.7976931348623157e+308
-console.log(Number.NEGATIVE_INFINITY); // Ausgabe: -Infinity
-console.log(Number.POSITIVE_INFINITY); // Ausgabe: Infinity
+const number1 = 0xF;        // Definition einer Hexadezimalzahl (Dezimalwert 15)
+const number2 = 0xb;        // Definition einer Hexadezimalzahl (Dezimalwert 11)
+// const number3 = 0xG;     // ungültige Hexadezimalzahl (Syntaxfehler)
+const number4 = 0xAF_BC_C0; // Trennzeichen bei Hexadezimaldarstellung
+
+console.log(number1); // 15
+console.log(number2); // 11
+console.log(number4); // 11517120

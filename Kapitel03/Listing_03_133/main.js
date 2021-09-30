@@ -1,14 +1,4 @@
 'use strict';
-function getNameGlobal() {
-  return this.name;
+function sum(x, y) {
+  return x + y; // Addition und Rückgabe
 }
-const person = {
-  name : 'Moritz',
-  getName : getNameGlobal
-}
-const artist = {
-  name : 'Kyuss',
-  getName : getNameGlobal
-}
-console.log(person.getName()); // Ausgabe: Moritz
-console.log(artist.getName()); // Ausgabe: Kyuss

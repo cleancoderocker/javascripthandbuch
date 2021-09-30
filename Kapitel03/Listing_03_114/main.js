@@ -1,15 +1,6 @@
 'use strict';
-function sum(x, y) {
-  const result =
-    normalize(x) +
-    normalize(y);
-  function normalize(i) {
-    if(i < 0) {
-      return 0;
-    }
-    return i;
-  }
-  return result;
+function showMessage() {
+  console.log('Herzlich willkommen');
 }
-console.log(sum(-5, 5));    // Ausgabe: 5
-console.log(normalize(-5)); // ReferenceError: normalize is not defined
+showMessage(); // Ausgabe: "Herzlich willkommen"
+showMessage(); // Ausgabe: "Herzlich willkommen"

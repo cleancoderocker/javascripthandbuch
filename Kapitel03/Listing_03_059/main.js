@@ -1,2 +1,5 @@
 'use strict';
-const variable = condition ? value1 : value2;
+const condition;
+if(condition) {
+// Programmcode, der ausgeführt werden soll, falls Bedingung erfüllt ist
+}

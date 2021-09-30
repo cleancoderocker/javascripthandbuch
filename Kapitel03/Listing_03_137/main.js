@@ -1,10 +1,18 @@
 'use strict';
-function divide(x, y) {
-  return normalized(x) / normalized(y);
+function createUser(username, email, password) {
+  password = password !== undefined ? password : 'StAnDaRdPaSsWoRt';
+  const user = {
+    username: username,
+    email: email,
+    password: password
+  }
+  return user;
 }
-function normalize(x) {
-  return x <= 0 ? 1 : x;
-}
-console.log(normalize(-2)); // Ausgabe: 1
-console.log(normalize(5));  // Ausgabe: 5
-console.log(divide(-2, 5)); // ReferenceError: normalized is not defined
+const max = createUser('Max Mustermann', 'max.mustermann@example.com', 'secret');
+console.log(max.username);    // Max Mustermann
+console.log(max.email);       // max.mustermann@example.com
+console.log(max.password);    // secret
+const moritz = createUser('Moritz Mustermann', 'moritz.mustermann@example.com');
+console.log(moritz.username); // Moritz Mustermann
+console.log(moritz.email);    // moritz.mustermann@example.com
+console.log(moritz.password); // StAnDaRdPaSsWoRt

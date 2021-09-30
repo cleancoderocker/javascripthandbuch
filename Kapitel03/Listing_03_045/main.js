@@ -1,5 +1,4 @@
 'use strict';
-const condition;
-if(condition) {
-// Programmcode, der ausgeführt werden soll, falls Bedingung erfüllt ist
-}
+let message = 'Ihr persönlicher Newsletter,';
+message += ' ';
+message += name;

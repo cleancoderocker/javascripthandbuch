@@ -1,7 +1,17 @@
 'use strict';
-funktion divide(x, y) {
-  return normalize(x) / normalize(y);
+function createUser(username, email, password = 'StAnDaRdPaSsWoRt') {
+  const user = {
+    username: username,
+    email: email,
+    password: password
+  }
+  return user;
 }
-function normalize(x) {
-  return x <= 0 ? 1 : x;
-}
+const max = createUser('Max Mustermann', 'max.mustermann@example.com', 'secret');
+console.log(max.username);    // Max Mustermann
+console.log(max.email);       // max.mustermann@example.com
+console.log(max.password);    // secret
+const moritz = createUser('Moritz Mustermann', 'moritz.mustermann@example.com');
+console.log(moritz.username); // Moritz Mustermann
+console.log(moritz.email);    // moritz.mustermann@example.com
+console.log(moritz.password); // StAnDaRdPaSsWoRt

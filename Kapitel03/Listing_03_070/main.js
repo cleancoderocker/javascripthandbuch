@@ -1,21 +1,15 @@
 'use strict';
-const selectElement = document.getElementById('grade'); // die Auswahlliste
-const options = [ // eine Liste mit Werten
-  'Sehr gut',
-  'Gut',
-  'Befriedigend',
-  'Ausreichend',
-  'Mangelhaft',
-  'Ungenügend'
-];
-for(let i=0; i<options.length; i++) { // Für jeden Wert in
-// der Liste
-  const optionElement = document.createElement('option'); // erstelle ein
-// Auswahlelement,
-  const optionText = document.createTextNode(options[i]); // erstelle den
-// entsprechenden Text,
-  optionElement.appendChild(optionText); // füge den Text an
-// das Element
-  selectElement.appendChild(optionElement); // und füge das Element
-// an die Auswahlliste.
+const age = prompt('Für welches Alter suchen Sie Filmtipps?');
+if(!isNaN(parseFloat(age)) && isFinite(age)) {
+  if(age >= 18) {
+    console.log('Filme mit FSK6, FSK12, FSK16 und FSK18 anzeigen.');
+  } else if(age >= 16) {
+    console.log('Filme mit FSK6, FSK12 und FSK16 anzeigen.');
+  } else if(age >= 12) {
+    console.log('Filme mit FSK6 und FSK12 anzeigen.');
+  } else if(age >= 6) {
+    console.log('Filme mit FSK6 anzeigen.');
+  }
+} else {
+  console.error('Ungültiges Alter eingegeben.');
 }

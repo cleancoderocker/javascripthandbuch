@@ -1,10 +1,6 @@
 'use strict';
-console.log(checkAge(22));  // true
-console.log(checkAge(-22)); // Error: Alter darf nicht negativ sein
-function checkAge(age) {
-  if (age < 0) {
-    throw new Error('Alter darf nicht negativ sein.');
-  } else {
-    return true;
-  }
+const sum = (x, y) => {return x + y;}
+// ... ist das gleiche wie ...
+const sum = function(x, y) {
+  return x + y;
 }

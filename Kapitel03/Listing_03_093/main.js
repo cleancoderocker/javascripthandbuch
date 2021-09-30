@@ -1,6 +1,6 @@
 'use strict';
-const showMessage = function showMessageFunctionName() {
-  console.log('Herzlich willkommen');
-}
-showMessage();
-// showMessageFunctionName(); // Aufruf nicht möglich
+let i = 1; // Initialisierung
+do {
+  console.log(i); // Anweisung
+  i++; // Inkrementierung
+} while (i < 11) // Bedingung

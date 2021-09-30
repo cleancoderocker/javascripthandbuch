@@ -1,5 +1,5 @@
 'use strict';
-const firstName = 'Max'; // einfache Anführungszeichen
-const lastName = "Mustermann"; // doppelte Anführungszeichen
-const age = "22"; // keine Zahl, sondern Zeichenkette
-const street = 'Musterstraße"; // Syntaxfehler: Mischform
+console.log(Number.MIN_VALUE); // Ausgabe: 5e-324
+console.log(Number.MAX_VALUE); // Ausgabe: 1.7976931348623157e+308
+console.log(Number.NEGATIVE_INFINITY); // Ausgabe: -Infinity
+console.log(Number.POSITIVE_INFINITY); // Ausgabe: Infinity

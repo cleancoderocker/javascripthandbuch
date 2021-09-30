@@ -1,6 +1,5 @@
 'use strict';
-let i = 1; // Initialisierung
-while (i < 11) { // Bedingung
-  console.log(i); // Anweisung
-  i++; // Inkrementierung
-}
+const age = prompt('Geben Sie bitte Ihr Alter ein.');
+const isAtLeast18 = age >= 18 ? true : false;
+const message = isAtLeast18 ? 'Über 18' : 'Unter 18';
+console.log(message);

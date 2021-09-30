@@ -1,6 +1,5 @@
 'use strict';
-const name = "globaler Name";
-function getNameGlobal() {
-  return this.name;
+function sum(x, y) {
+  const result = x + y; // Addition der zwei übergebenen Parameter
+  return result;      // Rückgabe des Ergebnisses
 }
-console.log(getNameGlobal()); // Ausgabe: globaler Name

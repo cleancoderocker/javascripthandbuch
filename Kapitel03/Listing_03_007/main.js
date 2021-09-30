@@ -1,7 +1,5 @@
 'use strict';
-const 2ndName = 'Moritz'; // ungültig, da mit Zahl beginnend
-const first%Name = 'Max'; // ungültig, da Sonderzeichen enthaltend
-const first-name = 'Max'; // ungültig, da Bindestrich enthaltend
-const first_name = 'Max'; // gültig
-const _firstName = 'Max'; // gültig
-const $firstName = 'Max'; // gültig
+const number = 22;    // Variable definieren
+console.log(number);  // Ausgabe: 22
+const console = 4711; // Variable definieren
+console.log(number);  // TypeError: console.log is not a function

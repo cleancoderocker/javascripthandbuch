@@ -1,2 +1,13 @@
 'use strict';
-const showMessage = message => console.log(message);
+function printPersonInformation(firstName, lastName, age) {
+  if(firstName !== undefined) {
+    console.log(`Vorname: ${firstName}`);
+  }
+  if(lastName !== undefined) {
+    console.log(`Nachname: ${lastName}`);
+  }
+  if(age !== undefined) {
+    console.log(`Alter: ${age}`);
+  }
+}
+printPersonInformation('Max', 'Mustermann', 44, 1.80);

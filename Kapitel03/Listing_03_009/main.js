@@ -1,6 +1,4 @@
 'use strict';
-const defaultValue = 2345;
-const firstName = 'Max';
-const lastName = 'Mustermann';
-const isAdmin = true;
-const userIsNotLoggedIn = true;
+const name = 'Max'; // Dies ist eine andere Variable ...
+const Name = 'Moritz'; // ... als diese Variable ...
+const nAme = 'Peter'; // ... und als diese Variable.

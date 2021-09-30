@@ -1,19 +1,15 @@
 'use strict';
-function compareNumbers(numberAtI, numberAtJ) {
-  if(numberAtI === numberAtJ) {
-    console.log(`Doppelte Zahl gefunden: ${numberAtI}`);
+document.addEventListener('DOMContentLoaded', function() {
+  const userInput = prompt('Bitte die Länge des Arrays eingeben');
+  const length = parseInt(userInput);
+  let array;
+  try {
+    array = createArray(length);
+  } catch (error) {
+    console.log(error.name); // Ausgabe: RangeError
+    console.log(error.message); // Invalid array length
   }
-}
-function checkNumber(numberAtI, numbers, i) {
-  for(let j=i+1; j<numbers.length; j++) {
-    const numberAtJ = numbers[j];
-    compareNumbers(numberAtI, numberAtJ);
+  function createArray(length) {
+    return new Array(length);
   }
-}
-function findDuplicates() {
-  const numbers = [2, 4, 5, 2, 5, 8, 5, 4711];
-  for(let i=0; i<numbers.length; i++) {
-    checkNumber(numbers[i], numbers, i);
-  }
-}
-document.addEventListener('DOMContentLoaded', findDuplicates);
+});

@@ -1,9 +1,13 @@
 'use strict';
-if(condition1) {
-  // Programmzweig, der ausgeführt wird, falls Bedingung 1 erfüllt ist
-} else if(condition2) {
-  // Programmzweig, der ausgeführt wird, falls Bedingung 2 erfüllt ist
-} else {
-  // Programmzweig, der ausgeführt wird, falls keine der vorherigen ...
-  // ... Bedingungen erfüllt ist
-}
+const name = 'Max Mustermann';
+const emptyString = '';
+console.log(!name); // Ausgabe: false
+console.log(!emptyString); // Ausgabe: true
+const amount = 0;
+const age = 25;
+console.log(!amount); // Ausgabe: true
+console.log(!age); // Ausgabe: false
+console.log(!max); // Ausgabe: false
+console.log(!null); // Ausgabe: true
+console.log(!NaN); // Ausgabe: true
+console.log(!undefined); // Ausgabe: true

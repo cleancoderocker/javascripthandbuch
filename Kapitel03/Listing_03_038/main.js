@@ -1,9 +1,10 @@
 'use strict';
-const isLoggedIn = true;
-const isAdmin = false;
-const isLoggedInAndAdmin = isLoggedIn && isAdmin; // Und-Operator
-const isLoggedInOrAdmin = isLoggedIn || isAdmin; // Oder-Operator
-const isLoggedOut = !isLoggedIn; // Negation
-console.log(isLoggedInAndAdmin); // false
-console.log(isLoggedInOrAdmin); // true
-console.log(isLoggedOut); // false
+const item = {
+  name: 'Schrödinger programmiert Java',
+  price: 44.90,
+  author: 'Philip Ackermann',
+  isbn: '978-3-8362-7272-8',
+  printDescription: function() {
+    console.log(`${this.author}: ${this.name}`);
+  }
+}

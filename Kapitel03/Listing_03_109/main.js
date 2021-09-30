@@ -1,13 +1,6 @@
 'use strict';
-function printPersonInformation(firstName, lastName, age) {
-  if(firstName !== undefined) {
-    console.log(`Vorname: ${firstName}`);
-  }
-  if(lastName !== undefined) {
-    console.log(`Nachname: ${lastName}`);
-  }
-  if(age !== undefined) {
-    console.log(`Alter: ${age}`);
-  }
+const showMessage = function showMessageFunctionName() {
+  console.log('Herzlich willkommen');
 }
-printPersonInformation('Max', 'Mustermann', 44, 1.80);
+showMessage();
+// showMessageFunctionName(); // Aufruf nicht möglich

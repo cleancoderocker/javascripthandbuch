@@ -1,17 +1,7 @@
 'use strict';
-switch(expression) {
-  case value1:
-// Anweisungen
-    break;
-  case value2:
-// Anweisungen
-    break;
-  case value3:
-// Anweisungen
-    break;
-  case value4:
-// Anweisungen
-    break;
-  default:
-// Anweisungen
+const condition;
+if(condition) {
+  // Programmcode, der ausgeführt werden soll, falls Bedingung erfüllt ist
+} else {
+  // Programmcode, der ausgeführt werden soll, falls Bedingung nicht erfüllt ist
 }

@@ -1,9 +1,8 @@
 'use strict';
-try {
-// Code ausführen, der potenziell Fehler produziert
-} catch (error) {
-// Behandeln des Fehlers
-} finally {
-// Alles, was hier steht, wird immer ausgeführt, unabhängig davon,
-// ob ein Fehler aufgetreten ist oder nicht.
+const person = {
+  name: 'Max',                  // Objekteigenschaft
+  getName: function() {
+    return this.name;
+  }
 }
+console.log(person.getName());  // Ausgabe: Max

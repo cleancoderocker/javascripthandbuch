@@ -1,5 +1,5 @@
 'use strict';
-const number = 22;      // Variable definieren
-console.log(number);  // Ausgabe: 22
-const console = 4711;   // Variable definieren
-console.log(number);  // TypeError: console.log is not a function
+let x = 4711;
+console.log(x); // Ausgabe: 4711
+x = 5;
+console.log(x); // Ausgabe: 5

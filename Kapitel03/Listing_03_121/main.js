@@ -1,23 +1,8 @@
 'use strict';
-function createUser(username, email, password) {
-  const user = {
-    username: username,
-    email: email,
-    password: password
-  }
-  return user;
+function printPersonInformation(firstName, lastName, age) {
+  console.log(`Vorname: ${firstName}`);
+  console.log(`Nachname: ${lastName}`);
+  console.log(`Alter: ${age}`);
 }
-const userData1 = ['Max Mustermann', 'max.mustermann@example.com', 'secret'];
-const userData2 = ['Moritz Mustermann', 'moritz.mustermann@example.com', 'password'];
-const max = createUser(
-  userData1[0],
-  userData1[1],
-  userData1[2]
-);
-const moritz = createUser(
-  userData2[0],
-  userData2[1],
-  userData2[2]
-);
-console.log(max);
-console.log(moritz);
+printPersonInformation('Max', 'Mustermann', 44);
+printPersonInformation('Moritz', 'Mustermann', 55);

@@ -1,12 +1,6 @@
 'use strict';
-const dog = {
-  name: 'Bello'
-}
-const person = {
-  firstName: 'Max',
-  lastName: 'Mustermann',
-  pet: dog
-}
-console.log(person.pet); // Ausgabe: Object {name: "Bello"}
-person.pet = null;
-console.log(person.pet); // Ausgabe: null
+const values = [        // ein Array ...
+  'Max Mustermann',   // ... mit einer Zeichenkette ...
+  22,                 // ... einer Zahl ...
+  true                // ... und einem booleschen Wert
+];

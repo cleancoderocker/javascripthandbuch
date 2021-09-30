@@ -1,7 +1,9 @@
 'use strict';
-let result = 5;
-result += 11; // Die Variable hat jetzt den Wert 16 ...
-result -= 1;  // ... jetzt den Wert 15 ...
-result /= 3;  // ... jetzt den Wert 5 ...
-result *= 4;  // ... jetzt den Wert 20 ...
-result %= 5;  // ... und jetzt den Wert 0.
+const item1 = shoppingCart[0]; // erster Eintrag
+const item2 = shoppingCart[1]; // zweiter Eintrag
+const item3 = shoppingCart[2]; // dritter Eintrag
+const item4 = shoppingCart[3]; // vierter Eintrag
+console.log(item1); // 'Plattenspieler'
+console.log(item2); // 'Lautsprecher'
+console.log(item3); // 'Vorverstärker'
+console.log(item4); // 'Lautsprecherkabel'

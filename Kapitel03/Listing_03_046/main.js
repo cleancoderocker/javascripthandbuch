@@ -1,6 +1,9 @@
 'use strict';
-const userIsLoggedIn = true;
-if(userIsLoggedIn) {
-  const message = 'Herzlich willkommen, ' + userName;
-  document.getElementById('message').textContent = message;
-}
+const isLoggedIn = true;
+const isAdmin = false;
+const isLoggedInAndAdmin = isLoggedIn && isAdmin; // Und-Operator
+const isLoggedInOrAdmin = isLoggedIn || isAdmin; // Oder-Operator
+const isLoggedOut = !isLoggedIn; // Negation
+console.log(isLoggedInAndAdmin); // false
+console.log(isLoggedInOrAdmin); // true
+console.log(isLoggedOut); // false

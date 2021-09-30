@@ -1,2 +1,7 @@
 'use strict';
-const MAXIMUM = 5000;
+// Wenig aussagekräftige Variablennamen
+const fn = 'Max ';
+const ln = 'Mustermann ';
+// Aussagekräftige Variablennamen
+const firstName = 'Max ';
+const lastName = 'Mustermann ';
