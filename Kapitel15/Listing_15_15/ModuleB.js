@@ -3,5 +3,5 @@
 function printHelloWorld() {
   console.log('Hello World');
 }
-// Öffentliche API
+// öffentliche API
 exports.printHelloWorld = printHelloWorld;

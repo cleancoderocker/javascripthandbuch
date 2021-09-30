@@ -8,6 +8,6 @@ if(condition1) {
 } else if(condition4) {
 // Programmzweig, der ausgeführt wird, falls Bedingung 4 erfüllt ist
 } else {
-// Programmzweig, der ausgeführt wird, falls keine der vorigen ...
+// Programmzweig, der ausgeführt wird, falls keine der vorherigen ...
 // ... Bedingungen erfüllt ist
 }

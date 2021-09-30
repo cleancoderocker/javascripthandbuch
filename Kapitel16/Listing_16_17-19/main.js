@@ -11,7 +11,7 @@ let arrayWrapper = {
 arrayWrapper[Symbol.iterator] = function() {
   let array = this.array;
   let counter = this.array.length-1;
-// Rückgabe des Iterator-Objekts
+// Rückgabe des Iteratorobjekts
   return {
     next: function(){
       if (counter < 0) {

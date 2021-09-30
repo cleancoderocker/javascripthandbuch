@@ -4,8 +4,8 @@ let emitter = new events.EventEmitter(); // Emitter erstellen
 emitter.on( // Event abfangen
   'personAdded', // Event-Name
   (firstName, lastName) => { // Callback-Funktion
-  console.log(firstName + ' ' + lastName);
-}
+    console.log(`${firstName} ${lastName}`);
+  }
 );
 emitter.emit( // Event auslösen
   'personAdded', // Event-Name

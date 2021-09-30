@@ -1,21 +1,33 @@
 'use strict';
 class Animal {
+
+  name = 'Max Musterfisch';
+  color = 'Gold';
+  age = '25';
+
   constructor(name, color, age) {
-    this.name = name;
-    this.color = color;
-    this.age = age;
+      this.name = name ? name : this.name;
+      this.color = color ? color : this.color;
+      this.age = age ? age : this.age;
   }
+
   eat(food) {
-    console.log('Mmpf mmpf, ' + food);
+    console.log(`Mmpf mmpf, ${food}`);
   }
+
   drink(drink) {
-    console.log('Mmmmmmh, ' + drink);
+    console.log(`Mmmmmmh, ${drink}`);
   }
+
   toString() {
-    return this.name + ', ' + this.color + ', ' + this.age;
+    return `${this.name}, ${this.color}, ${this.age}`;
   }
+
 }
 
+let defaultAnimal = new Animal();
+console.log(defaultAnimal.toString()); // "Max Musterfisch, Gold, 25"
+
 let fish = new Animal('Fischi', 'Grün', 2);
-fish.eat('Algen');
-console.log(fish.toString()); // Ausgabe: "Fischi, Grün, 2"
+fish.eat('Algen');             // "Mmpf mmpf, Algen"
+console.log(fish.toString());  // "Fischi, Grün, 2"

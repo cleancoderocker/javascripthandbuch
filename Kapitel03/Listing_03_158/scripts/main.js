@@ -6,7 +6,7 @@ function findDuplicates() {
     for(let j=i+1; j<numbers.length; j++) {
       let numberAtJ = numbers[j];
       if(numberAtI === numberAtJ) {
-        console.log('Doppelte Zahl gefunden: ' + numberAtI);
+        console.log(`Doppelte Zahl gefunden: ${numberAtI}`);
       }
     }
   }

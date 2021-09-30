@@ -2,7 +2,7 @@
 function init() {
   if (window.File && window.FileReader && window.FileList && window.Blob) {
     function handleFileSelected(event) {
-      let files = event.target.files;                 // Alle ausgewählten Dateien
+      let files = event.target.files;                 // alle ausgewählten Dateien
       console.log(files);
       let output = '';                                // Variable für Ergebnis
       for (let i = 0; i < files.length; i++) {        // Über alle Dateien iterieren ...

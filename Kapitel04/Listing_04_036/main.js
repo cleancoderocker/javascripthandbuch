@@ -3,12 +3,12 @@ let item = {
   name: 'Schrödinger programmiert Java',
   price: 44.90,
   author: 'Philip Ackermann',
-  isbn: ' 978-3836245838',
+  isbn: ' 978-3-8362-7272-8',
   printDescription: function() {
-    console.log(this.author + ': ' + this.name);
+    console.log(`${this.author}: ${this.name}`);
   }
 }
 for(let property in item) {
-  console.log('Name: ' + property);
-  console.log('Wert: ' + item[property]);
+  console.log(`Name: ${property}`);
+  console.log(`Wert: ${item[property]}`);
 }

@@ -12,7 +12,7 @@ function draw() {
     context.strokeStyle = 'rgba(0, 0, 200, 0.5)'; // Festlegen der Rahmenfarbe
     context.strokeRect (280, 10, 80, 80);         // Zeichnen des 4. Rechtecks
     context.fillStyle = 'rgb(200,0,0)';           // Festlegen der Hintergrundfarbe
-    context.fillRect (370, 10, 80, 80);           // Zeichnen des "Kopfes"
+    context.fillRect (370, 10, 80, 80);           // Zeichnen des "Kopfs"
     context.clearRect (380, 20, 60, 20);          // Zeichnen der "Augenpartie"
     context.fillRect (390, 25, 10, 10);           // Zeichnen des linken "Auges"
     context.fillRect (420, 25, 10, 10);           // Zeichnen des rechten "Auges"

@@ -1,48 +1,76 @@
 'use strict';
 class Animal {
+
+  _name = 'Max Musterfisch';
+  _color = 'Gold';
+  _age = '25';
+
   constructor(name, color, age) {
-    this.name = name;
-    this.color = color;
-    this.age = age;
+    this._name = name ? name : this._name;
+    this._color = color ? color : this._color;
+    this._age = age ? age : this._age;
   }
+
   static getAnimalColors() {
-    return {
+    return { 
       WHITE: 'Weiß',
       BLACK: 'Schwarz',
-      BROWN: 'Braun',
+      BROWN: 'Braun', 
       GREEN: 'Grün',
       YELLOW: 'Gelb',
       ORANGE: 'Orange'
     }
   }
-  eat(food) {
-    console.log('Mmpf mmpf, ' + food);
-  }
-  drink(drink) {
-    console.log('Mmmmmmh, ' + drink);
-  }
+
   get name() {
     return this._name;
   }
+
   set name(name) {
     this._name = name;
   }
+
   get color() {
     return this._color;
   }
+
   set color(color) {
     this._color = color;
   }
+
   get age() {
     return this._age;
   }
+
   set age(age) {
     this._age = age;
   }
+
+  eat(food) {
+    console.log(`Mmpf mmpf, ${food}`);
+  }
+
+  drink(drink) {
+    console.log(`Mmmmmmh, ${drink}`);
+  }
+
+  toString() {
+    return `${this._name}, ${this._color}, ${this._age}`;
+  }
+
 }
+
 console.log(Animal.getAnimalColors());
+// {
+//   WHITE: 'Weiß',
+//   BLACK: 'Schwarz',
+//   BROWN: 'Braun',
+//   GREEN: 'Grün',
+//   YELLOW: 'Gelb',
+//   ORANGE: 'Orange'
+// }
 let bird = new Animal('Birdie', Animal.getAnimalColors().BLACK, 5);
-console.log(bird.name); // "Birdie"
-console.log(bird.color); // "Schwarz"
-console.log(bird.age); // 5
+console.log(bird.name);   // "Birdie"
+console.log(bird.color);  // "Schwarz"
+console.log(bird.age);    // 5
 // console.log(bird.getAnimalColors()); // Fehler, da Methode statisch

@@ -7,8 +7,8 @@ function printContactInformation(
       }
     }
 ) {
-  console.log('E-Mail: ' + email);
-  console.log('Telefon: ' + phone);
+  console.log(`E-Mail: ${email}`);
+  console.log(`Telefon: ${phone}`);
 }
 let person = {
   firstName: 'Max',

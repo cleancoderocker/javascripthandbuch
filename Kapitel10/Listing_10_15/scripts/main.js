@@ -3,7 +3,7 @@ $(document).ready(() => {
   // Kindelemente
   // Auswahl aller Kindelemente von <ul>
   let listItems = $('ul').children();
-  // Auswahl des nächsten Links innerhalb <ul>
+  // Auswahl des nächsten Links innerhalb von <ul>
   let closestLink = $('ul').closest('a');
   // Geschwisterelemente
   // Auswahl des nächsten Geschwisterelements
@@ -16,12 +16,12 @@ $(document).ready(() => {
   let nextSiblingLinks = $('div').nextAll('a');
   // Auswahl aller nächsten Geschwisterelemente bis zu bestimmtem Element
   let nextSiblingsUntil = $('div').nextUntil('a');
-  // Auswahl des vorigen Geschwisterelements
+  // Auswahl des vorherigen Geschwisterelements
   let previousSibling = $('ul').prev();
-  // Auswahl aller vorigen Geschwisterelemente
+  // Auswahl aller vorherigen Geschwisterelemente
   let previousSiblings = $('ul').prevAll();
-  // Auswahl aller vorigen Geschwisterelemente bis zu bestimmtem Element
-  let previousSiblingsUntil = $('div').prevUntil('a');
+  // Auswahl aller vorherigen Geschwisterelemente bis zu bestimmtem Element
+  let previousSiblingsUntil = $('div').prevUntil('a');  
   // Auswahl aller Geschwisterelemente
   let siblings = $('div').siblings();
   // Elternelemente

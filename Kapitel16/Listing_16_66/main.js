@@ -1,5 +1,8 @@
 'use strict';
-let bestOfStonerrock = [];
+let bestOfStonerrock = [
+  'Spiritual Beggars',
+  'Spice and the RJ Band'
+];
 let [
   one = 'Kyuss',
   two = 'Kyuss',

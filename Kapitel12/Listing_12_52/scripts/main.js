@@ -16,21 +16,21 @@ function getPosition() {
     let map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     let travel = {
       origin : new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-      destination : "Alexanderplatz, Berlin",
+      destination : 'Alexanderplatz, Berlin',
       travelMode : google.maps.DirectionsTravelMode.DRIVING
     };
     let googlePosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     map.setCenter(googlePosition);
     directionsRenderer.setMap(map);
-    directionsRenderer.setPanel(document.getElementById("map-directions"));
-    directionsService.route(travel, function(result, status) {
+    directionsRenderer.setPanel(document.getElementById('map-directions'));
+    directionsService.route(travel, (result, status) => {
       if (status === google.maps.DirectionsStatus.OK) {
         directionsRenderer.setDirections(result);
       }
     });
   }
   function errorHandler(error) {
-    // Nutzer verweigert Positionsermittlung
+    // Nutzer verweigert Positionsermittlung.
   }
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(successHandler, errorHandler);

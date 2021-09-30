@@ -7,8 +7,8 @@ export function debug(message) {
   console.debug(message);
 }
 export function warn(message) {
-  console.warn(meldung);
+  console.warn(message);
 }
 export function error(message) {
-  console.warn(meldung);
+  console.error(message);
 }

@@ -1,9 +1,9 @@
 function init() {
   let source = new EventSource('/events');
-  source.onmessage = (e) => {
-    console.log(e.data);        // gesendete Nachricht
-    console.log(e.origin);      // Quelle
-    console.log(e.lastEventId); // ID des zuletzt gesendeten Events
+  source.onmessage = (event) => {
+    console.log(event.data);        // gesendete Nachricht
+    console.log(event.origin);      // Quelle
+    console.log(event.lastEventId); // ID des zuletzt gesendeten Events
   };
 }
 document.addEventListener('DOMContentLoaded', init);

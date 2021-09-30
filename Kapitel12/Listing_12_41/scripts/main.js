@@ -16,7 +16,7 @@ function init() {
         } else if(file.type.match('image.*')) {
           reader.onload = (event) => {
             let span = document.createElement('span');
-            span.innerHTML = '<img class="thumbnail" src="' + reader.result + '"/>';
+            span.innerHTML = `<img class="thumbnail" src="${reader.result}"/>`;
             document.getElementById('list').insertBefore(span, null);
           };
           reader.readAsDataURL(file);

@@ -10,8 +10,8 @@ client.connect(url, (error, db) => { // Verbindung herstellen
       if(document) { //
         console.log( //
           document._id, // interne ID
-          document.firstName, // Hier: "Max"
-          document.lastName // Hier: "Mustermann"
+          document.firstName, // hier: "Max"
+          document.lastName // hier: "Mustermann"
         );
       } else {
         db.close();

@@ -1,5 +1,10 @@
 'use strict';
 let connection = new WebSocket('ws://example.com/test');
-connection.onmessage = function(e) {
-  let data = JSON.parse(e.data);
+connection.onmessage = (event) => {
+  try {
+    let data = JSON.parse(event.data);
+    console.log(data);
+  } catch (error) {
+    console.error('Fehler beim Parsen');
+  }
 };

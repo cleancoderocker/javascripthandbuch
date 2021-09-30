@@ -4,7 +4,6 @@ import { // Import ...
   debug as d, // ... der Funktion 'debug' unter Alias 'd'
   warn as w, // ... der Funktion 'warn' unter Alias 'w'
   error as e // ... der Funktion 'error' unter Alias 'e'
-  } from 'logger'
-import 'logger' as l; // Import des Moduls 'logger' unter Alias 'l'
+  } from './logger.js'
+
 e(4711); // Aufruf der Funktion error des Moduls 'logger'
-l.debug(4711); // Aufruf der Funktion debug des Moduls 'logger'

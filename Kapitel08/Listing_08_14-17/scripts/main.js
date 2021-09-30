@@ -1,5 +1,5 @@
 function init() {
-  // Container-Element für den Inhalt
+  // Containerelement für den Inhalt
   let contentElement = document.getElementById('content');
   // Beispielinhalte, normalerweise per Ajax laden
   let contents = {

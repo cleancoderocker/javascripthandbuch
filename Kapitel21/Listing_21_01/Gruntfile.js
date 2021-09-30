@@ -4,7 +4,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
 // ...
   });
-// 2.) Plugins und Tasks laden
+// 2.) Plug-ins und Tasks laden
   grunt.loadNpmTasks('...');
 // 3.) Tasks definieren
   grunt.registerTask('default', [ '...' ]);

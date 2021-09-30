@@ -26,7 +26,7 @@ for (let
            phone: phone
            }
          } of persons) {
-  console.log(firstName + ' ' + lastName);
-  console.log('E-Mail: ' + email);
-  console.log('Telefon: ' + phone);
+  console.log(`${firstName} ${lastName}`);
+  console.log(`E-Mail: ${email}`);
+  console.log(`Telefon: ${phone}`);
 }

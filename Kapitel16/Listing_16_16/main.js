@@ -7,7 +7,7 @@ let artists = [
 ];
 function createIterator(array) {
   let counter = array.length-1;
-// Rückgabe des Iterator-Objekts
+// Rückgabe des Iteratorobjekts
   return {
     next: function(){
       if (counter < 0) {

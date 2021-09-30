@@ -8,7 +8,7 @@ function asyncFunction() {
           if(result >= 50) {
             resolve(result); // Ergebnis
           } else {
-            reject('Zufallszahl ' + result + ' kleiner als 50.'); // Fehler
+            reject(`Zufallszahl ${result} kleiner als 50.`); // Fehler
           }
         },
         2000);

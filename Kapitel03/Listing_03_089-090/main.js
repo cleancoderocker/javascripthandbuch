@@ -6,7 +6,7 @@ outerLoop:
     innerLoop:
       for (let j = i + 1; j < numbers.length; j++) {
         let number2 = numbers[j];
-        console.log('Vergleiche ' + number + ' mit ' + number2);
+        console.log(`Vergleiche ${number} mit ${number2}`);
         if (number === number2) {
           console.log('Gleiche Zahlen gefunden');
           continue outerLoop;

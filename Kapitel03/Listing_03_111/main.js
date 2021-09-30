@@ -1,13 +1,13 @@
 'use strict';
 function printPersonInformation(firstName, lastName, age, ...restArgs) {
-  console.log('Vorname: ' + firstName);
-  console.log('Nachname: ' + lastName);
-  console.log('Alter: ' + age);
+  console.log(`Vorname: ${firstName}`);
+  console.log(`Nachname: ${lastName}`);
+  console.log(`Alter: ${age}`);
   if(restArgs.length > 0) {
-    console.log('Größe: ' + restArgs[0]);
+    console.log(`Größe: ${restArgs[0]}`);
   }
   if(restArgs.length > 1) {
-    console.log('Gewicht: ' + restArgs[1]);
+    console.log(`Gewicht: ${restArgs[1]}`);
   }
 }
 printPersonInformation('Max', 'Mustermann', 44, 1.88, 88);

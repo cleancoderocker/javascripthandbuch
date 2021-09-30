@@ -9,9 +9,10 @@ function printPerson(
       }
     }
 ) {
-  console.log(firstName + ' ' + lastName);
-  console.log('E-Mail: ' + email);
-  console.log('Telefon: ' + phone);
+  console.log(`${firstName} ${lastName}`);
+  console.log(`E-Mail: ${email}`);
+  console.log(`Telefon: ${phone}`);
+
 }
 let person = {
   firstName: 'Max',

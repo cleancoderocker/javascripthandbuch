@@ -1,5 +1,5 @@
 function init() {
-  // Script für ältere Browser, daher auch das var-Schlüsselwort
+  // Skript für ältere Browser, daher auch das var-Schlüsselwort
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
     if (request.readyState === 4 && request.status === 200) {

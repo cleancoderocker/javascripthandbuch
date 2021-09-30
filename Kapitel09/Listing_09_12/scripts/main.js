@@ -3,7 +3,7 @@ function init() {
   let request = new XMLHttpRequest();               // Erstellen des XMLHttpRequest-Objekts
   request.onload = (e) => {                         // Wenn Ergebnis geladen wurde ...
     if(request.status === 200) {
-      let html = request.responseText;              // HTML-Antwort als Zeichenkette
+      let html = request.responseText;              // HTML-Antwort als Zeichenkette.
     }
   };
   request.open(

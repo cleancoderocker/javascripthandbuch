@@ -9,6 +9,8 @@ function init() {
       } else {
         json = JSON.parse(request.responseText);
       }
+      // hier Weiterverarbeitung der JSON-Daten
+      console.log(json);
     }
   };
   request.open('GET', 'data/content.json', true);

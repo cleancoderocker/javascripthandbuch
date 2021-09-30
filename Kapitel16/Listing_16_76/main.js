@@ -18,7 +18,7 @@ let persons = [
   }
 ];
 for (let {firstName:f, lastName:l, contact:{email:e, phone:p}} of persons) {
-  console.log(f + ' ' + l);
-  console.log('E-Mail: ' + e);
-  console.log('Telefon: ' + p);
+  console.log(`${f} ${l}`);
+  console.log(`E-Mail: ${e}`);
+  console.log(`Telefon: ${p}`);
 }

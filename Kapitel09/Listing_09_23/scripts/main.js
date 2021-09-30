@@ -2,11 +2,21 @@
 function init() {
 // 1.) Abfrage der Datei artists.json
   fetch('artists.json')
-    .then(function(response) {
+    .then((response) => {
+      console.log(response.status);     // 200
+      console.log(response.statusText); // "OK"
+      console.log(response.type);       // "basic"
+      console.log(response.bodyUsed);   // false
+      console.log(response.headers);    // []
+      console.log(response.ok);         // true
+      console.log(response.redirected); // false
+      console.log(response.url);        // "http://localhost:8080/artists.json"
+                                        // (abhängig vom Wurzelverzeichnis des Webservers)
+
 // 2.) Umwandeln der Antwort in ein JavaScript-Objekt
       return response.json();
     })
-    .then(function(result) {
+    .then((result) => {
 // 3.) Auswerten des umgewandelten JavaScript-Objekts
       let table = initTable();
       let artists = result.artists;
@@ -25,7 +35,7 @@ function init() {
       }
       document.getElementById('artists-container').appendChild(table);
     })
-    .catch(function(error) {
+    .catch((error) => {
       console.error(error);
     });
 }

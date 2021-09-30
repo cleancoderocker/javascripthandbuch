@@ -3,10 +3,10 @@ function handler(ev) {
   let target = e.target || e.srcElement;                  // Zielelement
   this.classList.toggle('selected');                      // CSS-Klasse
   console.log(                                            // Ausgabe geklicktes ...
-    'Geklickt auf Knoten mit ID "' + target.id + '"'      // ... Element.
+    `Geklickt auf Knoten mit ID "${target.id}"`           // ... Element.
   );
   console.log(                                            // Ausgabe aktuelles ...
-    'Event an Knoten mit ID "' + this.id + '"'            // ... Element.
+    `Event an Knoten mit ID "${this.id}"`                 // ... Element.
   );
 }
 function init() {

@@ -42,7 +42,9 @@ function init() {
       reader.onload = (event) => {
         progress.style.width = '100%';
         progress.textContent = '100%';
-        setTimeout("document.getElementById('progress-bar').className='';", 2000);
+        setTimeout(() => {
+          document.getElementById('progress-bar').className = '';
+        }, 2000);
       };
       reader.readAsBinaryString(event.target.files[0]);
     }

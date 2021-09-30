@@ -3,10 +3,10 @@ function handler(ev) {
   let target = e.target || e.srcElement;
   this.classList.toggle('selected');
   console.log(
-    'Geklickt auf Knoten mit ID "' + target.id + '"'
+    `Geklickt auf Knoten mit ID "${target.id}"`
   );
   console.log(
-    'Event an Knoten mit ID "' + this.id + '"'
+    `Event an Knoten mit ID "${this.id}"`
   );
   if(this.classList.contains('level2')) {             // Sobald Level 2 erreicht ist ...
     e.stopPropagation();                              // ... wird das Event nicht ...

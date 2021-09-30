@@ -3,7 +3,7 @@ let item = {
   _name: 'Schrödinger programmiert Java',
   _price: 44.90,
   _author: 'Philip Ackermann',
-  _isbn: '978-3836245838',
+  _isbn: '978-3-8362-7272-8',
   set name(newName) {
     if(typeof newName === 'string') {
       console.log('Neuen Namen setzen');

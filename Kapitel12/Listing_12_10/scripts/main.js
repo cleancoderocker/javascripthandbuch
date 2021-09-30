@@ -1,7 +1,7 @@
 function init() {
   let source = new EventSource('/events');
-  source.addEventListener('message', (e) => {
-    document.body.innerHTML += e.data + '<br>';
+  source.addEventListener('message', (event) => {
+    document.body.innerHTML += event.data + '<br>';
 });
 }
 document.addEventListener('DOMContentLoaded', init);

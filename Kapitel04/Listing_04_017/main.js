@@ -19,7 +19,7 @@ let item = Object.create(Object.prototype, {
     enumerable: true
   },
   isbn: {
-    value: '978-3836245838',
+    value: '978-3-8362-7272-8',
     writable: false,
     configurable: true,
     enumerable: false // Die Eigenschaft "isbn" wird bei Iteration
@@ -27,7 +27,7 @@ let item = Object.create(Object.prototype, {
   },
   printDescription: {
     value: function() {
-      console.log(this.author + ': ' + this.name);
+      console.log(`${this.author}: ${this.name}`);
     }
   }
 });

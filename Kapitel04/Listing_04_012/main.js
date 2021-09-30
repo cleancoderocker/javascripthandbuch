@@ -7,6 +7,6 @@ class Item {
     this.isbn = isbn;
   }
   printDescription() {
-    console.log(this.author + ': ' + this.name);
+    console.log(`${this.author}: ${this.name}`);
   }
 }

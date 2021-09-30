@@ -5,7 +5,7 @@ $(document).ready(() => {
     'fast',             // Geschwindigkeit
     'swing',            // Easing
     () => {
-      // Animation abgeschlossen.
+      // Animation abgeschlossen
     }
   );
 });

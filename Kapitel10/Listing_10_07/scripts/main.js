@@ -1,13 +1,13 @@
 'use strict';
 function init() {
-  let listItems = document.getElementsByTagName('li');
+  const listItems = document.getElementsByTagName('li');
   for(let i=0; i<listItems.length; i++) {
-    let listItem = listItems[i];
-    let url = listItem.textContent;
+    const listItem = listItems[i];
+    const url = listItem.textContent;
     listItem.textContent = '';
-    let link = document.createElement('a');
+    const link = document.createElement('a');
     link.setAttribute('href', url);
-    let linkText = document.createTextNode(url);
+    const linkText = document.createTextNode(url);
     link.appendChild(linkText);
     listItem.appendChild(link);
   }

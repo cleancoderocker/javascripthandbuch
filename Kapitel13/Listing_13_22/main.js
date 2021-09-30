@@ -1,7 +1,7 @@
 'use strict';
 class InvalidValueError extends Error {
   constructor(value) {
-    super('Ungültiger Wert: ' + value);
+    super(`Ungültiger Wert: ${value}`);
     this.value = value;
   }
   get value() {

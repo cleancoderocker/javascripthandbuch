@@ -1,3 +1,4 @@
-function showMessage() {
-  alert('Hallo Welt');
-}
+'Bad putzen'
+'Einkaufen'
+'Aufräumen'
+'Rasen mähen'

@@ -28,7 +28,7 @@ item.order(); // Ausgabe: Das Buch wurde erfolgreich bestellt.
 item.publisher = 'Rheinwerk Verlag';
 // Überschreiben der Methode
 item.order = function() {
-  console.log('Das Buch wurde von ' + this.publisher + ' erfolgreich bestellt.');
+  console.log(`Das Buch wurde bei ${this.publisher} erfolgreich bestellt.`);
 }
 console.log(item.publisher);  // Ausgabe: Rheinwerk Verlag
-item.order();                 // Ausgabe: Das Buch wurde von Rheinwerk Verlag erfolgreich bestellt.
+item.order();                 // Ausgabe: Das Buch wurde bei Rheinwerk Verlag erfolgreich bestellt.

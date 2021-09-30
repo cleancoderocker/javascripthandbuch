@@ -23,7 +23,7 @@ function init() {
       console.log('levelchange');
       displayBatteryStatus(event.target);
     }
-    navigator.getBattery().then(function(battery) {
+    navigator.getBattery().then((battery) => {
       displayBatteryStatus(battery);
       battery.addEventListener('chargingchange', chargingChangeHandler);
       battery.addEventListener('chargingtimechange', chargingTimeChangeHandler);

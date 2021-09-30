@@ -5,6 +5,6 @@ function Item(name, price, author, isbn) {
   this.author = author;
   this.isbn = isbn;
   this.printDescription = function() {
-    console.log(this.author + ': ' + this.name);
+    console.log(`${this.author}: ${this.name}`);
   }
 }

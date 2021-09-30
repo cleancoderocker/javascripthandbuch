@@ -5,7 +5,7 @@ function init() {
       event.stopPropagation();
       event.preventDefault();
 
-      let files = event.dataTransfer.files;                               // Alle ausgewählten Dateien
+      let files = event.dataTransfer.files;                               // alle ausgewählten Dateien
       let output = '';                                                    // Variable für Ergebnis
       for (let i = 0; i < files.length; i++) {                            // Über alle Dateien iterieren ...
         let file = files[i];                                              // ... jede Datei betrachten ...

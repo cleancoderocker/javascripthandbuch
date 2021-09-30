@@ -1,7 +1,7 @@
 'use strict';
 // Definition von 'ModuleA'
 define(
-  'ModuleA', // Names des Moduls
+  'ModuleA', // Name des Moduls
   ['ModuleB'], // zu importierende Module
   function (moduleB) { // Funktion, die das Modul definiert
     let x = 5;
@@ -28,7 +28,7 @@ define(
 );
 // Definition von 'ModuleB'
 define(
-  'ModuleB', // Names des Moduls
+  'ModuleB', // Name des Moduls
   [], // zu importierende Module
   function () { // Funktion, die das Modul definiert
     let module = {

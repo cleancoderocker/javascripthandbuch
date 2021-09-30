@@ -3,7 +3,7 @@ function asyncFunction(callbackFunction) {
 // hier weiterer Code
   console.log('Vor Callback');
   callbackFunction();
-  console.log('Nach Calback');
+  console.log('Nach Callback');
 // hier weiterer Code
 }
 function callbackFunction() {

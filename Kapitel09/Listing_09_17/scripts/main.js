@@ -37,7 +37,7 @@ function init() {
     console.log('Antwort geladen');
   });
   request.addEventListener('timeout', (event) => {
-    console.log('Anfrage wegen Timeout abgebrochen');
+    console.log('Anfrage wegen Time-Out abgebrochen');
   });
   request.addEventListener('loadend', (event) => {
     console.log('Anfrage beendet');
