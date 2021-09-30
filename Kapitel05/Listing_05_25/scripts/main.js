@@ -1,10 +1,8 @@
 function init() {
 
   (function() {
-    const innerHTML = document.querySelector('#news li:nth-child(1)').innerHTML;
-    console.log(innerHTML);
-    // Ausgabe: <strong>Platten-News: </strong>Neues Album von
-    // <em>Ben Harper</em> erschienen.
+    const element = document.querySelector('#news li:nth-child(1)');
+    element.textContent = '<strong>Platten-News:</strong> Neues Album von <em>Tool</em> endlich erschienen.';
   })();
 
 }

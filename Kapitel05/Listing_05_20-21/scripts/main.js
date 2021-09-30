@@ -1,9 +1,11 @@
 function init() {
 
   (function() {
-    const textContent = document.querySelector('#news li:nth-child(1)').textContent;
-    console.log(textContent);
-    // Ausgabe: Platten-News: Neues Album von Ben Harper erschienen.
+    const allListItemElements = document.getElementsByTagName('li');
+    console.log(allListItemElements.length); // Ausgabe: 8
+    const subList = document.getElementById('list-2');
+    const subListListItems = subList.getElementsByTagName('li');
+    console.log(subListListItems.length); // Ausgabe: 4
   })();
 
 }
