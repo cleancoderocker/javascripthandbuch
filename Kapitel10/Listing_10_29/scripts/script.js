@@ -17,10 +17,10 @@ function loadContent(name) {
     name + '.html',
     (
       responseText,
-        textStatus,
-        jqXHRObject
+      textStatus,
+      jqXHRObject
     ) => {
-    console.log('HTML geladen');
+      console.log('HTML geladen');
     }
   );
 }

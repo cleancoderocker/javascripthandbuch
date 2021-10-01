@@ -1,9 +1,8 @@
 'use strict';
 $(document).ready(() => {
-  $.get({
-    url: 'artists.json',
-    dataType: 'json'
-  }).done((data) => {
+  $.getJSON(
+    'artists.json'
+  ).done((data, textStatus, jqXHRObject) => {
     const table = initTable();
     const artists = data.artists;
     for (let i = 0; i < artists.length; i++) {
