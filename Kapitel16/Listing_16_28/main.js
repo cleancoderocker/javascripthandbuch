@@ -1,16 +1,8 @@
 'use strict';
-function asyncFunction(callbackFunction) {
-// hier weiterer Code
-  console.log('Vor Callback');
-  callbackFunction();
-  console.log('Nach Callback');
-// hier weiterer Code
+function* returnOneThenReturnTwo() {
+  console.log('A');
+  yield 1;              // Generator hält hier an und liefert den Wert 1.
+  console.log('B');     // Beim nächsten Aufruf wird der Generator ab hier weiter ausgeführt
+  yield 2;              // bis zu dieser Zeile, an der der Generator wieder anhält und diesmal den Wert 2 zurückgibt.
+    console.log('C');
 }
-function callbackFunction() {
-  console.log('Aufruf Callback');
-}
-asyncFunction(callbackFunction));
-// Ausgabe:
-// "Vor Callback"
-// "Aufruf Callback"
-// "Nach Callback"

@@ -1,17 +1,32 @@
 'use strict';
-const artists = new Set();                // Erstellen des Sets
-artists.add('Kyuss');                   // Hinzufügen verschiedener Werte
-artists.add('Kyuss');
-artists.add('Tool');
-artists.add('Monster Magnet');
-artists.add('Ben Harper');
-artists.add('Queens of the Stone Age'(
-  console.log(artists.size);            // Ausgabe: 5
-console.log(artists.has('Kyuss'));      // Ausgabe: true
-artists.delete('Kyuss');                // Löschen eines Wertes
-console.log(artists.has('Kyuss'));      // Ausgabe: false
-console.log(
-  artists.has('Justin Bieber')          // Ausgabe: false
-);
-artists.clear();                        // Löschen aller Werte
-console.log(artists.size);              // Ausgabe: 0
+function asyncFunction() {
+  const promise = new Promise(
+    function(resolve, reject) {
+      setTimeout(
+        () => {
+          const result = Math.floor(Math.random() * 100) + 1; // Zufallszahl
+          if(result >= 50) {
+            resolve(result); // Ergebnis
+          } else {
+            reject(`Zufallszahl ${result} kleiner als 50.`); // Fehler
+          }
+        },
+        2000);
+    }
+  );
+  return promise;
+}
+asyncFunction()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch(
+    (error) => {
+      console.error(error);
+    }
+  )
+  .finally(
+    () => {
+      console.log('Wird immer ausgeführt.');
+    }
+  );

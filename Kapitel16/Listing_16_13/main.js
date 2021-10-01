@@ -1,29 +1,31 @@
 'use strict';
-const artists = new Set(
-  [
-    'Kyuss',
-    'Tool',
-    'Monster Magnet',
-    'Ben Harper',
-    'Queens of the Stone Age'
-  ]
-);
-// Ausgabe: "Kyuss", "Tool", "Monster Magnet", "Ben Harper", "Queens of the
-// Stone Age"
-for (let artist of artists.keys()) {
-  console.log(artist);
+function asyncFunction() {
+  const promise = new Promise(
+    function(resolve, reject) {
+      setTimeout(
+        () => {
+          const result = Math.floor(Math.random() * 100) + 1; // Zufallszahl
+          if(result >= 50) {
+            resolve(result); // Ergebnis
+          } else {
+            reject(`Zufallszahl ${result} kleiner als 50.`); // Fehler
+          }
+        },
+        2000);
+    }
+  );
+  return promise;
 }
-// Ausgabe: "Kyuss", "Tool", "Monster Magnet", "Ben Harper", "Queens of the
-// Stone Age"
-for (let artist of artists.values()) {
-  console.log(artist);
-}
-for (let artist of artists.entries()) {
-  console.log(artist[0]); // Wert, z. B. "Kyuss"
-  console.log(artist[1]); // Wert, z. B. "Kyuss"
-}
-// Ausgabe: "Kyuss", "Tool", "Monster Magnet", "Ben Harper",
-// "Queens of the Stone Age"
-for (let artist of artists) {
-  console.log(artist);
-}
+asyncFunction()
+  .then((result) => {
+    // Inhalt von asyncFunction2
+  })
+  .then((result) => {
+    // Inhalt von asyncFunction3
+  })
+  .then((result) => {
+    // Inhalt von asyncFunction4
+  })
+  .then((result) => {
+    // Inhalt von asyncFunction5
+  });

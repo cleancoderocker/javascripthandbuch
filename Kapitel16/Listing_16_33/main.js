@@ -1,31 +1,22 @@
 'use strict';
-function asyncFunction(callbackFunction) {
-  let result;
-  setTimeout(
-    () => {
-      // Das hier passiert erst nach zwei Sekunden.
-      result = Math.floor(Math.random() * 100) + 1;
-      if (result >= 50) {
-        callbackFunction(
-          null,          // null --> kein Fehler
-          result         // Ergebniswert
-        );
-      } else {
-        callbackFunction(
-          new Error(`Zufallszahl ${result} kleiner als 50.`), // Fehler
-          undefined                                           // kein Ergebniswert
-        );
-      }
-    },
-    2000
-  );
-}
-asyncFunction(
-  (error, result) => {
-    if (error) {
-      console.error(error); // Fehlerbehandlung im Callback
-    } else {
-      console.log(result); // Ergebnisbehandlung im Callback
+function* counter() {
+  const counter = 0;
+  while(true) {
+    counter++;
+    const restart = yield counter;
+    if(restart === true) {
+      counter = 0;
     }
   }
-);
+}
+const counterInstance = counter();
+console.log(counterInstance.next());      // {done: false, value: 1}
+console.log(counterInstance.next());      // {done: false, value: 2}
+console.log(counterInstance.next());      // {done: false, value: 3}
+console.log(counterInstance.next());      // {done: false, value: 4}
+console.log(counterInstance.next());      // {done: false, value: 5}
+console.log(counterInstance.next(true));  // {done: false, value: 1}
+console.log(counterInstance.next());      // {done: false, value: 2}
+console.log(counterInstance.next());      // {done: false, value: 3}
+console.log(counterInstance.next());      // {done: false, value: 4}
+console.log(counterInstance.next());      // {done: false, value: 5}

@@ -1,11 +1,20 @@
 'use strict';
-const numbers = [ 18, 22, 26, 30, 34 ];
-numbers.name = "Zahlenarray";
-// for-in-Schleife
-for (let i in numbers) {
-  console.log(i); // 0, 1, 2, 3, 4, name
+function asyncFunction(callbackFunction) {
+  let result;
+  setTimeout(
+    () => {
+      // Das hier passiert erst nach zwei Sekunden.
+      result = Math.floor(Math.random() * 100) + 1; // Zufallszahl
+      if(result < 50) {
+        throw new Error(`Zufallszahl ${result} kleiner als 50.`);
+      }
+    },
+    2000
+  );
+  return result;
 }
-// for-of-Schleife
-for (let i of numbers) {
-  console.log(i); // 18, 22, 26, 30, 34
+try {
+  const result = asyncFunction();
+} catch(error) {
+  console.error(`Fehler: ${error}`); // Diese Stelle wird nicht aufgerufen!
 }

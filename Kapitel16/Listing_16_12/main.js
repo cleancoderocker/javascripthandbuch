@@ -1,9 +1,27 @@
 'use strict';
-'use strict';
-const artists = new Set()               // Erstellen eines Sets ...
-  .add('Kyuss')                       // ... mit Verkettung
-  .add('Tool')
-  .add('Monster Magnet')
-  .add('Ben Harper')
-  .add('Queens of the Stone Age');
-console.log(artists.size);            // Ausgabe: 5
+function asyncFunction() {
+  const promise = new Promise(
+    function(resolve, reject) {
+      setTimeout(
+        () => {
+          const result = Math.floor(Math.random() * 100) + 1; // Zufallszahl
+          if(result >= 50) {
+            resolve(result); // Ergebnis
+          } else {
+            reject(`Zufallszahl ${result} kleiner als 50.`); // Fehler
+          }
+        },
+        2000);
+    }
+  );
+  return promise;
+}
+asyncFunction()
+  .then((result) => {
+    return result * 2;
+  })
+  .then((result) => {
+    // Hier enthält result das mit zwei multiplizierte Ergebnis von oben.
+    console.log(result);
+  }
+);

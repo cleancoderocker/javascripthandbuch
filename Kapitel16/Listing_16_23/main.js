@@ -1,16 +1,18 @@
 'use strict';
-function* counter() {
-  const counter = 0;
-  while(true) {
-    counter++;
-    yield counter;
-  }
-}
-
-const counter1 = counter();
-console.log(counter1.next()); // {done: false, value: 1}
-console.log(counter1.next()); // {done: false, value: 2}
-console.log(counter1.next()); // {done: false, value: 3}
-console.log(counter1.next()); // {done: false, value: 4}
-console.log(counter1.next()); // {done: false, value: 5}
-// usw.
+const artists = [
+  'Deep Purple',
+  'Jimi Hendrix',
+  'The Doors',
+  'King Crimson'
+];
+const iterator = artists.values();  // Erzeugen des Iterators
+const artist = iterator.next();     // erster Wert im Iterator
+console.log(artist);              // Ausgabe: {value: 'Deep Purple', done: false}
+artist = iterator.next();         // weiter im Iterator
+console.log(artist);              // Ausgabe: {value: 'Jimi Hendrix', done: false}
+artist = iterator.next();         // weiter im Iterator
+console.log(artist);              // Ausgabe: {value: 'The Doors', done: false}
+artist = iterator.next();         // weiter im Iterator
+console.log(artist);              // Ausgabe: {value: 'King Crimson', done: false}
+artist = iterator.next();         // weiter im Iterator
+console.log(artist);              // Ausgabe: {value: undefined, done: true}

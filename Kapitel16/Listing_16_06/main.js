@@ -1,10 +1,31 @@
 'use strict';
-const numbersOfAlbums = new Map();                    // Erstellen der Map
-numbersOfAlbums.set('Kyuss', 4);                    // Hinzufügen mehrerer Einträge
-numbersOfAlbums.set('Tool', 6);
-numbersOfAlbums.set('Monster Magnet', 8);
-numbersOfAlbums.set('Ben Harper', 9);
-numbersOfAlbums.set('Queens of the Stone Age', 6);
-for (let number of numbersOfAlbums.values()) {
-  console.log(number);
+function asyncFunction(callbackFunction) {
+  let result;
+  setTimeout(
+    () => {
+      // Das hier passiert erst nach zwei Sekunden.
+      result = Math.floor(Math.random() * 100) + 1;
+      if (result >= 50) {
+        callbackFunction(
+          null,          // null --> kein Fehler
+          result         // Ergebniswert
+        );
+      } else {
+        callbackFunction(
+          new Error(`Zufallszahl ${result} kleiner als 50.`), // Fehler
+          undefined                                           // kein Ergebniswert
+        );
+      }
+    },
+    2000
+  );
 }
+asyncFunction(
+  (error, result) => {
+    if (error) {
+      console.error(error); // Fehlerbehandlung im Callback
+    } else {
+      console.log(result); // Ergebnisbehandlung im Callback
+    }
+  }
+);

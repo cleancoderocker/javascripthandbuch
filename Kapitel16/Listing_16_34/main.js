@@ -1,27 +1,11 @@
 'use strict';
-asyncFunction(
-  (error, result) => {
-    // weiterer Code
-    asyncFunction2(
-      // weiterer Code
-      (error2, result2) => {
-        // weiterer Code
-        asyncFunction3(
-          (error3, result3) => {
-            // weiterer Code
-            asyncFunction4(
-              (error4, result4) => {
-                // weiterer Code
-                asyncFunction5(
-                  (error5, result5) => {
-                    // weiterer Code
-                  }
-                );
-              }
-            );
-          }
-        );
-      }
-    );
-  }
-);
+const targetObject = {
+  firstName: null,
+  lastName: null
+};
+const handler = {/* wird gleich implementiert*/};
+const proxy = Proxy(targetObject, handler);
+proxy.firstName = 'Max';
+proxy.lastName = 'Mustermann';
+console.log(proxy.firstName);
+console.log(proxy.lastName);

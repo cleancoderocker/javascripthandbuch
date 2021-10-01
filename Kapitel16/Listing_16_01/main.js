@@ -1,11 +1,16 @@
 'use strict';
-const numbersOfAlbums = new Map(      // Erstellen einer Map ...
-  [                                 // ... auf Basis eines Arrays
-    ['Kyuss', 4],
-    ['Tool', 6],
-    ['Monster Magnet', 8],
-    ['Ben Harper', 9],
-    ['Queens of the Stone Age', 6]
-  ]
-);
-console.log(numbersOfAlbums.size);  // Ausgabe: 5
+function asyncFunction(callbackFunction) {
+// hier weiterer Code
+  console.log('Vor Callback');
+  callbackFunction();
+  console.log('Nach Callback');
+// hier weiterer Code
+}
+function callbackFunction() {
+  console.log('Aufruf Callback');
+}
+asyncFunction(callbackFunction);
+// Ausgabe:
+// "Vor Callback"
+// "Aufruf Callback"
+// "Nach Callback"

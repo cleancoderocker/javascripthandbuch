@@ -1,23 +1,23 @@
 'use strict';
-function* returnOneThenReturnTwo() {
-  console.log('A');
-  yield 1;
-  console.log('B');
-  yield 2;
-  console.log('C');
+function randomNumber() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const x = Math.floor(Math.random() * 100) + 1;
+	  resolve(x);
+	}, 2000);
+  });
 }
-const generator = returnOneThenReturnTwo();   // Aufruf der Generatorfunktion erzeugt einen Generator.
-const result = generator.next();              // Ausgabe: "A"
-console.log(result);                        // Ausgabe: {done: false, value: 1}
-result = generator.next();                  // Ausgabe: "B"
-console.log(result);                        // Ausgabe: {done: false, value: 2}
-result = generator.next();                  // Ausgabe: "C"
-console.log(result);                        // Ausgabe: {done: true, value: undefined}
-
-const generator2 = returnOneThenReturnTwo();  // ein zweiter Generator
-let result2 = generator2.next();            // Ausgabe: "A"
-console.log(result2);                       // Ausgabe: {done: false, value: 1}
-result2 = generator2.next();                 // Ausgabe: "B"
-console.log(result2);                       // Ausgabe: {done: false, value: 2}
-result2 = generator2.next();                 // Ausgabe: "C"
-console.log(result2);                       // Ausgabe: {done: true, value: undefined}
+  
+async function addTwoRandomNumbers() {
+  console.log('Berechnung erste Zufallszahl');
+  const a = await randomNumber();
+  console.log(`Ergebnis: ${a}`);
+  console.log('Berechnung zweite Zufallszahl');
+  const b = await randomNumber();
+  console.log(`Ergebnis: ${b}`);
+  return a + b;
+}
+  
+addTwoRandomNumbers()
+  .then(result => console.log(`Summe: ${result}`));
+  
