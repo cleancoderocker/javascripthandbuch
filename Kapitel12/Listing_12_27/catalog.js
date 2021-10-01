@@ -1,4 +1,4 @@
-var catalog = {
+const catalog = {
     id22345: {
         name: 'Gurkenglas (500 ml)',
         price: '2.50'

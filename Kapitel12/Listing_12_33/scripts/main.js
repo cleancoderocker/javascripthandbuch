@@ -11,11 +11,11 @@ function init() {
     const transaction = database.transaction('Books');     // Öffnen der Transaktion
     const objectStore = transaction.objectStore('Books');  // Öffnen des Objektspeichers
     const request = objectStore.get('978-3-8362-5687-2');  // Suche nach Schlüssel
-    request.onerror = (event) => {                       // Event-Handler für Fehlerfall
-      console.error(event.target.error.message);         // Ausgabe der Fehlermeldung
+    request.onerror = (event) => {                         // Event-Handler für Fehlerfall
+      console.error(event.target.error.message);           // Ausgabe der Fehlermeldung
     };
-    request.onsuccess = (event) => {                     // Event-Handler für Normalfall
-      console.log(request.result);                       // Ausgabe des Objekts
+    request.onsuccess = (event) => {                       // Event-Handler für Normalfall
+      console.log(request.result);                         // Ausgabe des Objekts
     };
   };
 

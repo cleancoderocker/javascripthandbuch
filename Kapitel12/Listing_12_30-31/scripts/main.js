@@ -25,12 +25,12 @@ function init() {
     const database = event.target.result;
     const transaction = database.transaction(              // Öffnen der Transaktion
       ['Books'],
-      'readwrite'                                        // Schreibender Zugriff
+      'readwrite'                                          // Schreibender Zugriff
     );
     const objectStore = transaction.objectStore('Books');  // Öffnen des Objektspeichers
     books.forEach(function(book) {
       console.log(book);
-      objectStore.add(book);                             // Hinzufügen der Objekte
+      objectStore.add(book);                               // Hinzufügen der Objekte
     });
   };
   request.onupgradeneeded = function (event) {
