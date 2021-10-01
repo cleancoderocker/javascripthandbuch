@@ -49,29 +49,7 @@ class Animal {
 
 }
 
-class Dog extends Animal {
-
-  _type;
-
-  constructor(name, color, age, type) {
-    super(name, color, age);
-    this._type = type ? type : this._type;
-  }
-
-  get type() {
-    return this._type;
-  }
-
-  set type(type) {
-    this._type = type;
-  }
-
-  bark() {
-    console.log('Wuff wuff');
-  }
-}
-
-const dog = new Dog('Bello', 'Weiß', 2, 'Malteser');
-dog.eat('Käse');       // "Mmpf mmpf, Käse"
-dog.bark();            // "Wuff wuff"
-console.log(dog.type); // "Malteser"
+const snake = new Animal('Zischi', 'Grün', 5);
+console.log(snake.name);  // "Zischi"
+console.log(snake.color); // "Grün"
+console.log(snake.age);   // 5

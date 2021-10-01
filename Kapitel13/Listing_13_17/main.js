@@ -1,38 +1,14 @@
 'use strict';
 class Animal {
 
-  _name = 'Max Musterfisch';
-  _color = 'Gold';
-  _age = '25';
+  name = 'Max Musterfisch';
+  color = 'Gold';
+  age = '25';
 
   constructor(name, color, age) {
-    this._name = name ? name : this._name;
-    this._color = color ? color : this._color;
-    this._age = age ? age : this._age;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(name) {
-    this._name = name;
-  }
-
-  get color() {
-    return this._color;
-  }
-
-  set color(color) {
-    this._color = color;
-  }
-
-  get age() {
-    return this._age;
-  }
-
-  set age(age) {
-    this._age = age;
+    this.name = name ? name : this.name;
+    this.color = color ? color : this.color;
+    this.age = age ? age : this.age;
   }
 
   eat(food) {
@@ -44,12 +20,14 @@ class Animal {
   }
 
   toString() {
-    return `${this._name}, ${this._color}, ${this._age}`;
+    return `${this.name}, ${this.color}, ${this.age}`;
   }
 
 }
 
-const snake = new Animal('Zischi', 'Grün', 5);
-console.log(snake.name);  // "Zischi"
-console.log(snake.color); // "Grün"
-console.log(snake.age);   // 5
+const defaultAnimal = new Animal();
+console.log(defaultAnimal.toString()); // "Max Musterfisch, Gold, 25"
+
+const fish = new Animal('Fischi', 'Grün', 2);
+fish.eat('Algen');             // "Mmpf mmpf, Algen"
+console.log(fish.toString());  // "Fischi, Grün, 2"

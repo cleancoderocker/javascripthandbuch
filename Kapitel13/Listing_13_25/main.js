@@ -53,10 +53,10 @@ class Dog extends Animal {
 
   _type;
 
-  constructor(name, color, age, type) {
-    super(name, color, age);
-    this._type = type ? type : this._type;
-  }
+  // Implizit wird folgender Konstruktor verwendet: 
+  // constructor(...args) {
+  //   super(...args);
+  // }
 
   get type() {
     return this._type;
@@ -74,4 +74,4 @@ class Dog extends Animal {
 const dog = new Dog('Bello', 'Weiß', 2, 'Malteser');
 dog.eat('Käse');       // "Mmpf mmpf, Käse"
 dog.bark();            // "Wuff wuff"
-console.log(dog.type); // "Malteser"
+console.log(dog.type); // undefined

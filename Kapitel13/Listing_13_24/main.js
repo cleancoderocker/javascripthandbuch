@@ -54,8 +54,7 @@ class Dog extends Animal {
   _type;
 
   constructor(name, color, age, type) {
-    super(name, color, age);
-    this._type = type ? type : this._type;
+    // Fehler, da kein Aufruf des Elternkonstruktors
   }
 
   get type() {
@@ -71,7 +70,7 @@ class Dog extends Animal {
   }
 }
 
-const dog = new Dog('Bello', 'Weiß', 2, 'Malteser');
-dog.eat('Käse');       // "Mmpf mmpf, Käse"
-dog.bark();            // "Wuff wuff"
-console.log(dog.type); // "Malteser"
+const dog = new Dog('Bello', 'Weiß', 2, 'Malteser'); // Fehler!
+dog.eat('Käse'); 
+dog.bark();
+console.log(dog.type);

@@ -1,4 +1,34 @@
 'use strict';
+class Food {
+
+  _description
+
+  constructor(description) {
+    this._description = description ? description : this._description;
+  }
+
+  get description() {
+    return this._description;
+  }
+
+  set description(description) {
+    this._description = description;
+  }
+
+  toString() {
+    return this.description;
+  }
+
+}
+class Meat extends Food {}
+
+class Bread extends Food {}
+
+const bread = new Bread('Weizenbrot');
+console.log(bread.description); // "Weizenbrot"
+const meat = new Meat('Steak');
+console.log(meat.description);  // "Steak"
+
 class Animal {
 
   _name = 'Max Musterfisch';
@@ -71,7 +101,18 @@ class Dog extends Animal {
   }
 }
 
-const dog = new Dog('Bello', 'Weiß', 2, 'Malteser');
-dog.eat('Käse');       // "Mmpf mmpf, Käse"
-dog.bark();            // "Wuff wuff"
-console.log(dog.type); // "Malteser"
+class VegetarianDog extends Dog {
+
+  eat(food) {
+    if (food instanceof Meat) {
+      throw new Error('Ich esse doch kein Fleisch!');
+    } else {
+      super.eat(food);
+    }
+  }
+
+}
+
+const dog = new VegetarianDog('Bello', 'Weiß', 2, 'Malteser');
+dog.eat(new Bread('Weizenbrot')); // "Mmpf, mmpf, Weizenbrot!"
+dog.eat(new Meat('Steak'));       // Fehler: "Ich esse doch kein Fleisch!"
