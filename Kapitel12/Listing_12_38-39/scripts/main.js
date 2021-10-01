@@ -4,7 +4,7 @@ function init() {
     function handleFileSelected(event) {
       const files = event.target.files;                 // alle ausgewählten Dateien
       console.log(files);
-      const output = '';                                // Variable für Ergebnis
+      let output = '';                                // Variable für Ergebnis
       for (let i = 0; i < files.length; i++) {        // Über alle Dateien iterieren ...
         const file = files[i];                          // ... jede Datei betrachten ...
         output += '<li>' +                            // ... und Ergebnis-HTML zusammebauen, bestehend aus:
