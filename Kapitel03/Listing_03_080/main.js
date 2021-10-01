@@ -10,7 +10,7 @@ switch(testResult) { // Prüfe das Testergebnis
   case 2: // Hat das Testergebnis den Wert 2
   case 3: // oder den Wert 3,
     icon = 'error.png'; // wird der Bildname "error.png" verwendet.
-    break: // Abbruch
+    break; // Abbruch
   default: // Für alle anderen Werte
     icon = 'unknown.png'; // wird der Bildname "unknown.png" verwendet.
 }
