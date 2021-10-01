@@ -1,7 +1,7 @@
 'use strict';
 $(document).ready(() => {
   $('input').on(
-    'change,
+    'change',
     {
       value: 4711                       // Datenobjekt
     },
