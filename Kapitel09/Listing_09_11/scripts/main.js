@@ -1,17 +1,18 @@
+'use strict';
 function init() {
-  // Skript für ältere Browser, daher auch das var-Schlüsselwort
-  var request = new XMLHttpRequest();
-  request.onreadystatechange = function() {
-    if (request.readyState === 4 && request.status === 200) {
-      var data = request.responseXML;
-      var entries = data.getElementsByTagName('entry');
-      for (var i = 0; i < entries.length; i++) {
-        /* XML einbauen */
-      }
+  const request = new XMLHttpRequest();               // Erstellen des XMLHttpRequest-Objekts
+  request.onload = (e) => {                         // Wenn Ergebnis geladen wurde ...
+    if(request.status === 200) {
+      const html = request.responseText;              // HTML-Antwort als Zeichenkette.
     }
   };
-  request.open('GET', 'content/data.xml', true);
-  request.send(null);
+  request.open(
+    'GET',                                          // Laden der ...
+    'content/snippet.html',                         // ... HTML-Datei
+  );
+  request.responseType = '';                        // Antwort als Zeichenkette ...
+  request.setRequestHeader('Accept', 'text/html');  // ... nur vom Typ HTML
+  request.send();                                   // Absenden der Anfrage
 }
 
 document.addEventListener('DOMContentLoaded', init);

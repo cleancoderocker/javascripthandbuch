@@ -1,43 +1,43 @@
 'use strict';
-function init() {
-// 1.) Abfrage der Datei artists.json
-  fetch('artists.json')
-    .then((response) => {
-      console.log(response.status);     // 200
-      console.log(response.statusText); // "OK"
-      console.log(response.type);       // "basic"
-      console.log(response.bodyUsed);   // false
-      console.log(response.headers);    // []
-      console.log(response.ok);         // true
-      console.log(response.redirected); // false
-      console.log(response.url);        // "http://localhost:8080/artists.json"
-                                        // (abhängig vom Wurzelverzeichnis des Webservers)
+async function init() {
+  try {
+    // 1.) Abfrage der Datei artists.json
+    const response = await fetch('artists.json');
 
-// 2.) Umwandeln der Antwort in ein JavaScript-Objekt
-      return response.json();
-    })
-    .then((result) => {
-// 3.) Auswerten des umgewandelten JavaScript-Objekts
-      const table = initTable();
-      const artists = result.artists;
-      for (let i = 0; i < artists.length; i++) {
-        const artist = artists[i];
-        const albums = artist.albums;
-        for (let j = 0; j < albums.length; j++) {
-          const album = albums[j];
-          const row = createRow(
-            artist.name,
-            album.title,
-            album.year
-          );
-          table.tBodies[0].appendChild(row);
-        }
+    // Folgende Eigenschaften enthält das response-Objekt:
+    console.log(response.status);     // 200
+    console.log(response.statusText); // "OK"
+    console.log(response.type);       // "basic"
+    console.log(response.bodyUsed);   // false
+    console.log(response.headers);    // []
+    console.log(response.ok);         // true
+    console.log(response.redirected); // false
+    console.log(response.url);        // "http://localhost:8080/artists.json"
+                                      // (abhängig vom Wurzelverzeichnis des Webservers)
+
+    
+    // 2.) Umwandeln der Antwort in ein JavaScript-Objekt
+    const result = await response.json(); 
+    // 3.) Auswerten des umgewandelten JavaScript-Objekts
+    const table = initTable();
+    const artists = result.artists;
+    for (let i = 0; i < artists.length; i++) {
+      const artist = artists[i];
+      const albums = artist.albums;
+      for (let j = 0; j < albums.length; j++) {
+        const album = albums[j];
+        const row = createRow(
+          artist.name,
+          album.title,
+          album.year
+        );
+        table.tBodies[0].appendChild(row);
       }
-      document.getElementById('artists-container').appendChild(table);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+    }
+    document.getElementById('artists-container').appendChild(table);
+  } catch(error) {
+  console.error(error);
+  }
 }
 
 function initTable() {

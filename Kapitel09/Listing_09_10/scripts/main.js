@@ -1,23 +1,17 @@
 function init() {
-  var createFunctions = [
-    function () {return new XMLHttpRequest()},
-    function () {return new ActiveXObject("Msxml2.XMLHTTP")},
-    function () {return new ActiveXObject("Msxml3.XMLHTTP")},
-    function () {return new ActiveXObject("Microsoft.XMLHTTP")}
-  ];
-  function createXMLHttpObject() {
-    var xmlhttp = null;
-    for (var i=0; i<createFunctions.length; i++) {
-      try {
-        xmlhttp = createFunctions[i]();
+  // Skript für ältere Browser, daher auch das var-Schlüsselwort
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function() {
+    if (request.readyState === 4 && request.status === 200) {
+      var data = request.responseXML;
+      var entries = data.getElementsByTagName('entry');
+      for (var i = 0; i < entries.length; i++) {
+        /* XML einbauen */
       }
-      catch (e) {
-        continue;
-      }
-      break;
     }
-    return xmlhttp;
-  }
+  };
+  request.open('GET', 'content/data.xml', true);
+  request.send(null);
 }
 
 document.addEventListener('DOMContentLoaded', init);

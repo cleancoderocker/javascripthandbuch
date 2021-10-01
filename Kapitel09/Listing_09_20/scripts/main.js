@@ -1,26 +1,12 @@
 'use strict';
 function init() {
-  const newArtist = {
-    "name": "Deltron 3030",
-    "albums": [
-      {
-        "title": "Deltron 3030",
-        "year": 2000
-      },
-      {
-        "title": "Event 2",
-        "year": 2013
-      }
-    ]
-  }
+  const formData = new FormData();
+  formData.append('username', 'max.mustermann');
+  formData.append('email', 'max.mustermann@javascripthandbuch.de');
+  formData.append('url', 'javascripthandbuch.de');
+  formData.append('age', 44);
   const request = new XMLHttpRequest();
-  request.onload = () => {
-    if(request.status === 200) {
-      console.log('Daten erfolgreich versendet.');
-    }
-  };
-  request.open('POST', 'artists/create');
-  request.setRequestHeader('Content-Type', 'application/json');
-  request.send(newArtist);
+  request.open('POST', 'register', true);
+  request.send(formData);
 }
 document.addEventListener('DOMContentLoaded', init);

@@ -1,18 +1,18 @@
 'use strict';
 function init() {
-  const request = new XMLHttpRequest();               // Erstellen des XMLHttpRequest-Objekts
-  request.onload = (e) => {                         // Wenn Ergebnis geladen wurde ...
+  const request = new XMLHttpRequest();                 // Erstellen des XMLHttpRequest-Objekts
+  request.onload = () => {                            // Wenn Ergebnis geladen wurde ...
     if(request.status === 200) {
-      const html = request.responseText;              // HTML-Antwort als Zeichenkette.
+      const html = request.responseXML.body.innerHTML;  // HTML-Antwort als geparstes Objekt.
     }
   };
   request.open(
-    'GET',                                          // Laden der ...
-    'content/snippet.html',                         // ... HTML-Datei
+    'GET',                                            // Laden der ...
+    'content/snippet.html'                            // ... HTML-Datei
   );
-  request.responseType = '';                        // Antwort als Zeichenkette ...
-  request.setRequestHeader('Accept', 'text/html');  // ... nur vom Typ HTML
-  request.send();                                   // Absenden der Anfrage
+  request.responseType = 'document';                  // Antwort als geparstes Objekt ...
+  request.setRequestHeader('Accept', 'text/html');    // ... nur vom Typ HTML
+  request.send();                                     // Absenden der Anfrage
 }
 
 document.addEventListener('DOMContentLoaded', init);

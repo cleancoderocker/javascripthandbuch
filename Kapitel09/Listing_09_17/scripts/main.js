@@ -2,81 +2,21 @@
 function init() {
   const request = new XMLHttpRequest();
   request.onload = () => {
-    const xmlDoc = request.responseXML;
-    const table = initTable();
-    const artists = xmlDoc.getElementsByTagName('artist');
-    for (let i = 0; i < artists.length; i++) {
-      const artist = artists[i];
-      const albums = artist.getElementsByTagName('album');
-      for (let j = 0; j < albums.length; j++) {
-        const album = albums[j];
-        const row = createRow(
-          artist.getAttribute('name'),
-          album.getElementsByTagName('title')[0].childNodes[0].nodeValue,
-          album.getElementsByTagName('year')[0].childNodes[0].nodeValue
-        );
-        table.tBodies[0].appendChild(row);
+    if(request.status === 200) {
+      let json;
+      if (request.responseType === 'json') {
+        json = request.response;
+      } else {
+        json = JSON.parse(request.responseText);
       }
+      // hier Weiterverarbeitung der JSON-Daten
+      console.log(json);
     }
-    document.getElementById('artists-container').appendChild(table);
   };
-  request.open('GET', 'artists.xml', true);
-  request.addEventListener('loadstart', (event) => {
-    console.log('Anfrage gestartet');
-  });
-  request.addEventListener('progress', (event) => {
-    console.log('Fortschritt');
-  });
-  request.addEventListener('abort', (event) => {
-    console.log('Anfrage abgebrochen');
-  });
-  request.addEventListener('error', (event) => {
-    console.log('Fehler bei der Anfrage');
-  });
-  request.addEventListener('load', (event) => {
-    console.log('Antwort geladen');
-  });
-  request.addEventListener('timeout', (event) => {
-    console.log('Anfrage wegen Time-Out abgebrochen');
-  });
-  request.addEventListener('loadend', (event) => {
-    console.log('Anfrage beendet');
-  });
+  request.open('GET', 'data/content.json', true);
+  request.responseType = 'json';
+  request.setRequestHeader('Accept', 'application/json');
   request.send();
 }
 
-function initTable() {
-  const table = document.createElement('table');
-  const tableHeader = document.createElement('thead');
-  const headerRow = document.createElement('tr');
-  const headerColumnArtistName = document.createElement('th');
-  const headerColumnAlbumTitle = document.createElement('th');
-  const headerColumnAlbumYear = document.createElement('th');
-  const tableBody = document.createElement('tbody');
-  headerColumnArtistName.appendChild(document.createTextNode('Name'));
-  headerColumnAlbumTitle.appendChild(document.createTextNode('Titel'));
-  headerColumnAlbumYear.appendChild(document.createTextNode('Jahr'));
-  headerRow.appendChild(headerColumnArtistName);
-  headerRow.appendChild(headerColumnAlbumTitle);
-  headerRow.appendChild(headerColumnAlbumYear);
-  tableHeader.appendChild(headerRow);
-  table.appendChild(tableHeader);
-  table.appendChild(tableBody);
-  table.className = 'table table-striped';
-  return table;
-}
-
-function createRow(artistName, albumTitle, albumYear) {
-  const row = document.createElement('tr');
-  const columnName = document.createElement('td');
-  const columnTitle = document.createElement('td');
-  const columnYear = document.createElement('td');
-  columnName.appendChild(document.createTextNode(artistName));
-  columnTitle.appendChild(document.createTextNode(albumTitle));
-  columnYear.appendChild(document.createTextNode(albumYear));
-  row.appendChild(columnName);
-  row.appendChild(columnTitle);
-  row.appendChild(columnYear);
-  return row;
-}
 document.addEventListener('DOMContentLoaded', init);
