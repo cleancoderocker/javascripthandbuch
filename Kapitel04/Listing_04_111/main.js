@@ -1,8 +1,18 @@
 'use strict';
-let text = 'Die private Telefonnummer lautet +49 30 1234567,' +
-  ' die geschäftliche Telefonnummer lautet +49 30 1234568.';
-const regExp = /(\+?\d{2})\s(\d{2})\s(\d{5,7})/g;
-text = text.replace(regExp, '<Nummer verborgen>');
-console.log(text);
-// Die private Telefonnummer lautet <Nummer verborgen>,
-// die geschäftliche Telefonnummer lautet <Nummer verborgen>.
+const numbersOfAlbums = new Map();                    // Erstellen der Map
+numbersOfAlbums.set('Kyuss', 4);                    // Hinzufügen mehrerer Einträge
+numbersOfAlbums.set('Tool', 6);
+numbersOfAlbums.set('Monster Magnet', 8);
+numbersOfAlbums.set('Ben Harper', 9);
+numbersOfAlbums.set('Queens of the Stone Age', 6);
+
+for (let entry of numbersOfAlbums) {
+  console.log(entry[0]);                            // Schlüssel
+  console.log(entry[1]);                            // Wert
+}
+
+// Alternativ Zugriff über Array-Destructuring:
+for (let [ bandName, numberOfAlbums ] of numbersOfAlbums) {
+  console.log(bandName);
+  console.log(numberOfAlbums);
+}

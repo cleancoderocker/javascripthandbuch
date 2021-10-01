@@ -1,22 +1,12 @@
 'use strict';
-const person = {
-  'first-name': 'Max',
-  'last-name': 'Mustermann'
+const item = {
+  name: 'Schrödinger programmiert Java',
+  price: 44.90,
+  author: 'Philip Ackermann',
+  isbn: '978-3-8362-7272-8',
+  printDescription: function() {
+    console.log(`${this.author}: ${this.name}`);
+  }
 }
-// console.log(person.first-name);  // Syntaxfehler
-// console.log(person.last-name);   // Syntaxfehler
-console.log(person['first-name']);  // "Max"
-console.log(person['last-name']);   // "Mustermann"
-
-const firstName = 'first-name';
-const lastName = 'last-name';
-
-console.log(person[firstName]);  // "Max"
-console.log(person[lastName]);   // "Mustermann"
-
-const name = 'name';
-const prefixFirstName = 'first-';
-const prefixLastName = 'last-';
-
-console.log(person[prefixFirstName + name]);  // "Max"
-console.log(person[prefixLastName + name]);   // "Mustermann"
+const itemName = item.name;
+item.printDescription();

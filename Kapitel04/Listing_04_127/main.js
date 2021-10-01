@@ -1,7 +1,6 @@
 'use strict';
-function logNames() {
-  Array.prototype.forEach.call(arguments, function(argument) {
-    console.log(argument);
-  });
-}
-logNames('Max', 'Moritz');
+const regExp = /[abcde]/;
+console.log(regExp.test('a'));      // true
+console.log(regExp.test('f'));      // false
+console.log(regExp.test('afghj'));  // true
+console.log(regExp.test('fghij'));  // false

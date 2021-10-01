@@ -1,19 +1,38 @@
 'use strict';
-const max = {
-  firstName: 'Max',
-  lastName: 'Mustermann'
+const item = {
+  name: 'Schrödinger programmiert Java',
+  price: 44.90,
+  author: 'Philip Ackermann ',
+  isbn: ' 978-3-8362-7272-8',
+  printDescription: function () {
+    console.log(`${this.author}: ${this.name}`);
+  }
 }
-console.log(Object.isExtensible(max));  // true
-console.log(Object.isSealed(max));      // false
-max.age = 44;                           // neue Eigenschaft definieren
-console.log(max.age);                   // 44
-Object.seal(max);                       // Objekt versiegeln
-console.log(Object.isExtensible(max));  // false
-console.log(Object.isSealed(max));      // true
-max.firstName = 'Moritz';               // Erlaubt: bestehende Eigenschaft ändern
-console.log(max.firstName);             // "Moritz"
-console.log(Object.getOwnPropertyDescriptor(max, 'firstName').enumerable); // true
-Object.defineProperty(max, 'firstName', { // Uncaught TypeError: Cannot redefine
-// property: firstName
-  enumerable: false
-});
+
+const keys = Object.keys(item);
+console.log(keys);
+// [
+// 'name',
+// 'price',
+// 'author',
+// 'isbn',
+// 'printDescription'
+// ]
+const values = Object.values(item);
+console.log(values);
+// [
+// 'Schrödinger programmiert Java',
+// 44.9,
+// 'Philip Ackermann',
+// '978-3-8362-7272-8',
+// [Function: printDescription]
+// ]
+const entries = Object.entries(item);
+console.log(entries);
+// [
+// [ 'name', 'Schrödinger programmiert Java' ],
+// [ 'price', 44.9 ],
+// [ 'author', 'Philip Ackermann' ],
+// [ 'isbn', '978-3-8362-7272-8' ],
+// [ 'printDescription', [Function: printDescription] ]
+// ]

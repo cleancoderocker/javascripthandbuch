@@ -1,4 +1,10 @@
 'use strict';
-const values = [7, 6, 4, 8, 7, 2, 4];
-values.sort(compare);
-console.log(values); // 2, 4, 4, 6, 7, 7
+const todoList = [
+  'Bad putzen',
+  'Einkaufen',
+  'Aufräumen',
+  'Rasen mähen'
+];
+const deletedTodos = todoList.splice(1, 2);
+console.log(deletedTodos);  // ["Einkaufen", "Aufräumen"]
+console.log(todoList);      // ["Bad putzen", "Rasen mähen"]

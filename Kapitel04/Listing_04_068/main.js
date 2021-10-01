@@ -1,14 +1,8 @@
 'use strict';
-const todoList = [
-  'Bad putzen',
-  'Einkaufen',
-  'Aufräumen',
-  'Rasen mähen'
-];
-todoList.copyWithin(
-  0, // Zielstartposition, an die die Elemente kopiert werden
-  2, // Quellenstartposition, ab der kopiert wird
-  4   // Quellenendposition, bis zu der kopiert wird
-);
-console.log(todoList);
-// ["Aufräumen", "Rasen mähen", "Aufräumen", "Rasen mähen"]
+const stack = [];             // Deklaration eines ganz normalen Arrays
+stack.push(1);              // Hinzufügen eines Elements ...
+stack.push(2);              // ... und noch eines ...
+stack.push(3);              // ... und noch eines ...
+stack.push(4, 5, 6, 7, 8);  // ... und direkt mehrere auf einen Schlag
+console.log(stack.pop());   // Zurückgegeben wird das zuletzt hinzugefügte
+                            // Element, die 8.

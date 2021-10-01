@@ -6,4 +6,4 @@ const max = {
 const max2 = max;
 max2.firstName = 'Moritz';
 console.log(max2.firstName); // "Moritz"
-console.log(max.firstName); // "Moritz"
+console.log(max.firstName);  // "Moritz"

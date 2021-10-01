@@ -1,10 +1,17 @@
 'use strict';
-function compare(value1, value2) {
-  if (value1 < value2) {
-    return -1;  // Der erste Wert ist kleiner als der zweite Wert.
-  } else if(value1 > value2) {
-    return 1;   // Der erste Wert ist größer als der zweite Wert.
-  } else {
-    return 0;   // Beide Werte sind gleich groß.
-  }
-}
+const todoList = [
+  'Bad putzen',
+  'Einkaufen',
+  'Aufräumen',
+  'Rasen mähen'
+];
+const item1 = todoList.shift();
+console.log(item1); // Ausgabe: Bad putzen
+const item2 = todoList.shift();
+console.log(item2); // Ausgabe: Einkaufen
+const item3 = todoList.shift();
+console.log(item3); // Ausgabe: Aufräumen
+const item4 = todoList.shift();
+console.log(item4); // Ausgabe: Rasen mähen
+const item5 = todoList.shift();
+console.log(item5); // Ausgabe: undefined

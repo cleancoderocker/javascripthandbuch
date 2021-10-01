@@ -1,5 +1,4 @@
 'use strict';
-const regExp = /^abcdef*$/;
-console.log(regExp.test('abcde'));    // true
-console.log(regExp.test('abcdef'));   // true
-console.log(regExp.test('abcdeff'));  // true
+const name = 'Max Mustermann';
+console.log(name.lastIndexOf('M'));     // Ausgabe: 4
+console.log(name.lastIndexOf('M', 2));  // Ausgabe: 0

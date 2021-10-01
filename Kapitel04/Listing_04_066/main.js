@@ -1,5 +1,4 @@
 'use strict';
-console.log(transactions.lastIndexOf(-20.0));   // Ausgabe: 6
-console.log(transactions.lastIndexOf(500));     // Ausgabe: -1
-console.log(transactions.lastIndexOf(200));     // Ausgabe: 7
-console.log(transactions.lastIndexOf(200, 5));  // Ausgabe: 4
+const values = [7, 6, 4, 8, 7, 2, 4];
+values.sort(compare);
+console.log(values); // 2, 4, 4, 6, 7, 7

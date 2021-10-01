@@ -1,4 +1,21 @@
 'use strict';
-const regExp = /\bspiele\b/;
-console.log(regExp.test('Ich spiele E-Gitarre.'));              // true
-console.log(regExp.test('Ich bin ein Schallplattenspieler.'));  // false
+const firstName = 'Max';
+const lastName = 'Mustermann';
+const properties = {
+  age: 33,
+  hairColor: 'brown',
+  height: 1.8
+};
+const person = {
+  firstName,
+  lastName,
+  ...properties
+};
+console.log(person);
+// {
+// firstName: 'Max',
+// lastName: 'Mustermann',
+// age: 33,
+// hairColor: 'brown',
+// height: 1.8
+// }

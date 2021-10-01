@@ -8,5 +8,8 @@ const item = {
     console.log(`${this.author}: ${this.name}`);
   }
 }
-const itemName = item['name'];
-item['printDescription']();
+const propertyDescriptor = Object.getOwnPropertyDescriptor(item, 'name');
+console.log(propertyDescriptor.enumerable);       // true
+console.log(propertyDescriptor.configurable);     // true
+console.log(propertyDescriptor.writable);         // true
+console.log(propertyDescriptor.value);            // "Schrödinger programmiert Java"

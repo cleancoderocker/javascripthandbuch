@@ -1,8 +1,3 @@
-function logNames() {
-  console.log(arguments); // Ausgabe: { '0': 'Max', '1': 'Moritz' }
-  /* Fehler: arguments ist kein Array arguments.forEach(function(argument) {
-	  console.log(argument);
-	});
-  */
-}
-logNames("Max", "Moritz");
+'use strict';
+const regExp = /[0-9][0-9] [0-9][0-9] [0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+console.log(regExp.test('49X30X1234567')); // false

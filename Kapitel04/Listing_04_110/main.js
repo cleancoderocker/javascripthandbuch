@@ -1,9 +1,18 @@
 'use strict';
-const regExp = /\+?\d{2}\s\d{2}\s\d{5,7}/g;
-const string = 'Eine Telefonnummer: 49 30 1234567, und noch eine: 49 30 1234568';
-const result = string.match(regExp);
-console.log(result[0]);             // 49 30 1234567
-console.log(result[1]);             // 49 30 1234567
-const result2 = regExp.exec(string);
-console.log(result2[0]);            // 49 30 1234567
-console.log(result2[1]);            // undefined
+const numbersOfAlbums = new Map();                    // Erstellen der Map
+numbersOfAlbums.set('Kyuss', 4);                    // Hinzufügen mehrerer Einträge
+numbersOfAlbums.set('Tool', 6);
+numbersOfAlbums.set('Monster Magnet', 8);
+numbersOfAlbums.set('Ben Harper', 9);
+numbersOfAlbums.set('Queens of the Stone Age', 6);
+
+for (let entry of numbersOfAlbums.entries()) {
+  console.log(entry[0]);                            // Schlüssel
+  console.log(entry[1]);                            // Wert
+}
+
+// Alternativ Zugriff über Array-Destructuring:
+for (let [ bandName, numberOfAlbums ] of numbersOfAlbums.entries()) {
+  console.log(bandName);
+  console.log(numberOfAlbums);
+}

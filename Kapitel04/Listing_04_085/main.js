@@ -1,5 +1,9 @@
 'use strict';
-const regExp = /............./;
-console.log(regExp.test('Hallo Welt'));           // false
-console.log(regExp.test('Max Mustermann'));       // true
-console.log(regExp.test('Hallo Max Mustermann')); // true
+const person = {
+  firstName : 'Max',
+  lastName : 'Mustermann'
+};
+const {
+  firstName : firstNameExtracted,
+  lastName : lastNameExtracted
+  } = person;

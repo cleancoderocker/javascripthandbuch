@@ -1,5 +1,14 @@
 'use strict';
-const name = 'Max Mustermann';
-console.log(name.slice(0, 4));  // Ausgabe: "Max "
-console.log(name.slice(4));     // Ausgabe: "Mustermann"
-console.log(name.slice(4, 10)); // Ausgabe: "Muster"
+const todoList = [
+  'Bad putzen',
+  'Einkaufen',
+  'Aufräumen',
+  'Rasen mähen'
+];
+todoList.copyWithin(
+  0, // Zielstartposition, an die die Elemente kopiert werden
+  2, // Quellenstartposition, ab der kopiert wird
+  4   // Quellenendposition, bis zu der kopiert wird
+);
+console.log(todoList);
+// ["Aufräumen", "Rasen mähen", "Aufräumen", "Rasen mähen"]

@@ -1,13 +1,5 @@
 'use strict';
-function sayHello() {
-  console.log('Hallo');
-  return function() {
-    console.log('Welt');
-    return function() {
-      console.log('Mein Name ist Max Mustermann.');
-    }
-  }
-}
-sayHello();      // Aufruf der »äußeren« Funktion
-sayHello()();    // Aufruf der »äußeren« und der »mittleren« Funktion
-sayHello()()();  // Aufruf aller Funktionen
+const number2 = new Number(2);
+const number4711 = new Number(4711);
+console.log(number2.toExponential());     // 2e+0
+console.log(number4711.toExponential());  // 4.711e+3

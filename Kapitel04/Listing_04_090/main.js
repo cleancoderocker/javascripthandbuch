@@ -1,7 +1,32 @@
 'use strict';
-const regExp = /\d\d\s\d\d\s\d\d\d\d\d\d\d/;
-console.log(regExp.test('49 30 1234567'));        // true
-console.log(regExp.test('Hallo Welt'));           // false
-console.log(regExp.test('Hallo Max Mustermann')); // false
-console.log(regExp.test('49 30 12345678'));       // true
-console.log(regExp.test('49X30X1234567'));        // false
+const persons = [
+  {
+    firstName: 'Max',
+    lastName: 'Mustermann',
+    contact: {
+      email: 'max.mustermann@javascripthandbuch.de',
+      phone: '02345/23456789'
+    }
+  },
+  {
+    firstName: 'Maxi',
+    lastName: 'Musterfrau',
+    contact: {
+      email: 'maxi.musterfrau@javascripthandbuch.de',
+      phone: '02345/23456789'
+    }
+  }
+];
+for (let
+       {
+         firstName: firstName,
+         lastName: lastName,
+         contact: {
+           email: email,
+           phone: phone
+           }
+         } of persons) {
+  console.log(`${firstName} ${lastName}`);
+  console.log(`E-Mail: ${email}`);
+  console.log(`Telefon: ${phone}`);
+}

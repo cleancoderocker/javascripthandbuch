@@ -1,21 +1,14 @@
 'use strict';
-const max = {
-  firstName: 'Max'
-}
-const maxMustermann = Object.create(max, {
-  lastName: {
-    value: 'Mustermann',
-    enumerable: true
+const item = {
+  name: 'Schrödinger programmiert Java',
+  price: 44.90,
+  author: 'Philip Ackermann',
+  isbn: ' 978-3-8362-7272-8',
+  printDescription: function() {
+    console.log(`${this.author}: ${this.name}`);
   }
-});
-console.log(max.firstName);           // Max
-console.log(max.lastName);            // undefined
-console.log(maxMustermann.firstName); // Max
-console.log(maxMustermann.lastName);  // Mustermann
-// Ausgabe: lastName, firstName
-for(let i in maxMustermann) {
-  console.log(i);
 }
-const properties = Object.keys(maxMustermann);
-// Ausgabe: ["lastName"]
-console.log(properties);
+for(let property in item) {
+  console.log(`Name: ${property}`);
+  console.log(`Wert: ${item[property]}`);
+}

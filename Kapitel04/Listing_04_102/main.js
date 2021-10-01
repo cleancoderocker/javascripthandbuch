@@ -1,7 +1,6 @@
 'use strict';
-const regExp = /^abcdef{2,}$/;
-console.log(regExp.test('abcde'));      // false
-console.log(regExp.test('abcdef'));     // false
-console.log(regExp.test('abcdeff'));    // true
-console.log(regExp.test('abcdefff'));   // true
-console.log(regExp.test('abcdeffff'));  // true
+const name = 'Max Mustermann';
+console.log(name.substring(4, 10)); // Muster
+console.log(name.substring(4));     // Mustermann
+console.log(name.substr(4, 6));     // Muster
+console.log(name.substr(4));        // Mustermann

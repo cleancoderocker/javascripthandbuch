@@ -5,14 +5,32 @@ const todoList = [
   'Aufräumen',
   'Rasen mähen'
 ];
-const sliced5 = todoList.slice(-2);   // die letzten beiden Elemente
-const sliced6 = todoList.slice(1,     // zweites Element von vorne bis ...
-  -1);                              // ... zweites Element von hinten
-const sliced7 = todoList.slice(1,     // zweites Element von vorne bis ...
-  -2);                              // ... bis drittes Element von hinten
-const sliced8 = todoList.slice(1,     // zweites Element von vorne bis ...
-  -3);                              // ... viertes Element von hinten
-console.log(sliced5);               // ["Aufräumen", "Rasen mähen"]
-console.log(sliced6);               // ["Einkaufen", "Aufräumen"]
-console.log(sliced7);               // ["Einkaufen"]
-console.log(sliced8);               // []
+todoList.splice(
+  2,                    // Index, ab dem eingefügt werden soll
+  0,                    // Anzahl an zu löschenden ELementen
+  'Garage streichen'    // Element, das hinzugefügt werden soll
+);
+console.log(todoList);
+// [
+// "Bad putzen",
+// "Einkaufen",
+// "Garage streichen",
+// "Aufräumen",
+// "Rasen mähen"
+// ]
+todoList.splice(
+  2,                    // Index, ab dem eingefügt werden soll
+  0,                    // Anzahl an zu löschenden ELementen
+  'Rollrasen verlegen', // Elemente, die hinzugefügt ...
+  'Gemüsebeet anlegen'  // ... werden sollen
+);
+console.log(todoList);
+// [
+// "Bad putzen",
+// "Einkaufen",
+// "Rollrasen verlegen",
+// "Gemüsebeet anlegen",
+// "Garage streichen",
+// "Aufräumen",
+// "Rasen mähen"
+// ]

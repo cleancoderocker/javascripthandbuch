@@ -8,7 +8,8 @@ const item = {
     console.log(`${this.author}: ${this.name}`);
   }
 }
-for(let property in item) {
-  console.log(`Name: ${property}`);
-  console.log(`Wert: ${item[property]}`);
-}
+console.log('price' in item);   // Ausgabe: true
+console.log(item.price);        // Ausgabe: 44.9
+delete item.price;              // Löschen der Eigenschaft
+console.log('price' in item);   // Ausgabe: false
+console.log(item.price);        // Ausgabe: undefined

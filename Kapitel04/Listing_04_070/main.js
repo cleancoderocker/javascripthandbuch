@@ -1,13 +1,8 @@
 'use strict';
-function checkUsername(userName) {
-  if(userName.length < 5) {
-    console.error('Nutzername muss mindestens 5 Zeichen enthalten.');
-  } else if(userName.length > 8) {
-    console.error('Nutzername darf maximal 8 Zeichen enthalten.');
-  } else {
-    console.log('Gültiger Nutzername');
-  }
-}
-checkUsername('Max');             // Fehler, da zu kurz
-checkUsername('Max Mustermann');  // Fehler, da zu lang
-checkUsername('MaxMuste');        // gültig
+const transactions = [
+  -20.0, 500.50, -40.0, -34.50, 200, 500.50, -20, 200
+];
+console.log(transactions.indexOf(-20.0));   // Ausgabe: 0
+console.log(transactions.indexOf(500));     // Ausgabe: -1
+console.log(transactions.indexOf(200));     // Ausgabe: 4
+console.log(transactions.indexOf(200, 5));  // Ausgabe: 7

@@ -1,17 +1,10 @@
 'use strict';
 const todoList = [
-  'Bad putzen',
-  'Einkaufen',
-  'Aufräumen',
-  'Rasen mähen'
+  'Bad putzen',           // Element an Index 0
+  'Einkaufen',            // Element an Index 1
+  'Aufräumen',            // Element an Index 2
+  'Rasen mähen'           // Element an Index 3
 ];
-const item1 = todoList.shift();
-console.log(item1); // Ausgabe: Bad putzen
-const item2 = todoList.shift();
-console.log(item2); // Ausgabe: Einkaufen
-const item3 = todoList.shift();
-console.log(item3); // Ausgabe: Aufräumen
-const item4 = todoList.shift();
-console.log(item4); // Ausgabe: Rasen mähen
-const item5 = todoList.shift();
-console.log(item5); // Ausgabe: undefined
+for (let i = 0; i < todoList.length; i++) {
+  console.log(todoList[i]);
+}

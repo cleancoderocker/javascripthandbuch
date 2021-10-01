@@ -1,10 +1,18 @@
 'use strict';
-const todoList = [];
-let length;
-length = todoList.unshift('Bad putzen');
-console.log(length);    // 1
-length = todoList.unshift('Einkaufen');
-console.log(length);    // 2
-length = todoList.unshift('Aufräumen', 'Rasen mähen');
-console.log(length);    // 4
-console.log(todoList);  // ["Aufräumen", "Rasen mähen", "Einkaufen", "Bad putzen"]
+const contacts = [
+  {
+    firstName: 'Max',
+    lastName: 'Mustermann',
+    email: 'max.mustermann@javascripthandbuch.de'
+  },
+  {
+    firstName: 'Moritz',
+    lastName: 'Mustermann',
+    email: 'moritz.mustermann@javascripthandbuch.de'
+  },
+  {
+    firstName: 'Peter',
+    lastName: 'Mustermann',
+    email: 'peter.mustermann@javascripthandbuch.de'
+  }
+];

@@ -1,18 +1,25 @@
 'use strict';
 const item = {
-  name: 'Schrödinger programmiert Java',
-  price: 44.90,
-  author: 'Philip Ackermann',
-  isbn: ' 978-3-8362-7272-8',
-  printDescription: function() {
-    console.log(`${this.author}: ${this.name}`);
+  isbn: '',
+  _name: '',
+  /* Hier die anderen Eigenschaften */
+  set name(newName) {
+    if(typeof newName === 'string') {
+      console.log('Neuen Namen setzen');
+      this._name = newName;
+    } else {
+      throw new TypeError('Name muss eine Zeichenkette sein.')
+    }
+  },
+  get name() {
+    console.log('Namen zurückgeben');
+    return this._name;
   }
+  /* Analog für die anderen Eigenschaften. */
 }
-const item = {};
-item.name = 'Schrödinger programmiert Java';
-item.price = 44.90;
-item.author = 'Philip Ackermann ';
-item.isbn = '978-3-8362-7272-8';
-item.printDescription = function() {
-  console.log(`${this.author}: ${this.name}`);
+item.publisher = 'Galileo Press';
+item.order = function() {
+  console.log('Das Buch wurde erfolgreich bestellt.');
 }
+console.log(item.publisher);  // Ausgabe: Galileo Press
+item.order();                 // Ausgabe: Das Buch wurde erfolgreich bestellt.

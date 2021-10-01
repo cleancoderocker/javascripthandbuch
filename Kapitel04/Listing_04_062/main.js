@@ -1,39 +1,21 @@
 'use strict';
-const contacts = [
-  {
-    firstName: 'Max',
-    lastName: 'Mustermann',
-    email: 'max.mustermann@javascripthandbuch.de'
-  },
-  {
-    firstName: 'Moritz',
-    lastName: 'Meier',
-    email: 'coolmoritz@javascripthandbuch.de'
-  },
-  {
-    firstName: 'Peter',
-    lastName: 'Müller',
-    email: 'mueller@javascripthandbuch.de'
-  }
+const todoList = [
+  'Bad putzen',
+  'Einkaufen',
+  'Aufräumen',
+  'Rasen mähen'
 ];
-function compareByFirstName(contact1, contact2) {
-  return contact1.firstName.localeCompare(contact2.firstName);
-}
-function compareByLastName(contact1, contact2) {
-  return contact1.lastName.localeCompare(contact2.lastName);
-}
-function compareByEmail(contact1, contact2) {
-  return contact1.email.localeCompare(contact2.email);
-}
-contacts.sort(compareByFirstName);  // Sortierung nach Vorname
-console.log(contacts[0].firstName); // Max
-console.log(contacts[1].firstName); // Moritz
-console.log(contacts[2].firstName); // Peter
-contacts.sort(compareByLastName);   // Sortierung nach Nachname
-console.log(contacts[0].firstName); // Moritz
-console.log(contacts[1].firstName); // Peter
-console.log(contacts[2].firstName); // Max
-contacts.sort(compareByEmail);      // Sortierung nach E-Mail-Adresse
-console.log(contacts[0].firstName); // Moritz
-console.log(contacts[1].firstName); // Max
-console.log(contacts[2].firstName); // Peter
+const sliced1 = todoList.slice(1);    // ab zweitem Element
+console.log(sliced1);   // ["Einkaufen", "Aufräumen", "Rasen mähen"]
+
+const sliced2 = todoList.slice(2);    // ab drittem Element
+console.log(sliced2);   // ["Aufräumen", "Rasen mähen"]
+
+const sliced3 = todoList.slice(0, 2); // erstes und zweites Element
+console.log(sliced3);   // ["Bad putzen", "Einkaufen"]
+
+const sliced4 = todoList.slice(2, 4); // drittes und viertes Element
+console.log(sliced4);   // ["Aufräumen", "Rasen mähen"]
+
+// Ursprungs-Array bleibt unverändert:
+console.log(todoList);  // ["Bad putzen", "Einkaufen", "Aufräumen", "Rasen mähen"]

@@ -17,9 +17,14 @@ const item = {
   }
   /* Analog für die anderen Eigenschaften. */
 }
-item.publisher = 'Galileo Press';
-item.order = function() {
-  console.log('Das Buch wurde erfolgreich bestellt.');
-}
-console.log(item.publisher);  // Ausgabe: Galileo Press
-item.order();                 // Ausgabe: Das Buch wurde erfolgreich bestellt.
+// Dateneigenschaft
+item.isbn = '978-3-8362-7272-8';
+console.log(item.isbn);
+
+// Möglich, aber nicht erwünscht, da der Zugriff über set und get erfolgen soll.
+item._name = 'Schrödinger programmiert Java';
+console.log(item._name);
+
+// Zugriffseigenschaft
+item.name = 'Schrödinger programmiert Java - Das etwas andere Fachbuch';
+console.log(item.name);

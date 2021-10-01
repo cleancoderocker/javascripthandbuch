@@ -1,24 +1,32 @@
 'use strict';
-const item = Object.create(Object.prototype, {
-  name: {
-    set: function(newName) {
-      if (typeof newName === 'string') {
-        console.log('Neuen Namen setzen');
-        this._name = newName;
-      } else {
-        throw new TypeError('Name muss eine Zeichenkette sein.')
-      }
-    },
-    get: function() {
-        console.log('Namen zurückgeben');
-        return this._name;
+function Item(name, price, author, isbn) {
+  this._name = name;
+  this._price = price;
+  this._author = author;
+  this._isbn = isbn;
+}
+Item.prototype = {
+  set name(newName) {
+    if(typeof newName === 'string') {
+      console.log('Neuen Namen setzen');
+      this._name = newName;
+    } else {
+      throw new TypeError('Name muss eine Zeichenkette sein.')
     }
-    /* Analog für die anderen Eigenschaften. */
+  },
+  get name() {
+    console.log('Namen zurückgeben');
+    return this._name;
   }
-});
-// "Neuen Namen setzen"
+  /* Analog für die anderen Eigenschaften. */
+};
+const item = new Item(
+  'Schrödinger programmiert Java',
+  44.90,
+  'Philip Ackermann',
+  '978-3-8362-7272-8'
+)
+console.log(item.name); // "Namen zurückgeben"
+// "Schrödinger programmiert Java"
 item.name = 'Schrödinger programmiert Java - Das etwas andere Fachbuch';
-// "Namen zurückgeben"
-console.log(item.name);
-// Ausgabe:
-// "Schrödinger programmiert Java - Das etwas andere Fachbuch"
+// "Neuen Namen setzen"

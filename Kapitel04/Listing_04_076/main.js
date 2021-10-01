@@ -1,6 +1,11 @@
 'use strict';
-const name = 'Max Mustermann';
-console.log(name.substring(4, 10)); // Muster
-console.log(name.substring(4));     // Mustermann
-console.log(name.substr(4, 6));     // Muster
-console.log(name.substr(4));        // Mustermann
+const bestOfStonerrock = [
+  'Kyuss',
+  'Spiritual Beggars',
+  'Spice and the RJ Band',
+  'Band of Spice'
+];
+const one = bestOfStonerrock[0];
+const two = bestOfStonerrock[1];
+const three = bestOfStonerrock[2];
+const four = bestOfStonerrock[3];

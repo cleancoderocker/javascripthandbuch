@@ -1,8 +1,18 @@
 'use strict';
-const stack = [];             // Deklaration eines ganz normalen Arrays
-stack.push(1);              // Hinzufügen eines Elements ...
-stack.push(2);              // ... und noch eines ...
-stack.push(3);              // ... und noch eines ...
-stack.push(4, 5, 6, 7, 8);  // ... und direkt mehrere auf einen Schlag
-console.log(stack.pop());   // Zurückgegeben wird das zuletzt hinzugefügte
-                            // Element, die 8.
+const todoList = [
+  'Bad putzen',
+  'Einkaufen',
+  'Aufräumen',
+  'Rasen mähen'
+];
+const sliced5 = todoList.slice(-2);   // die letzten beiden Elemente
+const sliced6 = todoList.slice(1,     // zweites Element von vorne bis ...
+  -1);                                // ... zweites Element von hinten
+const sliced7 = todoList.slice(1,     // zweites Element von vorne bis ...
+  -2);                                // ... bis drittes Element von hinten
+const sliced8 = todoList.slice(1,     // zweites Element von vorne bis ...
+  -3);                                // ... viertes Element von hinten
+console.log(sliced5);                 // ["Aufräumen", "Rasen mähen"]
+console.log(sliced6);                 // ["Einkaufen", "Aufräumen"]
+console.log(sliced7);                 // ["Einkaufen"]
+console.log(sliced8);                 // []

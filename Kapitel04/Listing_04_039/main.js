@@ -1,19 +1,22 @@
 'use strict';
-const max = {
-  firstName: 'Max',
-  lastName: 'Mustermann'
+const item = {
+  name: 'Schrödinger programmiert Java',
+  price: 44.90,
+  author: 'Philip Ackermann ',
+  isbn: ' 978-3-8362-7272-8',
+  printDescription: function() {
+    console.log(`${this.author}: ${this.name}`);
+  }
 }
-console.log(Object.isExtensible(max));  // true
-max.age = 44;                           // neue Eigenschaft definieren
-console.log(max.age);                   // 44
-Object.preventExtensions(max);          // Erweiterungen verhindern
-console.log(Object.isExtensible(max));  // false
-max.firstName = 'Moritz';               // Erlaubt: bestehende Eigenschaft ändern
-console.log(max.firstName);             // "Moritz"
-console.log(Object.getOwnPropertyDescriptor(max, 'firstName').enumerable); // true
-Object.defineProperty(max, 'firstName', { // Erlaubt: Eigenschaftsattribute ändern
-  enumerable: false
-});
-console.log(Object.getOwnPropertyDescriptor(max, 'firstName').enumerable); // false
-max.weight = 88; // TypeError: Can't add property weight,
-// object is not extensible
+const properties = Object.keys(item);
+for(let i=0; i<properties.length; i++) {
+  const property = properties[i];
+  console.log(`Name: ${property}`);
+  console.log(`Wert: ${item[property]}`);
+}
+printArray(properties);
+function printArray(array) {
+  for(let i=0; i<array.length; i++) {
+    console.log(array[i]);
+  }
+}

@@ -1,8 +1,4 @@
 'use strict';
-const queue = [];             // Deklaration eines ganz normalen Arrays
-queue.push(1);              // Hinzufügen eines Elements ...
-queue.push(2);              // ... und noch eines ...
-queue.push(3);              // ... und noch eines ...
-queue.push(4, 5, 6, 7, 8);  // ... und direkt mehrere auf einen Schlag
-console.log(queue.shift()); // Zurückgegeben wird das zuerst hinzugefügte
-                            // Element, die 1.
+const names = ['Max', 'Moritz', 'Peter'];
+names.reverse();
+console.log(names); // Ausgabe: Peter, Moritz, Max

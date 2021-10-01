@@ -1,12 +1,13 @@
 'use strict';
-const text = 'Die private Telefonnummer lautet +49 30 1234567,' +
-  ' die geschäftliche Telefonnummer lautet +49 30 1234568.';
-const regExp = /\+?\d{2}\s\d{2}\s\d{5,7}/g;
-let result;
-while ((result = regExp.exec(text)) !== null) {
-  console.log(
-    'Nummer ' + result[0]
-    + ' gefunden an Index ' + result.index
-    + '.'
-  );
+const numbersOfAlbums = new Map(                // Erstellen einer Map ...
+  [                                           // ... auf Basis eines Arrays
+    ['Kyuss', 4],
+    ['Tool', 6],
+    ['Monster Magnet', 8],
+    ['Ben Harper', 9],
+    ['Queens of the Stone Age', 6]
+  ]
+);
+for (const album of numbersOfAlbums.keys()) {
+  console.log(album);
 }

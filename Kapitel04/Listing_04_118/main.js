@@ -1,19 +1,9 @@
-const text = 'Max,Mustermann,4711,45,180,80'; const result = text.split(',');
-const firstName = result[0];
-const lastName = result[1];
-  const id = result[2];
-const age = result[3];
-const height = result[4];
-const weight = result[5];
-console.log(firstName);
-console.log(lastName);
-console.log(id);
-console.log(age);
-console.log(height);
-console.log(weight);
-// Max
-// Mustermann
-// 4711
-// 45
-// 180
-// 80
+'use strict';
+const today = new Date();
+console.log(today.getMonth());    // Gibt den aktuellen Monat (0-11) zurück
+console.log(today.getFullYear()); // Gibt das Jahr im Format YYYY zurück
+console.log(today.getDate());     // Gibt den aktuellen Tag im Monat (1-31) zurück
+console.log(today.getDay());      // Gibt den Wochentag zurück (startet
+                                  // Sonntag mit 0)
+console.log(today.getHours());    // Gibt die aktuelle Stunde am Tag (0-23) zurück
+console.log(today.getTime());     // Gibt die Millisekunden seit dem 1.1.1970 zurück

@@ -1,18 +1,25 @@
 'use strict';
-const item = {
-  name: 'Schrödinger programmiert Java',
-  price: 44.90,
-  author: 'Philip Ackermann',
-  isbn: ' 978-3-8362-7272-8',
-  printDescription: function() {
-    console.log(`${this.author}: ${this.name}`);
+const item = {};
+Object.defineProperties(item, {
+  name: {
+    value: 'Schrödinger programmiert Java'
+  },
+  price: {
+    value: 44.90
+  },
+  author: {
+    value: 'Philip Ackermann'
+  },
+  isbn: {
+    value: '978-3-8362-7272-8'
+  },
+  printDescription: {
+    value: function() {
+      console.log(`${this.author}: ${this.name}`);
+    }
   }
-}
-console.log('price' in item); // Ausgabe: true
-console.log(item.price);      // Ausgabe: 44.9
-item.price = null;            //
-console.log('price' in item); // Ausgabe: true
-console.log(item.price);      // Ausgabe: null
-item.price = undefined;       //
-console.log('price' in item); // Ausgabe: true
-console.log(item.price);      // Ausgabe: undefined
+});
+console.log(item.name);   // "Schrödinger programmiert Java"
+console.log(item.price);  // 44.9
+console.log(item.author); // "Philip Ackermann"
+console.log(item.isbn);   // "978-3-8362-7272-8"

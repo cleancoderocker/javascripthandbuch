@@ -1,32 +1,22 @@
 'use strict';
-function Item(name, price, author, isbn) {
-  this._name = name;
-  this._price = price;
-  this._author = author;
-  this._isbn = isbn;
+const person = {
+  'first-name': 'Max',
+  'last-name': 'Mustermann'
 }
-Item.prototype = {
-  set name(newName) {
-    if(typeof newName === 'string') {
-      console.log('Neuen Namen setzen');
-      this._name = newName;
-    } else {
-      throw new TypeError('Name muss eine Zeichenkette sein.')
-    }
-  },
-  get name() {
-    console.log('Namen zurückgeben');
-    return this._name;
-  }
-  /* Analog für die anderen Eigenschaften. */
-};
-const item = new Item(
-  'Schrödinger programmiert Java',
-  44.90,
-  'Philip Ackermann',
-  '978-3-8362-7272-8'
-)
-console.log(item.name); // "Namen zurückgeben"
-// "Schrödinger programmiert Java"
-item.name = 'Schrödinger programmiert Java - Das etwas andere Fachbuch';
-// "Neuen Namen setzen"
+// console.log(person.first-name);  // Syntaxfehler
+// console.log(person.last-name);   // Syntaxfehler
+console.log(person['first-name']);  // "Max"
+console.log(person['last-name']);   // "Mustermann"
+
+const firstName = 'first-name';
+const lastName = 'last-name';
+
+console.log(person[firstName]);  // "Max"
+console.log(person[lastName]);   // "Mustermann"
+
+const name = 'name';
+const prefixFirstName = 'first-';
+const prefixLastName = 'last-';
+
+console.log(person[prefixFirstName + name]);  // "Max"
+console.log(person[prefixLastName + name]);   // "Mustermann"

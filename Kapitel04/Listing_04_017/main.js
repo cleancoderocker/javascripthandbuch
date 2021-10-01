@@ -1,42 +1,20 @@
 'use strict';
-const item = Object.create(Object.prototype, {
-  name: {
-    value: 'Schrödinger programmiert Java',
-    writable: false,
-    configurable: true,
-    enumerable: true
-  },
-  price: {
-    value: 44.90,
-    writable: true,
-    configurable: true,
-    enumerable: true
-  },
-  author: {
-    value: 'Philip Ackermann',
-    writable: false,
-    configurable: true,
-    enumerable: true
-  },
-  isbn: {
-    value: '978-3-8362-7272-8',
-    writable: false,
-    configurable: true,
-    enumerable: false // Die Eigenschaft "isbn" wird bei Iteration
-// nicht ausgegeben.
-  },
-  printDescription: {
-    value: function() {
-      console.log(`${this.author}: ${this.name}`);
-    }
+class Item {
+  constructor(name, price, author, isbn) {
+    this.name = name;
+    this.price = price;
+    this.author = author;
+    this.isbn = isbn;
   }
-});
-for(let property in item) {
-  console.log(property); // Ausgabe: "name", "price", "author"
+  printDescription() {
+    console.log(`${this.author}: ${this.name}`);
+  }
 }
-item.name = 'Cooles neues Java-Buch';
-console.log(item.name);   // "Schrödinger programmiert Java", da die
-                          // Eigenschaft "name" nicht "writeable" ist.
-item.price = 54.95;
-console.log(item.price);  // "54.95", da für die Eigenschaft "price"
-                          // das Attribut "writable" den Wert "true" hat.
+const item = new Item(
+  'Schrödinger programmiert Java',
+  44.90,
+  'Philip Ackermann',
+  '978-3-8362-7272-8'
+)
+console.log(typeof item);           // object
+console.log(item instanceof Item);  // true

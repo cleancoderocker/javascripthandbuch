@@ -1,16 +1,21 @@
 'use strict';
 const max = {
-  firstName: 'Max',
-  lastName: 'Mustermann'
+  firstName: 'Max'
 }
-console.log(Object.isExtensible(max));  // true
-console.log(Object.isSealed(max));      // false
-console.log(Object.isFrozen(max));      // false
-max.age = 44;                           // neue Eigenschaft
-console.log(max.age);                   // 44
-Object.freeze(max);                     // Objekt einfrieren
-console.log(Object.isExtensible(max));  // false
-console.log(Object.isSealed(max));      // true
-console.log(Object.isFrozen(max));      // true
-max.firstName = 'Moritz';               // TypeError: Cannot assign to read only
-                                        // property 'firstName' of #<Object>
+const maxMustermann = Object.create(max, {
+  lastName: {
+    value: 'Mustermann',
+    enumerable: true
+  }
+});
+console.log(max.firstName);           // Max
+console.log(max.lastName);            // undefined
+console.log(maxMustermann.firstName); // Max
+console.log(maxMustermann.lastName);  // Mustermann
+// Ausgabe: lastName, firstName
+for(let i in maxMustermann) {
+  console.log(i);
+}
+const properties = Object.keys(maxMustermann);
+// Ausgabe: ["lastName"]
+console.log(properties);
