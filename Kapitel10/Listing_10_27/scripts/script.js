@@ -1,82 +1,36 @@
 'use strict';
-$(document)
-  .ajaxStart(() => {
-    console.log('Anfrage gestartet.');
-  })
-  .ajaxSend((event, request, settings) => {
-    console.log('Anfrage abgeschickt.');
-  })
-  .ajaxSuccess((event, request, settings, data) => {
-    console.log('Anfrage erfolgreich abgeschlossen');
-  })
-  .ajaxError((event, request, settings, error) => {
-    console.log('Fehler bei Anfrage: ' + error);
-  })
-  .ajaxComplete((event, request, settings) => {
-    console.log('Anfrage abgeschlossen.');
-  })
-  .ajaxStop(() => {
-    console.log('Alle Anfragen abgeschlossen.');
-  });
-
 $(document).ready(() => {
-  $.ajax({
-    url: 'artists.json',
-    dataType: 'json',
-    type: 'GET'
-  })
-    .done((data) => {
-      const table = initTable();
-      const artists = data.artists;
-      for (let i = 0; i < artists.length; i++) {
-        const artist = artists[i];
-        const albums = artist.albums;
-        for (let j = 0; j < albums.length; j++) {
-          const album = albums[j];
-          const row = createRow(
-            artist.name,
-            album.title,
-            album.year
-          );
-          $(table).find('tbody').append(row);
-        }
-      }
-      $('#artists-container').append(table);
-    })
-    .fail((jqXHR, errorMessage, error) => {
-    });
+  const login = $('#login');
+  const register = $('#register');
+  login.click((e) => {
+    e.preventDefault();
+    loadContent('login');
+  });
+  register.click((e) => {
+    e.preventDefault();
+    loadContent('register');
+  });
 });
-function initTable() {
-  const table = document.createElement('table');
-  const tableHeader = document.createElement('thead');
-  const headerRow = document.createElement('tr');
-  const headerColumnArtistName = document.createElement('th');
-  const headerColumnAlbumTitle = document.createElement('th');
-  const headerColumnAlbumYear = document.createElement('th');
-  const tableBody = document.createElement('tbody');
-  headerColumnArtistName.appendChild(document.createTextNode('Name'));
-  headerColumnAlbumTitle.appendChild(document.createTextNode('Titel'));
-  headerColumnAlbumYear.appendChild(document.createTextNode('Jahr'));
-  headerRow.appendChild(headerColumnArtistName);
-  headerRow.appendChild(headerColumnAlbumTitle);
-  headerRow.appendChild(headerColumnAlbumYear);
-  tableHeader.appendChild(headerRow);
-  table.appendChild(tableHeader);
-  table.appendChild(tableBody);
-  table.className = 'table table-striped';
-  return table;
+
+function loadContent(name) {
+  $('#main-content').load(
+    name + '.html',
+    (
+      responseText,
+      textStatus,
+      jqXHRObject
+    ) => {
+      console.log('HTML geladen');
+    }
+  );
 }
 
-function createRow(artistName, albumTitle, albumYear) {
-  const row = document.createElement('tr');
-  const columnName = document.createElement('td');
-  const columnTitle = document.createElement('td');
-  const columnYear = document.createElement('td');
-  columnName.appendChild(document.createTextNode(artistName));
-  columnTitle.appendChild(document.createTextNode(albumTitle));
-  columnYear.appendChild(document.createTextNode(albumYear));
-  row.appendChild(columnName);
-  row.appendChild(columnTitle);
-  row.appendChild(columnYear);
-  return row;
+
+/*
+function loadContent(name) {
+  $('#main-content').load(
+    name + '.html',
+    () => {console.log('HTML geladen')}
+  );
 }
+*/

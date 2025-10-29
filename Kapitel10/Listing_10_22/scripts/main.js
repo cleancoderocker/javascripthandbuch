@@ -1,13 +1,16 @@
 'use strict';
 $(document).ready(() => {
-  $('input#username')
-    .keypress((event) => {
-      console.log('Taste zur Eingabe des Nutzernamens gedrückt.');
-    })
-    .keydown((event) => {
-      console.log('Taste wird gedrückt.');
-    })
-    .keyup((event) => {
-      console.log('Taste zur Eingabe des Nutzernamens losgelassen.');
-    });
+  $('input').on(
+    'change',
+    {
+      value: 4711                       // Datenobjekt
+    },
+    (event) => {
+      console.log(event.currentTarget); // aktuelles Element
+      console.log(event.data);          // Datenobjekt
+      console.log(event.data.value);    // Eigenschaft des Datenobjekts
+      console.log(event.pageX);         // x-Position Maus
+      console.log(event.pageY);         // y-Position Maus
+    }
+  );
 });

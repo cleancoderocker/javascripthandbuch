@@ -1,8 +1,11 @@
 'use strict';
 $(document).ready(() => {
-  $.getJSON(
-    'artists.json'
-  ).done((data, textStatus, jqXHRObject) => {
+  $.ajax({
+    url: 'artists.json',
+    dataType: 'json',
+    type: 'GET'
+  })
+  .done((data) => {
     const table = initTable();
     const artists = data.artists;
     for (let i = 0; i < artists.length; i++) {
@@ -19,9 +22,10 @@ $(document).ready(() => {
       }
     }
     $('#artists-container').append(table);
+  })
+  .fail((jqXHR, errorMessage, error) => {
   });
 });
-
 function initTable() {
   const table = document.createElement('table');
   const tableHeader = document.createElement('thead');

@@ -1,4 +1,6 @@
 'use strict';
 $(document).ready(() => {
-  console.log('Webseite geladen');
+  $('button#target').on('click', (event) => {
+    console.log('Schaltfläche wurde gedrückt');
+  });
 });

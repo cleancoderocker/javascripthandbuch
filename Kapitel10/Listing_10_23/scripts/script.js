@@ -1,28 +1,31 @@
 'use strict';
 $(document).ready(() => {
-  $.get({
+  $.ajax({
     url: 'artists.json',
-    dataType: 'json'
-  }).done((data) => {
-    const table = initTable();
-    const artists = data.artists;
-    for (let i = 0; i < artists.length; i++) {
-      const artist = artists[i];
-      const albums = artist.albums;
-      for (let j = 0; j < albums.length; j++) {
-        const album = albums[j];
-        const row = createRow(
-          artist.name,
-          album.title,
-          album.year
-        );
-        $(table).find('tbody').append(row);
+    dataType: 'json',
+    type: 'GET',
+    success: (data) => {
+      const table = initTable();
+      const artists = data.artists;
+      for (let i = 0; i < artists.length; i++) {
+        const artist = artists[i];
+        const albums = artist.albums;
+        for (let j = 0; j < albums.length; j++) {
+          const album = albums[j];
+          const row = createRow(
+            artist.name,
+            album.title,
+            album.year
+          );
+          $(table).find('tbody').append(row);
+        }
       }
+      $('#artists-container').append(table);
+    },
+    error: (jqXHR, errorMessage, error) => {
     }
-    $('#artists-container').append(table);
   });
 });
-
 function initTable() {
   const table = document.createElement('table');
   const tableHeader = document.createElement('thead');
