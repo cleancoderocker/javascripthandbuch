@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="de">
+  <meta charset="utf-8" />
+  <title>Utils Demo (ESM)</title>
+  <body>
+    <h1>Utils Demo (ESM)</h1>
+
+    <script type="module">
+      import { MathFunctions, StringFunctions } from './dist/utils.min.js';
+
+      console.log('Compare 7/5:', MathFunctions.compare(7, 5));
+      console.log('Word count:', StringFunctions.wordCount('Das ist ein Test'));
+      console.log('Truncate:', StringFunctions.truncate('Dies ist ein längerer Text', 15));
+    </script>
+  </body>
+</html>
