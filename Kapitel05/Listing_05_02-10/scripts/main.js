@@ -4,8 +4,7 @@ function init() {
   mainElement.className = 'border';
 
   // Selektion nach Klassennamen
-  const tableRowsEven = document
-    .getElementsByClassName('even');              // Selektiere alle geraden Tabellenzeilen
+  const tableRowsEven = document.getElementsByClassName('even');
   if(tableRowsEven.length > 0) {                  // Wenn mindestens ein Element gefunden wurde
     for(let i=0; i<tableRowsEven.length; i++) {   // Gehe alle Elemente durch
       const tableRow = tableRowsEven[i];            // Weise Element einer Variablen zu
@@ -14,8 +13,7 @@ function init() {
   }
 
   /*
-  const tableRowsEven = document
-    .getElementsByClassName('even');              // Selektiere alle geraden Tabellenzeilen
+  const tableRowsEven = document.getElementsByClassName('even');
   if(tableRowsEven.length > 0) {                  // Wenn mindestens ein Element gefunden wurde
     for(let i=0; i<tableRowsEven.length; i++) {   // Gehe alle Elemente durch
       const tableRow = tableRowsEven.item(i);       // Weise Element einer Variablen zu
