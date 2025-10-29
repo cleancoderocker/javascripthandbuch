@@ -6,7 +6,7 @@ const artists = [
   'King Crimson'
 ];
 const iterator = artists.values();  // Erzeugen des Iterators
-const artist = iterator.next();     // erster Wert im Iterator
+let artist = iterator.next();     // erster Wert im Iterator
 console.log(artist);              // Ausgabe: {value: 'Deep Purple', done: false}
 artist = iterator.next();         // weiter im Iterator
 console.log(artist);              // Ausgabe: {value: 'Jimi Hendrix', done: false}
