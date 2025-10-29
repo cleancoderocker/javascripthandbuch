@@ -3,7 +3,7 @@ class Animal {
 
   _name = 'Max Musterfisch';
   _color = 'Gold';
-  _age = '25';
+  _age = 25;
 
   constructor(name, color, age) {
     this._name = name ? name : this._name;

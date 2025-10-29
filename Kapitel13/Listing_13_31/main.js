@@ -1,49 +1,54 @@
-'use strict';
 class Animal {
 
-  _name = 'Max Musterfisch';
-  _color = 'Gold';
-  _age = '25';
-
-  constructor(name, color, age) {
-    this._name = name ? name : this._name;
-    this._color = color ? color : this._color;
-    this._age = age ? age : this._age;
-  }
-
+  // Öffentliche statische Methode
   static getAnimalColors() {
-    return { 
+    return {
       WHITE: 'Weiß',
       BLACK: 'Schwarz',
-      BROWN: 'Braun', 
+      BROWN: 'Braun',
       GREEN: 'Grün',
       YELLOW: 'Gelb',
       ORANGE: 'Orange'
     }
   }
 
+  // Private statische Methode
+  static #isValidColor(color) {
+    return Object.values(Animal.getAnimalColors()).includes(color);
+  }
+
+  #name = 'Max Musterfisch';
+  #color = 'Gold';
+  #age = 25;
+
+  constructor(name, color, age) {
+    this.#name = name ? name : this.#name;
+    this.#color = Animal.#isValidColor(color) ? color : this.#color;
+    this.#age = age ? age : this.#age;
+  }
+
   get name() {
-    return this._name;
+    return this.#name;
   }
 
   set name(name) {
-    this._name = name;
+    this.#name = name;
   }
 
   get color() {
-    return this._color;
+    return this.#color;
   }
 
   set color(color) {
-    this._color = color;
+    this.#color = color;
   }
 
   get age() {
-    return this._age;
+    return this.#age;
   }
 
   set age(age) {
-    this._age = age;
+    this.#age = age;
   }
 
   eat(food) {
@@ -55,7 +60,7 @@ class Animal {
   }
 
   toString() {
-    return `${this._name}, ${this._color}, ${this._age}`;
+    return `${this.#name}, ${this.#color}, ${this.#age}`;
   }
 
 }
@@ -69,8 +74,16 @@ console.log(Animal.getAnimalColors());
 //   YELLOW: 'Gelb',
 //   ORANGE: 'Orange'
 // }
+// console.log(bird.getAnimalColors()); // Fehler, da Methode statisch
+
+// Erstes Tier mit gültiger Farbe
 const bird = new Animal('Birdie', Animal.getAnimalColors().BLACK, 5);
 console.log(bird.name);   // "Birdie"
 console.log(bird.color);  // "Schwarz"
 console.log(bird.age);    // 5
-// console.log(bird.getAnimalColors()); // Fehler, da Methode statisch
+
+// Zweites Tier mit ungültiger Farbe
+const fish = new Animal('Goldie', 'Pink', 3);
+console.log(fish.name);   // "Goldie"
+console.log(fish.color);  // "Gold" (Standardwert, da "Pink" ungültig)
+console.log(fish.age);    // 3

@@ -7,10 +7,10 @@ function Animal(name, color, age) {
 };
 // Schritt 2
 Animal.prototype.eat = function(food) {
-  console.log('Mmpf mmpf, ' + food);
+  console.log(`Mmpf mmpf, ${food}!`);
 }
 Animal.prototype.drink = function(drink) {
-  console.log('Mmmmmmh, ' + drink);
+  console.log(`Mmmmmmh, ${drink}!`);
 }
 // Schritt 3
 function Dog(name, color, age, type) {

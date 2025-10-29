@@ -5,10 +5,10 @@ function Animal(name, color, age) {
   this.age = age;
 };
 Animal.prototype.eat = function(food) {
-  console.log('Mmpf mmpf, ' + food + '!');
+  console.log(`Mmpf mmpf, ${food}!`);
 }
 Animal.prototype.drink = function(drink) {
-  console.log('Mmmmmmh, ' + drink + '!');
+  console.log(`Mmmmmmh, ${drink}!`);
 }
 const fish = new Animal('Fischi', 'Grün', 2);
 fish.eat('Algen');    // Ausgabe: 'Mmpf mmpf, Algen!'

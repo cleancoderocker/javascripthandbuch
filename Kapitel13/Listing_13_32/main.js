@@ -1,10 +1,6 @@
-'use strict';
 class Animal {
 
-  _name = 'Max Musterfisch';
-  _color = 'Gold';
-  _age = '25';
-
+  // Öffentliche statische Eigenschaft
   static ANIMAL_COLORS = {
     WHITE: 'Weiß',
     BLACK: 'Schwarz',
@@ -12,36 +8,53 @@ class Animal {
     GREEN: 'Grün',
     YELLOW: 'Gelb',
     ORANGE: 'Orange'
+  };
+
+  // Private statische Eigenschaft (interner Zähler)
+  static #animalCount = 0;
+
+  static #isValidColor(color) {
+    return Object.values(Animal.ANIMAL_COLORS).includes(color);
   }
 
+  static getAnimalCount() {
+    return Animal.#animalCount = 0;
+  }
+
+  #name = 'Max Musterfisch';
+  #color = 'Gold';
+  #age = 25;
+
   constructor(name, color, age) {
-    this._name = name ? name : this._name;
-    this._color = color ? color : this._color;
-    this._age = age ? age : this._age;
+    this.#name = name ? name : this.#name;
+    this.#color = Animal.#isValidColor(color) ? color : this.#color;
+    this.#age = age ? age : this.#age;
+    // Zähler erhöhen, wenn Instanz erstellt wird
+    Animal.#animalCount++;
   }
 
   get name() {
-    return this._name;
+    return this.#name;
   }
 
   set name(name) {
-    this._name = name;
+    this.#name = name;
   }
 
   get color() {
-    return this._color;
+    return this.#color;
   }
 
   set color(color) {
-    this._color = color;
+    this.#color = color;
   }
 
   get age() {
-    return this._age;
+    return this.#age;
   }
 
   set age(age) {
-    this._age = age;
+    this.#age = age;
   }
 
   eat(food) {
@@ -53,7 +66,7 @@ class Animal {
   }
 
   toString() {
-    return `${this._name}, ${this._color}, ${this._age}`;
+    return `${this.#name}, ${this.#color}, ${this.#age}`;
   }
 
 }
@@ -67,8 +80,10 @@ console.log(Animal.ANIMAL_COLORS);
 //   YELLOW: 'Gelb',
 //   ORANGE: 'Orange'
 // }
-const bird = new Animal('Birdie', Animal.ANIMAL_COLORS.BLACK, 5);
-console.log(bird.name);   // "Birdie"
-console.log(bird.color);  // "Schwarz"
-console.log(bird.age);    // 5
 // console.log(bird.ANIMAL_COLORS); // undefined
+
+const bird = new Animal('Birdie', Animal.ANIMAL_COLORS.BLACK, 5);
+console.log(Animal.getAnimalCount()); // 1
+
+const fish = new Animal('Goldie', Animal.ANIMAL_COLORS.ORANGE, 2);
+console.log(Animal.getAnimalCount()); // 2

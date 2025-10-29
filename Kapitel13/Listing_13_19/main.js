@@ -2,7 +2,7 @@
 class Animal {
   _name = 'Max Musterfisch';
   _color = 'Gold';
-  _age = '25';
+  _age = 25;
   constructor(name, color, age) {
     this._name = name ? name : this._name;
     this._color = color ? color : this._color;
@@ -25,7 +25,7 @@ console.log(snake.color); // "Grün"
 console.log(snake.age); // 5
 snake._name = 4711;
 snake._color = 'hello world';
-snake._age = 'zwanzig';
+snake._age = 20;
 console.log(snake.name); // 4711
 console.log(snake.color); // "hello world"
-console.log(snake.age); // "zwanzig"
+console.log(snake.age); // 20

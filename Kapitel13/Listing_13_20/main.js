@@ -2,7 +2,7 @@
 class Animal {
   #name = 'Max Musterfisch';
   #color = 'Gold';
-  #age = '25';
+  #age = 25;
   constructor(name, color, age) {
     this.#name = name ? name : this.#name;
     this.#color = color ? color : this.#color;
@@ -42,4 +42,4 @@ console.log(snake.color); // "Grün"
 console.log(snake.age); // 5
 // snake.#name = 4711; // SyntaxError
 // snake.#color = 'hello world'; // SyntaxError
-// snake.#age = 'zwanzig'; // SyntaxError
+// snake.#age = 20; // SyntaxError

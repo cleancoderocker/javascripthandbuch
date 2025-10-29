@@ -2,7 +2,7 @@
 class Animal {
   #name = 'Max Musterfisch';
   #color = 'Gold';
-  #age = '25';
+  #age = 25;
   constructor(name, color, age) {
     this.#name = name ? name : this._name;
     this.#color = color ? color : this._color;

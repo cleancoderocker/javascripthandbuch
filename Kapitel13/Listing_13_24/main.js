@@ -1,68 +1,60 @@
 'use strict';
 class Animal {
-
-  _name = 'Max Musterfisch';
-  _color = 'Gold';
-  _age = '25';
-
+  #name = 'Max Musterfisch';
+  #color = 'Gold';
+  #age = 25;
   constructor(name, color, age) {
-    this._name = name ? name : this._name;
-    this._color = color ? color : this._color;
-    this._age = age ? age : this._age;
+    this.#name = name ? name : this._name;
+    this.#color = color ? color : this._color;
+    this.#age = age ? age : this._age;
   }
 
   get name() {
-    return this._name;
+    return this.#name;
   }
-
   set name(name) {
-    this._name = name;
+    this.#name = name;
   }
-
   get color() {
-    return this._color;
+    return this.#color;
   }
-
   set color(color) {
-    this._color = color;
+    this.#color = color;
   }
-
   get age() {
-    return this._age;
+    return this.#age;
   }
-
   set age(age) {
-    this._age = age;
+    this.#age = age;
   }
-
   eat(food) {
     console.log(`Mmpf mmpf, ${food}`);
   }
-
   drink(drink) {
     console.log(`Mmmmmmh, ${drink}`);
   }
-
   toString() {
-    return `${this._name}, ${this._color}, ${this._age}`;
+    return `${this.#name}, ${this.#color}, ${this.#age}`;
   }
-
 }
+const snake = new Animal('Zischi', 'Grün', 5);
+// snake.#eat('Vogel'); // SyntaxError
+// snake.#drink('Wasser'); // SyntaxError
 
 class Dog extends Animal {
 
-  _type;
+  #type;
 
   constructor(name, color, age, type) {
     // Fehler, da kein Aufruf des Elternkonstruktors
   }
 
   get type() {
-    return this._type;
+    return this.#type;
   }
 
   set type(type) {
-    this._type = type;
+    this.#type = type;
   }
 
   bark() {
