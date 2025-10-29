@@ -3,7 +3,8 @@ function init() {
   const request = new XMLHttpRequest();               // Erstellen des XMLHttpRequest-Objekts
   request.onload = (e) => {                         // Wenn Ergebnis geladen wurde ...
     if(request.status === 200) {
-      const html = request.responseText;              // HTML-Antwort als Zeichenkette.
+      const html = request.responseText;            // HTML-Antwort als Zeichenkette.
+      console.log(html);
     }
   };
   request.open(
