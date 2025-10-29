@@ -1,6 +1,6 @@
-function handleLinkClicked(e) {
+function handleLinkClicked(event) {
   console.log('Link geklickt');
-  stopDefault(e);
+  stopDefault(event);
 }
 
 function init() {
@@ -14,9 +14,9 @@ function init() {
   );
 }
 
-function stopDefault(e) {
-  if (e && e.preventDefault) {
-    e.preventDefault();
+function stopDefault(event) {
+  if (event && event.preventDefault) {
+    event.preventDefault();
   } else if (window.event && window.event.returnValue) {
     window.event.returnValue = false;
   }

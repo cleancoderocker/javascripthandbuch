@@ -24,28 +24,28 @@ function showMessage(message) {
 }
 
 function init() {
-  const element = document.getElementById('age');       // Element holen
-  element.addEventListener(                           // Event-Listener registrieren
+  const ageInput = document.getElementById('age');    // Element holen
+  ageInput.addEventListener(                          // Event-Listener registrieren
     'blur',                                           // Name des Events
     clearMessage                                      // Name des Event-Listeners
   );
-  element.addEventListener(                           // Event-Listener registrieren
+  ageInput.addEventListener(                          // Event-Listener registrieren
     'blur',                                           // Name des Events
     checkAgeNotNegative                               // Name des Event-Listeners
   );
-  element.addEventListener(                           // Event-Listener registrieren
+  ageInput.addEventListener(                          // Event-Listener registrieren
     'blur',                                           // Name des Events
     checkAgeIsNumber                                  // Name des Event-Listeners
   );
   const checkBox = document.getElementById('validation');
   checkBox.addEventListener('change', function() {
     if(checkBox.checked) {
-      element.addEventListener('blur', checkAgeNotNegative);
-      element.addEventListener('blur', checkAgeIsNumber);
+      ageInput.addEventListener('blur', checkAgeNotNegative);
+      ageInput.addEventListener('blur', checkAgeIsNumber);
     } else {
       clearMessage();
-      element.removeEventListener('blur', checkAgeNotNegative);
-      element.removeEventListener('blur', checkAgeIsNumber);
+      ageInput.removeEventListener('blur', checkAgeNotNegative);
+      ageInput.removeEventListener('blur', checkAgeIsNumber);
     }
   });
 }

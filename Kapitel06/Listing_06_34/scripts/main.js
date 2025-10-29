@@ -1,6 +1,6 @@
-function handleLinkClicked(e) {
+function handleLinkClicked(event) {
   console.log('Link geklickt');
-  e.preventDefault();
+  event.preventDefault();
 }
 
 function init() {
