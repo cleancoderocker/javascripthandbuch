@@ -1,7 +1,13 @@
 'use strict';
-const fs = require('fs');
-const path = require('path');
-const zlib = require('zlib');
+import fs from 'fs';
+import path from 'path';
+import zlib from 'zlib';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const INPUT = path.join(__dirname, '..', 'data', 'someFile.txt.gz');
 const OUTPUT = path.join(__dirname, '..', 'data', 'output');
 const OUTPUT_FILE = path.join(OUTPUT, 'someFile.txt');

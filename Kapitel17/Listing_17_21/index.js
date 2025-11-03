@@ -1,13 +1,13 @@
 'use strict';
-const http = require('http');
-const url = require('url');
-const fs = require('fs');
+import http from 'http';
+import url from 'url';
+import { readFile } from 'fs';
 // 1.) Server erstellen
 http.createServer((request, response) => {
 // 2.) Pfad herausfinden
   const pathname = url.parse(request.url).pathname;
 // 3.) Datei für Pfad lesen
-fs.readFile(pathname.substr(1), (error, data) => {
+readFile(pathname.substr(1), (error, data) => {
   if (error) {
   return console.error(error);
 // 3.1.) Datei wurde nicht gefunden

@@ -1,5 +1,5 @@
 'use strict';
-const fs = require('fs');
+import fs from 'fs';
 fs.stat('input.txt', (error, stats) => {
   if (error) {
     return console.error(error);

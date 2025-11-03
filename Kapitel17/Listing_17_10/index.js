@@ -1,3 +1,3 @@
-const fs = require('fs');
-const data = fs.readFileSync('input.txt');
+import { readFileSync } from 'fs';
+const data = readFileSync('input.txt');
 console.log(data.toString());

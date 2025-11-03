@@ -1,5 +1,5 @@
 'use strict';
-const http = require('http');
+import http from 'http';
 http.createServer((request, response) => {
   if(request.url === '/') {
     response.writeHead(200, {'Content-Type': 'text/html'});

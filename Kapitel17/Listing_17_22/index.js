@@ -1,5 +1,5 @@
 'use strict';
-const http = require('http');
+import http from 'http';
 const options = {
   host: 'localhost',
   port: '8080',

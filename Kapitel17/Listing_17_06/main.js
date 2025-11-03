@@ -1,5 +1,5 @@
 'use strict';
-const events = require('events'); // events-Package einbinden
+import events from 'events'; // events-Package einbinden
 const emitter = new events.EventEmitter(); // Emitter erstellen
 emitter.on( // Event abfangen
   'personAdded', // Event-Name

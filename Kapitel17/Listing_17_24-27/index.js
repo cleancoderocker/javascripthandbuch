@@ -1,5 +1,5 @@
 'use strict';
-const express = require('express');
+import express from 'express';
 const app = express();
 app.get('/', (request, response) => {
   response.send('Hallo Welt');
