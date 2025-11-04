@@ -1,6 +1,6 @@
 'use strict';
 const age = prompt('Für welches Alter suchen Sie Filmtipps?');
-if(!isNaN(parseFloat(age)) && isFinite(age)) {
+if(!isNaN(parseInt(age)) && isFinite(age)) {
   if(age >= 18) {
     console.log('Filme mit FSK6, FSK12, FSK16 und FSK18 anzeigen.');
   } else if(age >= 16) {

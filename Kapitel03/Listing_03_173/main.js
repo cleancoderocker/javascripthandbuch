@@ -17,10 +17,10 @@ function accessDatabase() {
     getUsersByName(22);
   } catch(error) {
     console.log(error);         // TypeError: Zeichenkette erwartet
-    throw new DBError('Fehler bei der Kommunikation mit der Datenbank');
-  } finally {
     closeDatabaseConnection();  // 'Datenbankverbindung geschlossen'
+    throw new DBError('Fehler bei der Kommunikation mit der Datenbank');
   }
+  closeDatabaseConnection();    // Wird nicht ausgeführt
 }
 class DBError extends Error {
 

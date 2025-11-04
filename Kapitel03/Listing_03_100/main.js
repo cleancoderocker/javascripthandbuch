@@ -2,7 +2,7 @@
 const numbers = [2, 4, 56, 22, 65, 2, 54, 88, 29];
 console.log('Vor der Schleife.');
 let i = -1;                                   // Zählervariable initialisieren
-while(i < numbers.length) {                   // Iteriere über das Zahlenarray.
+while(i < numbers.length) {                   // Iteriere über das Zahlen-Array.
   i++;                                        // Erhöhe die Zählervariable.
   const number = numbers[i];                    // Jeweilige Zahl zuweisen.
   if (number % 2 === 1) {                     // Wenn eine Zahl ungerade ist ...

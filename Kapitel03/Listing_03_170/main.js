@@ -12,12 +12,8 @@ function getUsersByName(name) {
   /* ... */
 }
 function accessDatabase() {
-  openDatabaseConnection();   // 'Datenbankverbindung geöffnet'
-  try {
-    getUsersByName(22);
-  } catch(error) {
-    console.error(error);     // TypeError: Zeichenkette erwartet
-  }
-  closeDatabaseConnection();  // 'Datenbankverbindung geschlossen'
+  openDatabaseConnection();     // 'Datenbankverbindung geöffnet'
+  getUsersByName(22);           // TypeError: Zeichenkette erwartet
+  closeDatabaseConnection();    // Wird nicht ausgeführt
 }
 accessDatabase();

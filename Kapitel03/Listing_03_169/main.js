@@ -1,19 +1,9 @@
 'use strict';
-function openDatabaseConnection() {
-  console.log('Datenbankverbindung geöffnet');
+try {
+// Code ausführen, der potenziell Fehler produziert
+} catch (error) {
+// Behandeln des Fehlers
+} finally {
+// Alles, was hier steht, wird immer ausgeführt, unabhängig davon,
+// ob ein Fehler aufgetreten ist oder nicht.
 }
-function closeDatabaseConnection() {
-  console.log('Datenbankverbindung geschlossen');
-}
-function getUsersByName(name) {
-  if(typeof name !== 'string') {
-    throw new TypeError('Zeichenkette erwartet');
-  }
-  /* ... */
-}
-function accessDatabase() {
-  openDatabaseConnection();     // 'Datenbankverbindung geöffnet'
-  getUsersByName(22);           // TypeError: Zeichenkette erwartet
-  closeDatabaseConnection();    // Wird nicht ausgeführt
-}
-accessDatabase();
