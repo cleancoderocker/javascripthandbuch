@@ -2,28 +2,33 @@
 function init() {
   if (window.File && window.FileReader && window.FileList && window.Blob) {
     function handleFileSelected(event) {
-      const files = event.target.files;
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const reader = new FileReader();
-        if (file.type.match('text.*')) {
-          reader.onload = (event) => {
-            const span = document.createElement('span');
-            span.innerHTML = reader.result;
-            document.getElementById('list').insertBefore(span, null);
-          };
-          reader.readAsText(file);
-        } else if(file.type.match('image.*')) {
-          reader.onload = (event) => {
-            const span = document.createElement('span');
-            span.innerHTML = `<img class="thumbnail" src="${reader.result}"/>`;
-            document.getElementById('list').insertBefore(span, null);
-          };
-          reader.readAsDataURL(file);
-        }
+      event.stopPropagation();
+      event.preventDefault();
+
+      const files = event.dataTransfer.files;              // alle ausgewählten Dateien
+      let output = '';                                     // Variable für Ergebnis
+      for (let i = 0; i < files.length; i++) {             // Über alle Dateien iterieren ...
+        const file = files[i];                             // ... jede Datei betrachten ...
+        output += '<li>' +                                 // ... und Ergebnis-HTML zusammebauen, bestehend aus:
+        '<strong>' + file.name + '</strong>' +             // Dateiname
+        ' (' + (file.type || "n/a") + ') - ' +             // Dateityp
+        file.size + ' Bytes, ' +                           // Dateigröße
+        ' geändert am: ' +                                 // Änderungsdatum
+        file.lastModifiedDate.toLocaleDateString() +
+        '</li>';
       }
+      document.getElementById('list').innerHTML = '<ul>' + output + '</ul>';
     }
-    document.getElementById('files').addEventListener('change', handleFileSelected, false);
+
+    function handleDragOver(event) {
+      event.stopPropagation();
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'copy';
+    }
+
+    const dropTarget = document.getElementById('target');
+    dropTarget.addEventListener('dragover', handleDragOver, false);
+    dropTarget.addEventListener('drop', handleFileSelected, false);
   } else {
     alert('File API nicht vollständig durch den Browser unterstützt');
   }
