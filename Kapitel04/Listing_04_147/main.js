@@ -1,9 +1,10 @@
 'use strict';
-const text = 'Die Telefonnummer lautet +49 30 1234567.';
-const regExp = /\+?\d{2}\s\d{2}\s\d{5,7}/;
-const result = regExp.exec(text)
-console.log(
-  'Nummer ' + result[0]
-  + ' gefunden an Index ' + result.index
-  + '.'
-);
+const regExp = /^\+?\d{2}\s\d{2}\s\d{5,7}$/;
+console.log(regExp.test('49 30 1234567'));        // true
+console.log(regExp.test('Hallo Welt'));           // false
+console.log(regExp.test('Hallo Max Mustermann')); // false
+console.log(regExp.test('49X30X1234567'));        // false
+console.log(regExp.test('49 30 12345678'));       // false
+console.log(regExp.test('449 30 1234567'));       // false
+console.log(regExp.test('49 30 12345'));          // true
+console.log(regExp.test('+49 30 1234567'));       // true

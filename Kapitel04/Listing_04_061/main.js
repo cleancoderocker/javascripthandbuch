@@ -5,6 +5,13 @@ const todoList = [
   'Aufräumen',
   'Rasen mähen'
 ];
-const deletedTodos = todoList.splice(1, 2);
-console.log(deletedTodos);  // ["Einkaufen", "Aufräumen"]
-console.log(todoList);      // ["Bad putzen", "Rasen mähen"]
+const item1 = todoList.shift();
+console.log(item1); // Ausgabe: Bad putzen
+const item2 = todoList.shift();
+console.log(item2); // Ausgabe: Einkaufen
+const item3 = todoList.shift();
+console.log(item3); // Ausgabe: Aufräumen
+const item4 = todoList.shift();
+console.log(item4); // Ausgabe: Rasen mähen
+const item5 = todoList.shift();
+console.log(item5); // Ausgabe: undefined

@@ -5,14 +5,17 @@ const todoList = [
   'Aufräumen',
   'Rasen mähen'
 ];
-const sliced5 = todoList.slice(-2);   // die letzten beiden Elemente
-const sliced6 = todoList.slice(1,     // zweites Element von vorne bis ...
-  -1);                                // ... zweites Element von hinten
-const sliced7 = todoList.slice(1,     // zweites Element von vorne bis ...
-  -2);                                // ... bis drittes Element von hinten
-const sliced8 = todoList.slice(1,     // zweites Element von vorne bis ...
-  -3);                                // ... viertes Element von hinten
-console.log(sliced5);                 // ["Aufräumen", "Rasen mähen"]
-console.log(sliced6);                 // ["Einkaufen", "Aufräumen"]
-console.log(sliced7);                 // ["Einkaufen"]
-console.log(sliced8);                 // []
+const sliced1 = todoList.slice(1);    // ab zweitem Element
+console.log(sliced1);   // ["Einkaufen", "Aufräumen", "Rasen mähen"]
+
+const sliced2 = todoList.slice(2);    // ab drittem Element
+console.log(sliced2);   // ["Aufräumen", "Rasen mähen"]
+
+const sliced3 = todoList.slice(0, 2); // erstes und zweites Element
+console.log(sliced3);   // ["Bad putzen", "Einkaufen"]
+
+const sliced4 = todoList.slice(2, 4); // drittes und viertes Element
+console.log(sliced4);   // ["Aufräumen", "Rasen mähen"]
+
+// Ursprungs-Array bleibt unverändert:
+console.log(todoList);  // ["Bad putzen", "Einkaufen", "Aufräumen", "Rasen mähen"]

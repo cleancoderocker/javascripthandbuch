@@ -1,10 +1,7 @@
 'use strict';
-const regExp = /^\d{2}\s\d{2}\s\d{5,7}$/;
-console.log(regExp.test('49 30 1234567'));        // true
-console.log(regExp.test('Hallo Welt'));           // false
-console.log(regExp.test('Hallo Max Mustermann')); // false
-console.log(regExp.test('49X30X1234567'));        // false
-console.log(regExp.test('49 30 12345678'));       // false
-console.log(regExp.test('449 30 1234567'));       // false
-console.log(regExp.test('49 30 12345'));          // true
-console.log(regExp.test('+49 30 1234567'));       // false
+const regExp = /^abcdef{2,3}$/;
+console.log(regExp.test('abcde'));      // false
+console.log(regExp.test('abcdef'));     // false
+console.log(regExp.test('abcdeff'));    // true
+console.log(regExp.test('abcdefff'));   // true
+console.log(regExp.test('abcdeffff'));  // false

@@ -19,7 +19,6 @@ const handler = {
   }
 }
 // Registrieren des Callback-Handlers
-const boundFunction = handler.handle.bind(handler);
-button.onClick(boundFunction);
+button.onClick(handler.handle.bind(handler));
 // Implizites Aktivieren des Callback-Handlers
 button.click();

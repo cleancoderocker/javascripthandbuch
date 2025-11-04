@@ -1,7 +1,8 @@
 'use strict';
-[4, 5, 6].includes(4);                  // true
-[2, 7, 8].includes(4);                  // false
-['Max', 'Moritz'].includes('Peter');    // false
-['Max', 'Moritz'].includes('Moritz');   // true
-[4, 5, 6, 4711, 50, 87].includes(6, 2); // true
-[4, 5, 6, 4711, 50, 87].includes(6, 4); // false
+const transactions = [
+    -20.0, 500.50, -40.0, -34.50, 200, 500.50, -20, 200
+];
+console.log(transactions.lastIndexOf(-20.0));   // Ausgabe: 6
+console.log(transactions.lastIndexOf(500));     // Ausgabe: -1
+console.log(transactions.lastIndexOf(200));     // Ausgabe: 7
+console.log(transactions.lastIndexOf(200, 5));  // Ausgabe: 4

@@ -1,21 +1,21 @@
 'use strict';
+function printContactInformation(
+  {
+    contact: {
+      email: email,
+      phone: phone
+      }
+    }
+) {
+  console.log(`E-Mail: ${email}`);
+  console.log(`Telefon: ${phone}`);
+}
 const person = {
   firstName: 'Max',
   lastName: 'Mustermann',
-  age: 33,
-  hairColor: 'brown',
-  height: 1.8
+  contact: {
+    email: 'max.mustermann@javascripthandbuch.de',
+    phone: '02345/23456789'
+  }
 };
-const {
-  firstName,
-  lastName,
-  ...properties
-} = person;
-console.log(firstName);  // Max
-console.log(lastName);   // Mustermann
-console.log(properties); 
-// {
-// age: 33,
-// hairColor: 'brown',
-// height: 1.8
-// }
+printContactInformation(person);

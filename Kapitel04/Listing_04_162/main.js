@@ -1,13 +1,10 @@
 'use strict';
-function sayHello() {
-  console.log('Hallo');
-  return function() {
-    console.log('Welt');
-    return function() {
-      console.log('Mein Name ist Max Mustermann.');
-    }
+function createAddFunction() {
+  return function(x, y) {
+    return x + y;
   }
 }
-sayHello();      // Aufruf der »äußeren« Funktion
-sayHello()();    // Aufruf der »äußeren« und der »mittleren« Funktion
-sayHello()()();  // Aufruf aller Funktionen
+const addFunction1 = createAddFunction();
+const addFunction2 = createAddFunction();
+console.log(addFunction1(22, 55)); // 77
+console.log(addFunction2(33, 66)); // 99

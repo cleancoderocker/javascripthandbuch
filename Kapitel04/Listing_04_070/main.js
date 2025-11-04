@@ -1,8 +1,8 @@
 'use strict';
-const transactions = [
-  -20.0, 500.50, -40.0, -34.50, 200, 500.50, -20, 200
-];
-console.log(transactions.indexOf(-20.0));   // Ausgabe: 0
-console.log(transactions.indexOf(500));     // Ausgabe: -1
-console.log(transactions.indexOf(200));     // Ausgabe: 4
-console.log(transactions.indexOf(200, 5));  // Ausgabe: 7
+const queue = [];           // Deklaration eines ganz normalen Arrays
+queue.push(1);              // Hinzufügen eines Elements ...
+queue.push(2);              // ... und noch eines ...
+queue.push(3);              // ... und noch eines ...
+queue.push(4, 5, 6, 7, 8);  // ... und direkt mehrere auf einen Schlag
+console.log(queue.shift()); // Zurückgegeben wird das zuerst hinzugefügte
+                            // Element, die 1.

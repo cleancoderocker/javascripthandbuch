@@ -1,8 +1,6 @@
 function logNames() {
-  Array.prototype.forEach.apply(arguments, [
-    function(argument) {
-      console.log(argument);
-    }
-  ]);
+  Array.prototype.forEach.call(arguments, function(argument) {
+    console.log(argument);
+  });
 }
 logNames("Max", "Moritz");

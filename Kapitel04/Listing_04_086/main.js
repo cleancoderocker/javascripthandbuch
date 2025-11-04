@@ -4,6 +4,6 @@ const person = {
   lastName : 'Mustermann'
 };
 const {
-  firstName,
-  lastName
+  firstName : firstNameExtracted,
+  lastName : lastNameExtracted
   } = person;

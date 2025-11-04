@@ -1,6 +1,5 @@
 'use strict';
-const regExp = /[abcde]/;
-console.log(regExp.test('a'));      // true
-console.log(regExp.test('f'));      // false
-console.log(regExp.test('afghj'));  // true
-console.log(regExp.test('fghij'));  // false
+const regExp = /............./;
+console.log(regExp.test('Hallo Welt'));           // false
+console.log(regExp.test('Max Mustermann'));       // true
+console.log(regExp.test('Hallo Max Mustermann')); // true

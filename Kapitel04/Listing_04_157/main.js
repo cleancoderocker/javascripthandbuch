@@ -1,19 +1,15 @@
 'use strict';
-// Definition der Funktion, die als Argument eine andere Funktion erwartet
-function function1(f) {
-  console.log('Funktion 1 Start'); // Aufruf der übergebenen Funktion
-  f();
-  console.log('Funktion 1 Ende');
-}
-function function2() {
-  console.log('Funktion 2 Start');
-  console.log('Funktion 2 Ende');
-}
-// Aufruf mit einer Funktion über deren Namen
-function1(function2);
-// function1(function2()); // Das funktioniert nicht.
-// Aufruf mit einer anonymen Funktion als Argument
-function1(function() {
-  console.log('Anonyme Funktion Start');
-  console.log('Anonyme Funktion Ende');
-});
+const text = 'Max,Mustermann,4711,45,180,80';
+const result = text.split(',');
+const firstName = result[0];
+const lastName = result[1];
+const id = result[2];
+const age = result[3];
+const height = result[4];
+const weight = result[5];
+console.log(firstName);   // Max
+console.log(lastName);    // Mustermann
+console.log(id);          // 4711
+console.log(age);         // 45
+console.log(height);      // 180
+console.log(weight);      // 80

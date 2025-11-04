@@ -1,17 +1,15 @@
 'use strict';
 const bestOfStonerrock = [
-  'Kyuss',
   'Spiritual Beggars',
-  'Spice and the RJ Band',
-  'Band of Spice'
+  'Spice and the RJ Band'
 ];
 const [
-  one,
-  , // Hier wird keine Variable angegeben.
-  three,
-  four
+  one = 'Kyuss',
+  two = 'Kyuss',
+  three = 'Kyuss',
+  four = 'Kyuss'
   ] = bestOfStonerrock;
-console.log(one);     // "Kyuss"
-// console.log(two);  // Fehler, da nicht definiert
-console.log(three);   // "Spice and the RJ Band"
-console.log(four);    // "Band of Spice"
+console.log(one); // "Kyuss";
+console.log(two); // "Kyuss";
+console.log(three); // "Kyuss";
+console.log(four); // "Kyuss";

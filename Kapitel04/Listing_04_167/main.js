@@ -1,8 +1,26 @@
-function logNames() {
-  console.log(arguments); // Ausgabe: { '0': 'Max', '1': 'Moritz' }
-  /* Fehler: arguments ist kein Array arguments.forEach(function(argument) {
-	  console.log(argument);
-	});
-  */
+'use strict';
+const button = {
+  handler : null,
+// Funktion, die einen Callback-Handler erwartet
+  onClick : function(handler) {
+    this.handler = handler;
+  },
+  click : function() {
+    this.handler();
+  }
+};
+const handler = {
+  log: function() {
+    console.log("Button geklickt.");
+  },
+// Objektmethode, die weiter unten als Callback-Handler registriert wird
+  handle: function() {
+    this.log();
+  }
 }
-logNames("Max", "Moritz");
+// Registrieren des Callback-Handlers
+button.onClick(function() {
+  handler.handle();
+});
+// Implizites Aktivieren des Callback-Handlers
+button.click();

@@ -7,6 +7,6 @@ function example(x) {
 let y = {
   value: 4711
 };
-console.log(y.value);
-example(y);
-console.log(y.value);
+console.log(y.value);   // Ausgabe: 4711
+example(y);             // Ausgabe: erst 4711, dann 5
+console.log(y.value);   // Ausgabe: 5

@@ -1,14 +1,18 @@
 'use strict';
-function printContactInformation(
+function printPerson(
   {
+    firstName: firstName,
+    lastName: lastName,
     contact: {
       email: email,
       phone: phone
       }
     }
 ) {
+  console.log(`${firstName} ${lastName}`);
   console.log(`E-Mail: ${email}`);
   console.log(`Telefon: ${phone}`);
+
 }
 const person = {
   firstName: 'Max',
@@ -18,4 +22,4 @@ const person = {
     phone: '02345/23456789'
   }
 };
-printContactInformation(person);
+printPerson(person);

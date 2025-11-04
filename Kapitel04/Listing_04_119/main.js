@@ -1,21 +1,9 @@
 'use strict';
-const date1 = new Date(); // aktuelles Datum und aktuelle Zeit
-// hier: Sat Aug 15 2021
-// 17:34:25 GMT+0200 (CEST)
-const date2 = new Date(1438654000000); // Datum basierend auf Millisekunden
-// seit dem 01.01.1970
-// hier: Tue Aug 04 2015
-// 04:06:40 GMT+0200 (CEST)
-const date3 = new Date("02 08 2021"); // Datum basierend auf Zeichenkette
-// hier: Sun Feb 08 2021
-// 00:00:00 GMT+0100 (CET)
-const date4 = new Date( // Datum basierend auf ...
-  2021, // ... Jahr ...
-  8, // ... Monat ...
-  15, // ... Tag ...
-  17, // ... Stunden ...
-  36, // ... Minuten ...
-  30, // ... Sekunden ...
-  30 // ... und Millisekunden
-); // hier: Tue Sep 15 2021
-// 17:36:30 GMT+0200 (CEST)
+const today = new Date();
+console.log(today.getMonth());    // Gibt den aktuellen Monat (0-11) zurück
+console.log(today.getFullYear()); // Gibt das Jahr im Format YYYY zurück
+console.log(today.getDate());     // Gibt den aktuellen Tag im Monat (1-31) zurück
+console.log(today.getDay());      // Gibt den Wochentag zurück (startet
+                                  // Sonntag mit 0)
+console.log(today.getHours());    // Gibt die aktuelle Stunde am Tag (0-23) zurück
+console.log(today.getTime());     // Gibt die Millisekunden seit dem 1.1.1970 zurück

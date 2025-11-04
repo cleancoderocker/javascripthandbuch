@@ -1,4 +1,13 @@
 'use strict';
-const name = 'Max Mustermann';
-console.log(name.indexOf('M'));     // Ausgabe: 0
-console.log(name.indexOf('mann'));  // Ausgabe: 10
+function checkUsername(userName) {
+  if(userName.length < 5) {
+    console.error('Nutzername muss mindestens 5 Zeichen enthalten.');
+  } else if(userName.length > 8) {
+    console.error('Nutzername darf maximal 8 Zeichen enthalten.');
+  } else {
+    console.log('Gültiger Nutzername');
+  }
+}
+checkUsername('Max');             // Fehler, da zu kurz
+checkUsername('Max Mustermann');  // Fehler, da zu lang
+checkUsername('MaxMuste');        // gültig

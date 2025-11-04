@@ -1,6 +1,8 @@
 function logNames() {
-  Array.prototype.forEach.call(arguments, function(argument) {
-    console.log(argument);
-  });
+  console.log(arguments); // Ausgabe: { '0': 'Max', '1': 'Moritz' }
+  /* Fehler: arguments ist kein Array arguments.forEach(function(argument) {
+	  console.log(argument);
+	});
+  */
 }
 logNames("Max", "Moritz");

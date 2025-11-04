@@ -1,20 +1,20 @@
 'use strict';
-const firstName = 'Max';
-const lastName = 'Mustermann';
-const properties = {
+const person = {
+  firstName: 'Max',
+  lastName: 'Mustermann',
   age: 33,
   hairColor: 'brown',
   height: 1.8
 };
-const person = {
+const {
   firstName,
   lastName,
   ...properties
-};
-console.log(person);
+} = person;
+console.log(firstName);  // Max
+console.log(lastName);   // Mustermann
+console.log(properties); 
 // {
-// firstName: 'Max',
-// lastName: 'Mustermann',
 // age: 33,
 // hairColor: 'brown',
 // height: 1.8

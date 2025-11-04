@@ -1,10 +1,14 @@
 'use strict';
-const names = ['Max', 'Moritz', 'Peter'];
-const namesString = names.toString();
-console.log(namesString);       // Ausgabe: Max,Moritz,Peter
-const namesLocaleString = names.toLocaleString();
-console.log(namesLocaleString); // Ausgabe: Max,Moritz,Peter
-const namesValue = names.valueOf();
-console.log(namesValue);        // Ausgabe: ["Max", "Moritz", "Peter"]
-const namesJoined = names.join('-');
-console.log(namesJoined);       // Ausgabe: Max-Moritz-Peter
+const todoList = [
+  'Bad putzen',
+  'Einkaufen',
+  'Aufräumen',
+  'Rasen mähen'
+];
+todoList.copyWithin(
+  0, // Zielstartposition, an die die Elemente kopiert werden
+  2, // Quellenstartposition, ab der kopiert wird
+  4   // Quellenendposition, bis zu der kopiert wird
+);
+console.log(todoList);
+// ["Aufräumen", "Rasen mähen", "Aufräumen", "Rasen mähen"]

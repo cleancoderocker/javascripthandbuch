@@ -1,29 +1,9 @@
 'use strict';
-const artists = new Set(
-  [
-    'Kyuss',
-    'Tool',
-    'Monster Magnet',
-    'Ben Harper',
-    'Queens of the Stone Age'
-  ]
-);
-// Ausgabe: "Kyuss", "Tool", "Monster Magnet", "Ben Harper", "Queens of the
-// Stone Age"
-for (let artist of artists.keys()) {
-  console.log(artist);
-}
-// Ausgabe: "Kyuss", "Tool", "Monster Magnet", "Ben Harper", "Queens of the
-// Stone Age"
-for (let artist of artists.values()) {
-  console.log(artist);
-}
-for (let artist of artists.entries()) {
-  console.log(artist[0]); // Wert, z. B. "Kyuss"
-  console.log(artist[1]); // Wert, z. B. "Kyuss"
-}
-// Ausgabe: "Kyuss", "Tool", "Monster Magnet", "Ben Harper",
-// "Queens of the Stone Age"
-for (let artist of artists) {
-  console.log(artist);
-}
+'use strict';
+const artists = new Set()               // Erstellen eines Sets ...
+  .add('Kyuss')                       // ... mit Verkettung
+  .add('Tool')
+  .add('Monster Magnet')
+  .add('Ben Harper')
+  .add('Queens of the Stone Age');
+console.log(artists.size);            // Ausgabe: 5
