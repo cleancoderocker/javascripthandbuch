@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  background: #0f1724;
+  color: #e6eef8;
+  padding: 20px;
+}
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+button {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.output {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  line-height: 1.6;
+}
+
+.entity {
+  background: rgba(16, 185, 129, 0.2);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
