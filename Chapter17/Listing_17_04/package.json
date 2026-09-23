@@ -1,0 +1,19 @@
+{
+  "name": "samplepackage",
+  "version": "1.0.0",
+  "description": "Sample package JavaScript Manual",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Philip Ackermann",
+  "dependencies": {
+    "lodash": "~4.17.21"
+  },
+  "devDependencies": {
+    "mocha": "~8.4.0"
+  }
+}

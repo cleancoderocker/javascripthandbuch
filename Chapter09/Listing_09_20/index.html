@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Form validation</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
+</head>
+<body>
+<form id="register" name="register" method="post" action="register.html">
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required class="form-control" >
+  </div>
+    <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required class="form-control" >
+  </div>
+  <div id="email-error" class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="error-message"></span>
+  </div>
+  <div class="form-group">
+    <label for="url">Website:</label>
+    <input type="url" id="website" name="website" class="form-control" >
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="99" value="18" class="form-control" >
+  </div>
+  <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block">Login</button>
+</form>
+<script src="scripts/main.js"></script>
+</body>
+</html>
