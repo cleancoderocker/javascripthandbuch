@@ -5,13 +5,32 @@ const todoList = [
   'Tidy up',
   'Mow lawn'
 ];
-const item1 = todoList.pop();
-console.log(item1);             // Output: Mow lawn
-const item2 = todoList.pop();
-console.log(item2);             // Output: Tidy up
-const item3 = todoList.pop();
-console.log(item3);             // Output: Go shopping
-const item4 = todoList.pop();
-console.log(item4);             // Output: Clean bathroom
-const item5 = todoList.pop();
-console.log(item5);             // Output: undefined
+todoList.splice(
+  2,                  // Index from which to insert elements
+  0,                  // Number of elements to be deleted
+  'Paint garage'      // Element to be added
+);
+console.log(todoList);
+// [
+//   "Clean bathroom",
+//   "Go shopping",
+//   "Paint garage",
+//   "Tidy up",
+//   "Mow lawn"
+// ]
+todoList.splice(
+  2,                          // Index from which to insert elements
+  0,                          // Number of elements to be deleted
+  'Lay sod',                  // Elements to be ...
+  'Lay out vegetable garden'  // ... added
+);
+console.log(todoList);
+// [
+//   "Clean bathroom",
+//   "Go shopping",
+//   "Lay sod",
+//   "Lay out vegetable garden",
+//   "Paint garage",
+//   "Tidy up",
+//   "Mow lawn"
+// ]

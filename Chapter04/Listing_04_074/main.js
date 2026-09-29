@@ -1,14 +1,8 @@
 'use strict';
-const todoList = [
-  'Clean bathroom',
-  'Go shopping',
-  'Tidy up',
-  'Mow lawn'
-];
-todoList.copyWithin(
-  0,  // target start position to which the elements will be copied
-  2,  // source start position from which the elements are copied
-  4   // source end position up to which the elements are copied
-);
-console.log(todoList);
-// ["Tidy up", "Mow lawn", "Tidy up", "Mow lawn"]
+const result = [2,3,4,5,6,7,2,3,4,5]
+  .find(element => element % 2 !== 0)
+console.log(result); // 3
+
+const result2 = [2,3,4,5,6,7,2,3,4,5]
+  findIndex(element => element % 2 !== 0);
+console.log(result2); // 1

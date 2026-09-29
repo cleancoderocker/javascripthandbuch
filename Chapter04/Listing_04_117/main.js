@@ -1,35 +1,29 @@
 'use strict';
-const artist1 = {
-  name: 'Kyuss'
-};
-const artist2 = {
-  name: 'Tool'
-};
-const artist3 = {
-  name: 'Monster Magnet'
-};
-const artist4 = {
-  name: 'Ben Harper'
-};
-const artist5 = {
-  name: 'Queens of the Stone Age'
-};
-const artist6 = {
-  name: 'Justin Bieber'
-};
-
-const artists = new WeakSet(
+const artists = new Set(
   [
-    artist1, 
-    artist2,
-    artist3,
-    artist4,
-    artist5
+    'Kyuss',
+    'Tool',
+    'Monster Magnet',
+    'Ben Harper',
+    'Queens of the Stone Age'
   ]
 );
-console.log(artists.has(artist1));  // Output: true
-artists.delete(artist1);            // Delete a value
-console.log(artists.has(artist1));  // Output: false
-console.log(artists.has(artist6));  // Output: false
-
-console.log(artists);
+// Output: "Kyuss", "Tool", "Monster Magnet", "Ben Harper", "Queens of the 
+// Stone Age"
+for (let artist of artists.keys()) {
+  console.log(artist);
+}
+// Output: "Kyuss", "Tool", "Monster Magnet", "Ben Harper", "Queens of the 
+// Stone Age"
+for (let artist of artists.values()) {
+  console.log(artist);
+} 
+for (let artist of artists.entries()) {
+  console.log(artist[0]);  // value, e.g. "Kyuss"
+  console.log(artist[1]);  // value, e.g. "Kyuss"
+}
+// Output: "Kyuss", "Tool", "Monster Magnet", "Ben Harper", "Queens of the 
+// Stone Age"
+for (let artist of artists) {
+  console.log(artist);
+}

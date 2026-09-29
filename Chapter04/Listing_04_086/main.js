@@ -1,9 +1,9 @@
 'use strict';
 const person = {
-  firstName : 'John', 
-  lastName : 'Doe'
+  firstName : 'Max',
+  lastName : 'Mustermann'
 };
 const {
-  firstName,
-  lastName
+  firstName : firstNameExtracted,
+  lastName : lastNameExtracted
   } = person;

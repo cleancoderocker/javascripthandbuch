@@ -1,10 +1,28 @@
 'use strict';
-function logNames() {
-  console.log(arguments); // Output: { '0': 'John', '1': 'Doe' }
-  /* Error: arguments is not an array
-  arguments.forEach(function(argument) {
-    console.log(argument);
-  });
-  */
+const button = {
+  handler : null,
+  // Function that expects a callback handler
+  onClick : function(handler) {
+    this.handler = handler;
+  },
+  click : function() {
+    this.handler();
+  }
+};
+
+const handler = {
+  log : function() {
+    console.log("Button clicked.");
+  },
+  // Object method registered as a callback handler further below
+  handle: function() {
+    this.log();
+  }
 }
-logNames('John', 'James');
+// Register callback handler
+button.onClick(function() {
+  handler.handle();
+});
+
+// Implicit activation of the callback handler
+button.click();

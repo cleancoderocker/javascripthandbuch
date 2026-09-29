@@ -5,11 +5,14 @@ const bestOfStonerrock = [
   'Spice and the RJ Band',
   'Band of Spice'
 ];
-const [
+let one;
+let two;
+let three;
+let four;
+
+[
   one,
   two,
   three,
-  four,
-  five
-  ] = bestOfStonerrock;
-console.log(five); // undefined
+  four
+] = bestOfStonerrock;

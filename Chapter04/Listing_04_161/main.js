@@ -1,10 +1,10 @@
 'use strict';
-function createAddFunction() {
-  return function(x, y) {
-    return x + y;
-  }
+const numbers = [2,3,4,5];
+function print(item) {
+  console.log('Item: ' + item);
 }
-const addFunction1 = createAddFunction();
-const addFunction2 = createAddFunction();
-console.log(addFunction1(22, 55)); // 77
-console.log(addFunction2(33, 66)); // 99
+function modulo(item) {
+  console.log(item + ' % 2 = ' + item % 2);
+}
+numbers.forEach(print);
+numbers.forEach(modulo);

@@ -1,20 +1,15 @@
 'use strict';
-// Definition of the function that expects another function as an argument
-function function1(f) {
-  console.log('Function 1 start'); // Calling the passed function
-  f();
-  console.log('Function 1 end');
-}
-function function2() {
-  console.log('Function 2 start');
-  console.log('Function 2 end');
-}
-// Call with a function using its name
-function1(function2);
-// function1(function2());        // This does not work.
-
-// Call with an anonymous function as an argument
-function1(function() {
-  console.log('Anonymous function start');
-  console.log('Anonymous function end');
-});
+const text = 'John,Doe,4711,45,180,80';
+const result = text.split(',');
+const firstName = result[0];
+const lastName = result[1];
+const id = result[2];
+const age = result[3];
+const height = result[4];
+const weight = result[5];
+console.log(firstName);   // John
+console.log(lastName);    // Doe
+console.log(id);          // 4711
+console.log(age);         // 45
+console.log(height);      // 180
+console.log(weight);      // 80

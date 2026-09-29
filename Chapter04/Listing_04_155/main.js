@@ -1,6 +1,10 @@
 'use strict';
-const text = 'This text contains a phone number: +49 30 1234567';
-const text2 = 'This text does not contain any phone number.';
+let text = 'The private phone number is +49 30 1234567,' +
+  ' the business phone number is +49 30 1234568.';
 const regExp = /(\+?\d{2})\s(\d{2})\s(\d{5,7})/g;
-console.log(text.search(regExp));   // Output: 40
-console.log(text2.search(regExp));  // Output: -1
+text = text.replace(regExp, function(number) {
+  return number.substring(0, 9) + 'XXXXX';
+});
+console.log(text);
+// The private phone number is +49 30 12XXXXX,
+// the business phone number is +49 30 12XXXXX.

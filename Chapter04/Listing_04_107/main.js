@@ -1,13 +1,8 @@
 'use strict';
-const numbersOfAlbums = new Map(    // Create a map ...
-  [                                 // ... based on an array
-    ['Kyuss', 4],
-    ['Tool', 6],
-    ['Monster Magnet', 8],
-    ['Ben Harper', 9],
-    ['Queens of the Stone Age', 6]
-  ]
-);
-for (let artist of numbersOfAlbums.keys()) {
-  console.log(artist);
-}
+const numbersOfAlbums = new Map()   // Create a map ...
+  .set('Kyuss', 4)                  // ... using method chaining
+  .set('Tool', 6)
+  .set('Monster Magnet', 8)
+  .set('Ben Harper', 9)
+  .set('Queens of the Stone Age', 6);
+console.log(numbersOfAlbums.size);  // Output: 5

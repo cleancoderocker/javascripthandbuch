@@ -1,8 +1,39 @@
 'use strict';
-const stack = [];            // Declaration of a normal array
-stack.push(1);               // Add one element ...
-stack.push(2);               // ... and another one ...
-stack.push(3);               // ... and another one ...
-stack.push(4, 5, 6, 7, 8);   // ... and several in one go
-console.log(stack.pop());    // Return the element that was 
-                             // added last: 8.
+const contacts = [
+  {
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'john.doe@javascripthandbuch.de'
+  },
+  {
+    firstName: 'James',
+    lastName: 'Dean',
+    email: 'superjames@javascripthandbuch.de'
+  },
+  {
+    firstName: 'Peter',
+    lastName: 'Dickens',
+    email: 'dickens@javascripthandbuch.de'
+  }
+];
+function compareByFirstName(contact1, contact2) {
+  return contact1.firstName.localeCompare(contact2.firstName);
+}
+function compareByLastName(contact1, contact2) {
+  return contact1.lastName.localeCompare(contact2.lastName);
+}
+function compareByEmail(contact1, contact2) {
+  return contact1.email.localeCompare(contact2.email);
+}
+contacts.sort(compareByFirstName);  // sort by first name
+console.log(contacts.at(0).firstName); // James
+console.log(contacts.at(1).firstName); // John
+console.log(contacts.at(2).firstName); // Peter
+contacts.sort(compareByLastName);   // sort by last name
+console.log(contacts.at(0).firstName); // James
+console.log(contacts.at(1).firstName); // Peter
+console.log(contacts.at(2).firstName); // John
+contacts.sort(compareByEmail);      // sort by email address
+console.log(contacts.at(0).firstName); // Peter
+console.log(contacts.at(1).firstName); // John
+console.log(contacts.at(2).firstName); // James

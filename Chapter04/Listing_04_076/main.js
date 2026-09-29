@@ -1,11 +1,10 @@
 'use strict';
-const bestOfStonerrock = [
-  'Kyuss',
-  'Spiritual Beggars',
-  'Spice and the RJ Band',
-  'Band of Spice'
-];
-const one = bestOfStonerrock[0];
-const two = bestOfStonerrock[1];
-const three = bestOfStonerrock[2];
-const four = bestOfStonerrock[3];
+const names = ['John', 'James', 'Peter'];
+const namesString = names.toString();
+console.log(namesString);           // Output: John,James,Peter
+const namesLocaleString = names.toLocaleString();
+console.log(namesLocaleString);     // Output: John,James,Peter
+const namesValue = names.valueOf();
+console.log(namesValue);            // Output: ["John", "James", "Peter"]
+const namesJoined = names.join('-');
+console.log(namesJoined);           // Output: John-James-Peter

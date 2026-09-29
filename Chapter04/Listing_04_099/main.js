@@ -1,4 +1,3 @@
 'use strict';
 const name = 'Max Mustermann';
-console.log(name.lastIndexOf('M'));     // Output: 4
-console.log(name.lastIndexOf('M', 2));  // Output: 0
+console.log(name.indexOf('M', 2));  // Output: 4

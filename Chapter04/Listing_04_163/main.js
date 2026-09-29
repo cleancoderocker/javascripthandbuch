@@ -1,25 +1,23 @@
 'use strict';
-const button = {
-  handler : null,
-  // Function that expects a callback handler
-  onClick : function(handler) {
-    this.handler = handler;
-  },
-  click : function() {
-    this.handler();
-  }
-};
-
-const handler = {
-  log : function() {
-    console.log("Button clicked.");
-  },
-  // Object method registered as a callback handler further below
-  handle: function() {
-    this.log();
+function sayHello() {
+  console.log('Hello');
+  return function() {
+    console.log('World');
+    return function() {
+      console.log('My name is John Doe.');
+    }
   }
 }
-// Register callback handler
-button.onClick(handler.handle);
-// Implicit activation of the callback handler
-button.click();
+
+sayHello();      // Calling the "outer" function
+                 // Output: 
+                 // "Hello"
+sayHello()();    // Calling the "outer" and "middle" functions
+                 // Output:
+                 // "Hello"
+                 // "World"
+sayHello()()();  // Calling all functions 
+                 // Output:
+                 // "Hello"
+                 // "World"
+                 // "My name is John Doe."

@@ -1,15 +1,15 @@
 'use strict';
 const bestOfStonerrock = [
+  'Kyuss',
   'Spiritual Beggars',
-  'Spice and the RJ Band'
+  'Spice and the RJ Band',
+  'Band of Spice'
 ];
 const [
-  one = 'Kyuss', 
-  two = 'Kyuss', 
-  three = 'Kyuss', 
-  four = 'Kyuss'
-] = bestOfStonerrock;
-console.log(one);     // "Spiritual Beggars";
-console.log(two);     // "Spice and the RJ Band";
-console.log(three);   // "Kyuss";
-console.log(four);    // "Kyuss";
+  one,
+  two,
+  three,
+  four,
+  five
+  ] = bestOfStonerrock;
+console.log(five); // undefined

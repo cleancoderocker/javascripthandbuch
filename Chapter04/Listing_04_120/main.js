@@ -1,8 +1,21 @@
 'use strict';
-console.log(Math.min(0, 4711, 30, 5, -8, -40));   // Output: -40
-console.log(Math.max(0, 4711, 30, 5, -8, -40));   // Output: 4711
-console.log(Math.random());                       // Output a random number
-console.log(Math.round(4.7));                     // Output: 5
-console.log(Math.round(4.4));                     // Output: 4
-console.log(Math.ceil(4.4));                      // Output: 5
-console.log(Math.floor(4.7));                     // Output: 4
+const date1 = new Date();               // current date and time
+                                        // here: Sat Aug 15 2021 
+                                        //       17:34:25 GMT+0200 (CEST)
+const date2 = new Date(1438654000000);  // date based on milliseconds 
+                                        // since 01/01/1970
+                                        // here: Tue Aug 04 2015 
+                                        //       04:06:40 GMT+0200 (CEST)
+const date3 = new Date("02 08 2021");   // date based on string
+                                        // here: Sun Feb 08 2021 
+                                        //       00:00:00 GMT+0100 (CET)
+const date4 = new Date(                 // date based on ...
+  2021,                                 // ... year ...
+  8,                                    // ... month ...
+  15,                                   // ... day ...
+  17,                                   // ... hours ...
+  36,                                   // ... minutes ...
+  30,                                   // ... seconds ...
+  30                                    // ... and milliseconds
+);                                      // here: Tue Sep 15 2021 
+                                        //       17:36:30 GMT+0200 (CEST)

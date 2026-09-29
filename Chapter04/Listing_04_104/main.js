@@ -1,11 +1,17 @@
 'use strict';
-const numbersOfAlbums = new Map(    // Create a map ...
-  [                                 // ... based on an array
-    ['Kyuss', 4],
-    ['Tool', 6],
-    ['Monster Magnet', 8],
-    ['Ben Harper', 9],
-    ['Queens of the Stone Age', 6]
-  ]
-);
-console.log(numbersOfAlbums.size);  // Output: 5
+for (let i=1; i<15; i++) {
+    console.log(`${i}`.padStart(3,'0'));
+  }
+  // Output consecutively: 
+  // "001", "002", "003", "004", "005"
+  // "006", "007", "008", "009", "010"
+  // "011", "012", "013", "014"
+  
+  for (let i=1; i<15; i++) {
+    console.log(`${i}`.padEnd(3,'0'));
+  }
+  // Output consecutively: 
+  // "100", "200", "300", "400", "500"
+  // "600", "700", "800", "900", "100"
+  // "110", "120", "130", "140"
+  

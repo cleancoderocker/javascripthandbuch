@@ -1,22 +1,23 @@
 'use strict';
-const person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  age: 33,
-  hairColor: 'brown',
-  height: 1.8
+function printContactInformation(
+  {
+    contact: {
+      email: email, 
+      phone: phone
+    }
+  }
+) {
+  console.log(`Email: ${email}`);
+  console.log(`Phone: ${phone}`);
+}
+
+const person = { 
+  firstName: 'John', 
+  lastName: 'Doe', 
+  contact: {
+    email: 'john.doe@javascripthandbuch.de', 
+    phone: '02345/23456789'
+  }
 };
 
-const {
-  firstName,
-  lastName,
-  ...properties
-} = person;
-
-console.log(firstName);    // John
-console.log(lastName);     // Doe
-console.log(properties);   // {
-                           //   age: 33, 
-                           //   hairColor: 'brown', 
-                           //   height: 1.8
-                           // }
+printContactInformation(person);

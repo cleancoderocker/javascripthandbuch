@@ -1,10 +1,10 @@
 'use strict';
 const todoList = [];
 let length;
-length = todoList.unshift('Clean bathroom');
+length = todoList.push('Clean bathroom');
 console.log(length);   // 1
-length = todoList.unshift('Go shopping');
+length = todoList.push('Go shopping');
 console.log(length);   // 2
-length = todoList.unshift('Tidy up', 'Mow lawn');
+length = todoList.push('Tidy up', 'Mow lawn');
 console.log(length);   // 4
-console.log(todoList); // ["Tidy up", "Mow lawn", "Go shopping", "Clean bathroom"]
+console.log(todoList); // ["Clean bathroom", "Go shopping", "Tidy up", "Mow lawn"]

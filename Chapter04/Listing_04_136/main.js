@@ -1,4 +1,5 @@
 'use strict';
-const regExp = /\bplay\b/;
-console.log(regExp.test('I play the electric guitar.'));   // true 
-console.log(regExp.test('I am a teamplayer.'));            // false
+const regExp = /^Southampton$/;
+console.log(regExp.test('Southampton'));                   // true
+console.log(regExp.test('In Southampton'));                // false
+console.log(regExp.test('Southampton Port'));              // false

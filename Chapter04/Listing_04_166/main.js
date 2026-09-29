@@ -20,9 +20,8 @@ const handler = {
   }
 }
 // Register callback handler
-button.onClick(function() {
-  handler.handle();
-});
+const boundFunction = handler.handle.bind(handler);
+button.onClick(boundFunction);
 
 // Implicit activation of the callback handler
 button.click();

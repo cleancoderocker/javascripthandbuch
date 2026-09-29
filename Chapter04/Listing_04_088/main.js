@@ -7,16 +7,16 @@ const person = {
     street : '22, Sample Street' 
   }
 }
+
 const {
-  firstName, 
-  lastName, 
+  firstName : firstNameExtracted, 
+  lastName : lastNameExtracted, 
   address : {
-    postCode, 
-    street
+    postCode : postCodeExtracted, 
+    street : streetExtracted
   }
 } = person;
-console.log(firstName); // "John"
-console.log(lastName);  // "Doe"
-console.log(postCode);  // "23456"
-console.log(street);    // "22, Sample Street"
-
+console.log(firstNameExtracted); // "John"
+console.log(lastNameExtracted);  // "Doe"
+console.log(postCodeExtracted);  // "23456"
+console.log(streetExtracted);    // "22, Sample Street"

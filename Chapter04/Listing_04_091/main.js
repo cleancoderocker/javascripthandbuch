@@ -18,8 +18,16 @@ const persons = [
   }
 ];
 
-for (let {firstName:f, lastName:l, contact:{email:e, phone:p}} of persons) {
-  console.log(`${f} ${l}`);
-  console.log(`Email: ${e}`);
-  console.log(`Phone: ${p}`);
+for (let 
+  {
+    firstName: firstName, 
+    lastName: lastName, 
+    contact: { 
+      email: email, 
+      phone: phone 
+    } 
+  } of persons) {
+  console.log(`${firstName} ${lastName}`);
+  console.log(`Email: ${email}`);
+  console.log(`Phone: ${phone}`);
 }

@@ -1,10 +1,7 @@
 'use strict';
-const todoList = [];
-let length;
-length = todoList.push('Clean bathroom');
-console.log(length);   // 1
-length = todoList.push('Go shopping');
-console.log(length);   // 2
-length = todoList.push('Tidy up', 'Mow lawn');
-console.log(length);   // 4
-console.log(todoList); // ["Clean bathroom", "Go shopping", "Tidy up", "Mow lawn"]
+const todoList = [
+  'Clean bathroom',       // Element at index 0
+  'Go shopping',          // Element at index 1
+  'Clean up',             // Element at index 2
+  'Mow lawn'              // Element at index 3
+];

@@ -1,4 +1,4 @@
 'use strict';
-const regExp = /n$/;
+const regExp = /^S/;
 console.log(regExp.test('Southampton'));                   // true
-console.log(regExp.test('Southampton Port'));              // false
+console.log(regExp.test('In Southampton'));                // false

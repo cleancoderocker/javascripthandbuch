@@ -1,26 +1,25 @@
 'use strict';
-function printPerson(
+const persons = [
   {
-    firstName: firstName, 
-    lastName: lastName, 
+    firstName: 'John', 
+    lastName: 'Doe', 
     contact: {
-      email: email, 
-      phone: phone
+      email: 'john.doe@javascripthandbuch.de', 
+      phone: '02345/23456789'
+    }
+  }, 
+  {
+    firstName: 'Jane', 
+    lastName: 'Smith', 
+    contact: {
+      email: 'jane.smith@javascripthandbuch.de', 
+      phone: '02345/23456789'
     }
   }
-) {
-  console.log(`${firstName} ${lastName}`);
-  console.log(`Email: ${email}`);
-  console.log(`Phone: ${phone}`);
+];
+
+for (let {firstName:f, lastName:l, contact:{email:e, phone:p}} of persons) {
+  console.log(`${f} ${l}`);
+  console.log(`Email: ${e}`);
+  console.log(`Phone: ${p}`);
 }
-
-const person = { 
-  firstName: 'John', 
-  lastName: 'Doe', 
-  contact: {
-    email: 'john.doe@javascripthandbuch.de', 
-    phone: '02345/23456789'
-  }
-};
-
-printPerson(person);
