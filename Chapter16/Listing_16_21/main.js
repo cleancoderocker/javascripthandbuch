@@ -17,7 +17,16 @@ async function addTwoRandomNumbers() {
   console.log(`Ergebnis: ${b}`);
   return a + b;
 }
-  
-addTwoRandomNumbers()
-  .then(result => console.log(`Summe: ${result}`));
+
+// Mit Top-Level Await (seit ES2022)
+const result = await addTwoRandomNumbers();
+console.log(`Summe: ${result}`);
+
+// Ohne Top-Level Await
+// (async () => {
+//   const result = await addTwoRandomNumbers();
+//   console.log(`Summe: ${result}`);
+// })();
+
+
   

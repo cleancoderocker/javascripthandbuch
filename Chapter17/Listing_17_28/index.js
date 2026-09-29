@@ -1,8 +1,8 @@
 'use strict';
-const express = require('express');
-const bodyParser = require('body-parser');
+'use strict';
+import express from 'express'; 
 const app = express();
-app.use(bodyParser.json())
+app.use(express.json())
 app.get('/', (request, response) => {
   const json = request.body;
   // here normal processing of the request

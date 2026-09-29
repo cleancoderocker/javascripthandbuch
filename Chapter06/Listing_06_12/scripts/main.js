@@ -33,16 +33,16 @@ function init() {
   );
   element.addEventListener(
     'blur',
-    function() {                      // Anonyme Funktion
-      const age = getAgeValue();        // Wert für Alter holen
-      checkAgeNotNegative(age);       // Aufruf der eigentlichen Funktion
+    function() {
+      const age = getAgeValue();
+      checkAgeNotNegative(age);
     }
   );
   element.addEventListener(
     'blur',
-    function() {                      // Anonyme Funktion
-      const age = getAgeValue();        // Wert für Alter holen
-      checkAgeIsNumber(age);          // Aufruf der eigentlichen Funktion
+    function() {
+      const age = getAgeValue();
+      checkAgeIsNumber(age);
     }
   );
 }

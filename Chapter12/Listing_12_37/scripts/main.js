@@ -1,50 +1,29 @@
 'use strict';
 function init() {
   const idbFactory = window.indexedDB;
-  const request = idbFactory.open(
-    'TestDatabase',
-    1
-  );
-  const books = [
-    {
-      'isbn': '978-1-4932-2286-5',
-      'title': 'JavaScript: The Comprehensive Guide',
-      'author': 'Philip Ackermann'
-    },
-    {
-      'isbn': '978-1-4932-2292-6',
-      'title': 'Node.js: The Comprehensive Guide',
-      'author': 'Sebastian Springer'
-    }
-  ] 
+  const request = idbFactory.open('TestDatabase', 9);
   request.onerror = (event) => {
     const error = event.target.error;
     console.error(error.message);
   };
   request.onsuccess = (event) => {
     const database = event.target.result;
-    const transaction = database.transaction('Books');
+    const transaction = database.transaction(
+      'Books',
+      'readwrite'
+    );
     const objectStore = transaction.objectStore('Books');
-    var request = objectStore.openCursor();
-    const books = [];
+    const request = objectStore.get('978-3-8362-7272-8');
+    request.onerror = (event) => {
+      console.error(event.target.error.message);
+    };
     request.onsuccess = (event) => {
-      const cursor = event.target.result;
-      if (cursor) {
-        console.log(cursor.key);
-        console.log(cursor.value);
-        books.push(cursor.value);
-        cursor.continue();
-      } else {
-        console.log(books);
-      }
+      const book = request.result;
+      book.title = 'Schrödinger programmiert Java' + ' - Das etwas andere Fachbuch';
+      const requestUpdate = objectStore.put(book);
+      requestUpdate.onerror = (event) => { };
+      requestUpdate.onsuccess = (event) => { };
     };
   };
-  request.onupgradeneeded = (event) => {
-    const database = event.target.result;
-    const objectStore = database.createObjectStore('Books', { keyPath: 'isbn' });
-    books.forEach((book) => {
-      objectStore.add(book);
-    });
-  }
 }
 document.addEventListener('DOMContentLoaded', init);

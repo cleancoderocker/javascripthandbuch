@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
   try {
     array = createArray(length);
   } catch (error) {
-    console.log(error.name);     // Output: RangeError
-    console.log(error.message);  // Invalid array length
+    console.error(error.name);     // Output: RangeError
+    console.error(error.message);  // Invalid array length
   }
   
   function createArray(length) {

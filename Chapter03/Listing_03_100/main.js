@@ -1,5 +1,6 @@
 'use strict';
 const numbers = [2, 4, 56, 22, 65, 2, 54, 88, 29];
+
 console.log('Before the loop.');
 let i = 0;                                    // Initialize counter variable.
 while(i < numbers.length) {                   // Iterate over number array.

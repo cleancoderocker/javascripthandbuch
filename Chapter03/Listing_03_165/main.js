@@ -2,17 +2,17 @@
 try {
   console.log(checkAge(22));         // true
 } catch(error) {
-  console.log(error);                // will not be called
+  console.error(error);                // will not be called
 }
 try {
   console.log(checkAge("John Doe")); // no output
 } catch(error) {
-  console.log(error);                // TypeError: Age must be a number
+  console.error(error);                // TypeError: Age must be a number
 }
 try {
   console.log(checkAge(-22));        // no output
 } catch(error) {
-  console.log(error);                // RangeError: Age must not be negative
+  console.error(error);                // RangeError: Age must not be negative
 }
 
 function checkAge(age) {

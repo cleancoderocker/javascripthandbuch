@@ -1,5 +1,5 @@
 'use strict';
-const fs = require('fs');
+import fs from 'fs';
 fs.writeFileSync('output.txt', 'Hello World');
 const data = fs.readFileSync('output.txt');
 console.log(data.toString());

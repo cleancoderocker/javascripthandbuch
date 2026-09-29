@@ -12,8 +12,3 @@ ul {
     min-height: 200px;
     padding: 0.5em;
 }
-.thumbnail {
-    height: 75px;
-    border: 1px solid #000;
-    margin: 10px 5px 0 0;
-}

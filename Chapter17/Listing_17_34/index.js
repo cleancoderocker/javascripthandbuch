@@ -1,7 +1,7 @@
 'use strict';
-const mongoDB = require('mongodb');                 // Include mongodb package
-const client = mongoDB.MongoClient;                 // Create client
+import { MongoClient } from 'mongodb';              // Include mongodb package
 const url = 'mongodb://localhost:27017/exampleDB';  // URL to the database
+const client = new MongoClient(url);                // Create client
 client.connect(url, (error, db) => {                // Establish connection
   if (!error) {                                     //
     db.createCollection(                            // Create collection

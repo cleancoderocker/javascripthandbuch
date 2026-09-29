@@ -1,4 +1,4 @@
 'use strict';
-const _ = require('lodash');
+import _ from 'underscore';
 const names = ['John', 'James'];
-console.log(_.includes(names, 'James')); // Output: true
+console.log(_.contains(names, 'James')); // Output: true

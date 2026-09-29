@@ -1,17 +1,19 @@
 'use strict';
 class UserRepository {
 
+  #users;
+
   constructor() {
-    this._users = new Map();
+    this.#users = new Map();
   }
 
   async save(user) {
-    this._users.set(user.id, user);
+    this.#users.set(user.id, user);
     return Promise.resolve(user);
   }
 
   async find(id) {
-    const user = this._users.get(id);
+    const user = this.#users.get(id);
     return Promise.resolve(user);
   }
 }
@@ -33,7 +35,7 @@ async function saveAndFindJames() {
     console.error(error);
   }
 }
-saveAndFindJames();
+await saveAndFindJames();
 
 // Using promises
 function saveAndFindJohn() {
@@ -48,4 +50,4 @@ function saveAndFindJohn() {
     .catch(error => console.error(error));
 }
 
-saveAndFindJohn();
+await saveAndFindJohn();

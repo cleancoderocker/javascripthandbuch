@@ -15,11 +15,7 @@ function getUsersByName(name) {
 }
 
 function accessDatabase() {
-  openDatabaseConnection();    // 'Database connection open'
-  try {
-    getUsersByName(22);
-  } catch(error) {
-    console.error(error);      // TypeError: String expected
-  }
-  closeDatabaseConnection();   // 'Database connection closed'
+  openDatabaseConnection();     // 'Database connection open'
+  getUsersByName(22);           // TypeError: String expected
+  closeDatabaseConnection();    // will not be executed
 }

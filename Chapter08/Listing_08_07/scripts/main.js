@@ -1,9 +1,4 @@
 (function () {
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
-      results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-  }
-  console.log(getParameterByName('tests'));
+  const params = new URLSearchParams(window.location.search);
+  console.log(params.get("tests"));
 })();

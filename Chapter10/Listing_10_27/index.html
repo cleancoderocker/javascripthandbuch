@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
 </head>
 <body>
-  <div id="artists-container"></div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <div class="container">
+    <nav>
+      <ul class="nav nav-pills">
+        <li role="presentation"><a id="login" href="#">Login</a></li>
+        <li role="presentation"><a id="register" href="#">Registrieren</a></li>
+      </ul>
+    </nav>
+    <main id="main-content" class="container col-xs-offset-2 col-xs-8"></main>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous">
+  </script>
   <script src="scripts/script.js"></script>
 </body>
 </html>

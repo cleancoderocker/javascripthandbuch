@@ -1,0 +1,25 @@
+{
+  "name": "example-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --max-warnings=0",
+    "lint:fix": "eslint src --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "build": "esbuild src/index.js --bundle --format=esm --platform=browser --outfile=dist/utils.js",
+    "build:min": "esbuild src/index.js --bundle --format=esm --platform=browser --minify --outfile=dist/utils.min.js",
+    "all": "npm run lint:fix && npm run test:coverage && npm run build:min"
+  },
+  "keywords": [],
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.35.0",
+    "globals": "^16.3.0",
+    "vitest": "^3.2.4"
+  }
+}

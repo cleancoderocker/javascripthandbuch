@@ -1,5 +1,5 @@
 'use strict';
-const http = require('http');
+import http from 'http';
 const PORT = 8080;
 function handleRequest(request, response){
   response.writeHead(200, {'Content-Type': 'text/plain'});

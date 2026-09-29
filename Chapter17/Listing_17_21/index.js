@@ -1,7 +1,7 @@
 'use strict';
-const http = require('http');
-const url = require('url');
-const fs = require('fs');
+import http from 'http';
+import url from 'url';
+import { readFile } from 'fs';
 // 1.) Create server
 http.createServer((request, response) => {  
    // 2.) Find path

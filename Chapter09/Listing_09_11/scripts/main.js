@@ -5,6 +5,7 @@ function init() {
   request.onload = (e) => {                          // When result is loaded ...
     if (request.status === 200) {
       const html = request.responseText;             // HTML response as a string.
+      console.log(html);
     }
   };
   request.open(

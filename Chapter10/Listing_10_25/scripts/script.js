@@ -1,10 +1,31 @@
 'use strict';
+$(document)
+  .ajaxStart(() => {
+    console.log('Anfrage gestartet.');
+  })
+  .ajaxSend((event, request, settings) => {
+    console.log('Anfrage abgeschickt.');
+  })
+  .ajaxSuccess((event, request, settings, data) => {
+    console.log('Anfrage erfolgreich abgeschlossen');
+  })
+  .ajaxError((event, request, settings, error) => {
+    console.log('Fehler bei Anfrage: ' + error);
+  })
+  .ajaxComplete((event, request, settings) => {
+    console.log('Anfrage abgeschlossen.');
+  })
+  .ajaxStop(() => {
+    console.log('Alle Anfragen abgeschlossen.');
+  });
+
 $(document).ready(() => {
   $.ajax({
     url: 'artists.json',
     dataType: 'json',
-    type: 'GET',
-    success: (data) => {
+    type: 'GET'
+  })
+    .done((data) => {
       const table = initTable();
       const artists = data.artists;
       for (let i = 0; i < artists.length; i++) {
@@ -21,10 +42,9 @@ $(document).ready(() => {
         }
       }
       $('#artists-container').append(table);
-    },
-    error: (jqXHR, errorMessage, error) => {
-    }
-  });
+    })
+    .fail((jqXHR, errorMessage, error) => {
+    });
 });
 function initTable() {
   const table = document.createElement('table');

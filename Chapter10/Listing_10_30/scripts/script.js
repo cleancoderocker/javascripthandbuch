@@ -1,22 +1,23 @@
 'use strict';
 $(document).ready(() => {
-  $.get({
-    url: 'artists.xml',
-    dataType: 'xml'
-  }).done((data) => {
+  $.getJSON(
+    'artists.json'
+  ).done((data, textStatus, jqXHRObject) => {
     const table = initTable();
-    const artists = $(data).find('artist');
-    artists.each((index, artist) => {
-      const albums = $(artist).find('album');
-      albums.each((index, album) => {
+    const artists = data.artists;
+    for (let i = 0; i < artists.length; i++) {
+      const artist = artists[i];
+      const albums = artist.albums;
+      for (let j = 0; j < albums.length; j++) {
+        const album = albums[j];
         const row = createRow(
-          artist.getAttribute('name'),
-          $(album).find('title').text(),
-          $(album).find('year').text()
+          artist.name,
+          album.title,
+          album.year
         );
         $(table).find('tbody').append(row);
-      });
-    });
+      }
+    }
     $('#artists-container').append(table);
   });
 });

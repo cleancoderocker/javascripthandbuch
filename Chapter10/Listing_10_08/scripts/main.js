@@ -2,9 +2,8 @@
 function init() {
   const listItems = document.getElementsByTagName('li');
   for(let i=0; i<listItems.length; i++) {
-    listItems[i].innerHTML = '<a href="'
-    + listItems[i].textContent + '">'
-    + listItems[i].textContent + '</a>';
+    const text = listItems[i].textContent;
+    listItems[i].innerHTML = `<a href="${text}">${text}</a>`;
   }
 }
 document.addEventListener('DOMContentLoaded', init);

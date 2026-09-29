@@ -14,16 +14,15 @@ function getUsersByName(name) {
   /* ... */ 
 }
 function accessDatabase() {
-  openDatabaseConnection();    // 'Database connection open'
+  openDatabaseConnection();
   try {
     getUsersByName(22);
   } catch(error) {
-    console.log(error);        // TypeError: String expected
+    console.log(error);
+    closeDatabaseConnection();
     throw new DBError('Error communicating with the database');
-  } finally {
-    closeDatabaseConnection(); // 'Database connection closed'
   }
-  
+  closeDatabaseConnection();
 }
 class DBError extends Error {
 

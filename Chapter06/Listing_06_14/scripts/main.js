@@ -20,19 +20,19 @@ function showMessage(message) {
 }
 
 function init() {
-  const element = document.getElementById('age');
-  element.addEventListener('blur', clearMessage); 
-  element.addEventListener('blur', checkAgeNotNegative); 
-  element.addEventListener('blur', checkAgeIsNumber);
+  const ageInput = document.getElementById('age');
+  ageInput.addEventListener('blur', clearMessage); 
+  ageInput.addEventListener('blur', checkAgeNotNegative); 
+  ageInput.addEventListener('blur', checkAgeIsNumber);
   const checkBox = document.getElementById('validation'); 
-  checkBox.addEventListener('change', () => {
+  checkBox.addEventListener('change', function() {
     if(checkBox.checked) {
-      element.addEventListener('blur', checkAgeNotNegative);
-      element.addEventListener('blur', checkAgeIsNumber);
+      ageInput.addEventListener('blur', checkAgeNotNegative);
+      ageInput.addEventListener('blur', checkAgeIsNumber);
     } else {
       clearMessage();
-      element.removeEventListener('blur', checkAgeNotNegative);
-      element.removeEventListener('blur', checkAgeIsNumber);
+      ageInput.removeEventListener('blur', checkAgeNotNegative);
+      ageInput.removeEventListener('blur', checkAgeIsNumber);
     }
   });
 }

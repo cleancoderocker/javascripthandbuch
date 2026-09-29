@@ -1,16 +1,28 @@
 'use strict';
-/* This function adds two positive numbers 
-and returns the result. */
-function add(x, y) {
-  let result = 0;         // Variable for the result
-  // If one of the two numbers is less than 0 ...
-  if(x < 0 || y < 0) {
-    // ... an error is returned ...
-    throw new Error('Numbers must be greater than or equal to 0.');
-  } else {
-    // ... otherwise the two numbers are added ...
-    result = x + y;
-  }
-  // ... and the result is returned.
-  return result;
+function openDatabaseConnection() {
+  console.log('Database connection open');
 }
+function closeDatabaseConnection() {
+  console.log('Database connection closed');
+}
+function getUsersByName(name) {
+  if(typeof name !== 'string') {
+    throw new TypeError('String expected');
+  }
+  /* ... */
+}
+function accessDatabase() {
+  openDatabaseConnection();
+  try {
+    getUsersByName(22);
+  } catch(error) {
+    console.log(error);
+    throw new DBError('Error communicating with the database');
+  } finally {
+    closeDatabaseConnection();
+  }
+}
+class DBError extends Error {
+
+}
+accessDatabase();

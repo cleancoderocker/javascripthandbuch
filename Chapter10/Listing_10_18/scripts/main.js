@@ -1,6 +1,4 @@
 'use strict';
 $(document).ready(() => {
-  $('#button').click((event) => {
-    console.log('Button pressed');
-  });
+  console.log('Web page loaded');
 });

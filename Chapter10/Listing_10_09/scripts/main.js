@@ -2,7 +2,7 @@
 function init() {
   $('li').wrapInner(
     function() {
-      return '<a href="' + this.textContent + '"></a>'
+      return `<a href="${this.textContent}"></a>`;
     }
   );
 }

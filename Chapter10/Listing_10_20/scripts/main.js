@@ -1,6 +1,14 @@
 'use strict';
 $(document).ready(() => {
-  $('button#target').click((event) => {
-    console.log('Button was pressed');
-  });  
+  $('input#username')
+    .on('keypress', (event) => {
+      console.log('Key for entering username pressed.');
+    })
+    .on('keydown', (event) => {
+      console.log('Key is pressed.');
+    })
+    .on('keyup', (event) => {
+      console.log('Key for entering username released.');
+    });
+
 });

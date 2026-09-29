@@ -1,6 +1,6 @@
 'use strict';
 const age = prompt('For what age are you looking for film tips?');
-if(!isNaN(parseFloat(age)) && isFinite(age)) {
+if(!isNaN(parseInt(age)) && isFinite(age)) {
   if(age >= 18) {
     console.log('Show films with a rating of G, PG, PG-13, R, and NC-17.');
   } else if(age >= 17) {

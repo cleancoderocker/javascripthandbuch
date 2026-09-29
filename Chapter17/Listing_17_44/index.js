@@ -1,7 +1,12 @@
 'use strict';
-const fs = require('fs');
-const path = require('path');
-const zlib = require('zlib');
+import fs from 'fs';
+import path from 'path';
+import zlib from 'zlib';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
  
 const INPUT = path.join(
   __dirname, 
@@ -16,7 +21,7 @@ const OUTPUT = path.join(
   'data', 
   'someFile.txt.gz'
 );
- 
+
 // 1. Stream for reading the file to be compressed
 const inputStream = fs.createReadStream(INPUT);
  
