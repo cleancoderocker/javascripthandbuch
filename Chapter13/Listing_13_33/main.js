@@ -30,7 +30,15 @@ class Animal {
   set age(age) {
     this._age = age;
   }
-  
+
+  eat(food) {
+    console.log(`Mmpf mmpf, ${food}`);
+  }
+
+  drink(drink) {
+    console.log(`Mmmmmmh, ${drink}`);
+  }
+
   toString() {
     return `${this._name}, ${this._color}, ${this._age}`;
   }
@@ -45,6 +53,7 @@ Animal.ANIMAL_COLORS = {
   YELLOW: 'Yellow',
   ORANGE: 'Orange'
 }
+
 console.log(Animal.ANIMAL_COLORS);
 // {
 //   WHITE: 'White',

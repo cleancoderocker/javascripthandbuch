@@ -5,10 +5,10 @@ function Animal(name, color, age) {
   this.age = age;
 };
 Animal.prototype.eat = function(food) {
-  console.log('Chow chow, ' + food + '!');
+  console.log(`Mmpf mmpf, ${food}!`);
 }
 Animal.prototype.drink = function(drink) {
-  console.log('Mmmmmmh, ' + drink + '!');
+  console.log(`Mmmmmmh, ${drink}!`);
 }
 const fish = new Animal('Fishy', 'Green', 2);
 fish.eat('Algae');       // Output: 'Chow Chow, algae!'

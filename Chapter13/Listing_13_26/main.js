@@ -4,14 +4,11 @@ class InvalidValueError extends Error {
     super(`Invalid value: ${value}`);
     this.value = value;
   }
-  
   get value() {
     return this._value;
   }
-  
   set value(value) {
     this._value = value;
   }
 }
-
 throw new InvalidValueError(5);
