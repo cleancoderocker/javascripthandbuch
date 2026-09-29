@@ -5,7 +5,7 @@ class Animal {
     return {
       WHITE: 'White',
       BLACK: 'Black',
-      BROWN: 'brown',
+      BROWN: 'Brown',
       GREEN: 'Green',
       YELLOW: 'Yellow',
       ORANGE: 'Orange'

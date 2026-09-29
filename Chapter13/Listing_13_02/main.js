@@ -16,4 +16,4 @@ console.log(cat.color);           // ... and properties from the prototype.
 const dog = Object.create(animal);
 dog.eat('meat');               // Output: 'Mmpf mmpf, meat!' 
 dog.drink('water');              // Output: 'Mmmmmmh, water!'
-console.log(dog.color);           // Output: 'brown'
+console.log(dog.color);           // Output: 'Brown'
